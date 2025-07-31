@@ -1,1 +1,0 @@
-chalk, dacite, quartzite, chert, conglomerate, slate, phyllite, dolomite, limestone, schist, gneiss, claystone, shale, marble, gabbro, granite, diorite, rhyolite, basalt, andesite

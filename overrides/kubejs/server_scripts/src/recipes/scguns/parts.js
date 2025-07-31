@@ -59,13 +59,13 @@ ServerEvents.recipes((event) => {
 		.tier(4);
 
 	event.shaped('scguns:rapid_firing_unit', [' A ', 'BCD', ' A '], {
-		A: 'tfc:metal/sheet/steel',
+		A: 'kubejs:metal/sheet/mangalloy',
 		B: 'create:precision_mechanism',
 		C: 'createbigcannons:recoil_spring',
 		D: 'tfc:metal/rod/black_steel',
 	});
 	event.shaped('scguns:firing_unit', ['AB'], {
-		A: 'tfc:metal/sheet/steel',
+		A: 'kubejs:metal/sheet/mangalloy',
 		B: 'tfc:metal/rod/steel',
 	});
 

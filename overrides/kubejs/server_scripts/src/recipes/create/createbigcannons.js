@@ -51,34 +51,9 @@ ServerEvents.recipes((e) => {
 			G: 'createbigcannons:packed_gunpowder',
 		}
 	);
-	e.recipes.tfc
-		.anvil(
-			'16x createbigcannons:empty_machine_gun_round',
-			'tfc:metal/sheet/brass',
-			['punch_last', 'bend_second_last', 'draw_third_last']
-		)
-		.tier(2);
 
-	e.recipes.create
-		.sequenced_assembly(
-			[Item.of('createbigcannons:machine_gun_round')],
-			'createbigcannons:empty_machine_gun_round',
-			[
-				e.recipes.createDeploying(
-					'createbigcannons:empty_machine_gun_round',
-					['createbigcannons:empty_machine_gun_round', 'gunpowder']
-				),
-				e.recipes.createDeploying(
-					'createbigcannons:empty_machine_gun_round',
-					[
-						'createbigcannons:empty_machine_gun_round',
-						'scguns:standard_bullet',
-					]
-				),
-			]
-		)
-		.transitionalItem('createbigcannons:empty_machine_gun_round')
-		.loops(1);
+	
+        e.shapeless('createbigcannons:machine_gun_round', ['scguns:large_brass_casing', 'scguns:nitro_powder_dust', 'scguns:hardened_bullet']);
 
 	e.recipes.tfc
 		.anvil(
