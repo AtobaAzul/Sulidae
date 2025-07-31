@@ -1,10 +1,102 @@
-- Firing Units now require Mangalloy to better differentiate flintlocks and semi/fully automatic firearms.
-- Added Rhodocrosite, another manganese ore, more easily found but significantly rarer.
-- Added quest entry on alcohols giving the Warmth effect.
-- Renamed Molten Processed Manganite into Molten Raw Manganese
-- Removed empty machine gun rounds (MG ammo now uses large brass casings instead.)
-- Machine gun round recipe is now shapeless.
-- Added an automated way to make empty casings and fluid pipes, at a worse yield than manually making them.
-- Removed Distant Horizons (Wasn't meant to be in the release, just using it for the panorama, sorry. It's client-side, so feel free to re-add!)
-- Kaolin Clay now spawns on any biome.
-- Added translation strings for prospecting manganite.
+# Pack Changes
+- Added Kyanite
+- Added Unfired Refractory Brick, Refractory Brick (item) and Refractory Bricks (block)
+- Added Industrial Furnace Multiblock
+- Added Ilmenite and Titanium.
+- Added Wolframite and Tungsten.
+- Added Metal Former, a machine to automate smithing recipes.
+- Added Metalworks Forge, a machine for advanced iron/steelmaking and tungsten refining.
+- Added Liquid Hydrogen and Lubricant
+- Made Safes very large and very heavy.
+- Added the Electric Kiln, a new machine to automate non-food heating recipes with no fluid output.
+- Added a new structure
+- Changed the costs and requirements for steel and blue steel gun frames to better differentiate between the post-musket, but pre-frame weapons
+- Maple and birch sugar has been deprecated. Recipe now outputs normal sugar.
+- Added extra-large kaolinite veins, found where kaolin clay generates.
+- Slightly increased small kaolinite vein size.
+- Reinforced fiber can now use flax fiber instead of jute.
+- Economy plane now uses reinforced fiber instead of sails and treated lumber instead of regular lumber.
+- Warship is now craftable.
+- Rotary Cannon now uses rifle rounds.
+- Aircraft health and collision damage has been increased by 8x (Stronger against normal damage but still the same when crashing.)
+- Fixed not being able to put tracers manually to autocannon rounds.
+- Tracer recipe now yields 16 tracers.
+- Fixed machine gun rounds giving back wrong empty casing.
+- Added missing lang entries for dyeing recipes.
+- Made locometal and industrial iron craftable.
+- Fixed induction heaters not properly being upgraded.
+- Rifle Rounds cost 2 pinches of gunpowder.
+- Rebalanced a bit a couple gun recipes. Added steel gun barrel, used for lower tier guns.
+- Fixed custom metals not being heatable and having wrong tags.
+- Fixed Lignite not being able to fuel burners.
+- Fixed Fuel Cans not being craftable.
+- Reworked all simple radio recipes.
+- Added aluminum, mangalloy and manganese rods.
+- Removed Thermal's Sawmill.
+- Cerametal Funnels/Tunnels use leather instead of rubber. (Brass ones still use rubber!)
+- Adjusted Chute recipe to better match Hopper's.
+- Replaced Create's Gas Burner with Create Diesel Generator's Burner.
+- Fixed Sugar Cubes not being uncraftable back into sugar.
+- And more! I think.
+
+# Added mods:
+- Chunk Scheduler
+- Grapling Hook
+
+# Updated mods:
+- Simple Voice Chat
+- Horseman
+- Polymorph
+- Lithic TFC Addon
+- Fusion
+- Connectivity
+- Sacks n Such
+- Scholar
+- KubeJS Additions
+- EMI
+- Raw's Visual Keybinder
+- Sound Physics Remastered
+- KubeJS TFC
+- Packet Fixer
+- Moonlight Lib
+- Flerovium
+- Supplementaries
+- Not Enough Animations
+- Curios API
+- Immersive Aircraft
+- Target Dummy
+- Voice Chat
+- Entity Culling
+- GeckoLib
+- Amendments
+- Jade
+- Cold Sweat
+- TFC Cold Sweat
+- TFC Textile
+- FTB Quests
+- Amendments
+- Firmalife
+- Shoulder Surfing Reloaded
+- Every Compat
+- Chloride (Embeddium++)
+- TFC Water Flasks
+- Create*
+- Create Crafts & Additions*
+- Create Diesel Generators*
+- KubeJS Create*
+- Create Low-heated*
+- More Create Burners*
+- OctoLib
+- Fzzy Config
+- Subtle Effects
+- Furniture Mod
+- Jade Addons
+- Quark
+- Zeta
+- Aaaaand I lost track
+
+# Removed mods:
+- Liquid Burner
+- TerraBlender
+
+* create 6.0 update

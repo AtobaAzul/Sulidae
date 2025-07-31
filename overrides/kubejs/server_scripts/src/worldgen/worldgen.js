@@ -64,9 +64,20 @@ ServerEvents.tags('worldgen/placed_feature', (event) => {
 	event.add('tfc:in_biome/veins', 'tfc:vein/graphite_small');
 
 	event.add('tfc:in_biome/veins', 'tfc:vein/kaolinite');
+    event.add('tfc:in_biome/veins', 'tfc:vein/kaolinite_large');
 	event.add('tfc:in_biome/veins', 'tfc:vein/manganite');
 	event.add('tfc:in_biome/veins', 'tfc:vein/rhodocrosite');
 	event.add('tfc:in_biome/veins', 'tfc:vein/rhodocrosite_silver');
+
+	event.add('tfc:in_biome/veins', 'tfc:vein/wolframite');
+	event.add('tfc:in_biome/veins', 'tfc:vein/ilmenite');
+
+
+	event.add('tfc:in_biome/veins', 'tfc:vein/kyanite_test');
+
+
+	event.add('tfc:in_biome/veins', 'tfc:vein/sulfur_volcanic');
+
 
 	for (let [plant, def] of Object.entries(plant_defs)) {
 		event.add('tfc:feature/land_plants', 'tfc:plant/' + plant + '_patch');

@@ -47,11 +47,13 @@ const registryDef = {
 	kaolinite_sludge: { name: 'Kaolinite Sludge' },
 	hardened_kaolinite_sludge: { name: 'Dried Kaolinite Sludge' },
 	alumina_powder: { name: 'Alumina Powder' },
-    processed_manganite_powder: { name: 'Processed Manganite Powder', tags: ['kubejs:processed_manganese_powder']},
-    processed_rhodocrosite_powder: { name: 'Processed Rhodocrosite Powder', tags: ['kubejs:processed_manganese_powder']},
 
 	unfinished_gun_parts: { name: 'Unfinished Gun Parts' },
 	unfinished_heavy_gun_parts: { name: 'Unfinished Heavy Gun Parts' },
+	unfinished_iron_gun_frame: { name: 'Unfinished Steel Gun Frame' },
+	unfinished_diamond_steel_gun_frame: {
+		name: 'Unfinished Blue Steel Gun Frame',
+	},
 
 	rocket_fuel: { name: 'Rocket Fuel' },
 	wood_pulp: { name: 'Wood Pulp' },
@@ -87,6 +89,80 @@ const registryDef = {
 		name: 'Unfinished Caoivish Boots',
 		unstackable: true,
 	},
+manganite_chunk: {
+  name: 'Manganite Chunk',
+  texture: 'thermal:item/raw_nickel',
+  tags: ['kubejs:manganese_ore', 'tfc:ore_pieces'],
+},
+rhodocrosite_fragment: {
+  name: 'Rhodocrosite Fragment',
+  texture: 'thermal:item/rich_slag',
+  tags: ['kubejs:manganese_ore', 'tfc:ore_pieces'],
+},
+
+
+	kyanite_dust: {
+		name: 'Kyanite Dust',
+		tags: [
+			'supplementaries:hourglass_dusts',
+			'forge:dusts',
+			'forge:dusts/kyanite',
+		],
+		texture: 'thermal:item/apatite_dust',
+	},
+
+	unfired_refractory_brick: {
+		name: 'Unfired Refractory Brick',
+		tags: ['tfc:unfired_pottery'],
+	},
+	refractory_brick: {
+		name: 'Refractory Brick',
+	},
+
+    ilmenite_chunk: {
+        name: 'Ilmenite',
+        tags: ['tfc:ore_pieces', 'sns:allowed_in_ore_sack'],
+        texture: 'thermal:item/raw_tin'
+    },
+    ilmenite_powder: {
+        name: 'Ilmenite Powder',
+        tags: ['forge:dusts', 'forge:dusts/ilmenite', 'supplementaries:hourglass_dusts', 'kubejs:metal_powders'],
+        texture: 'thermal:item/tin_dust'
+    },
+    titanium_powder: {
+        name: 'Titanium Powder',
+        tags: ['forge:dusts', 'forge:dusts/titanium', 'supplementaries:hourglass_dusts', 'kubejs:metal_powders'],
+        texture: 'thermal:item/silver_dust'
+    },
+    
+    wolframite_chunk: {
+        name: 'Wolframite',
+        tags: ['tfc:ore_pieces', 'sns:allowed_in_ore_sack'],
+        texture: 'thermal:item/raw_lead'
+    },
+    wolframite_powder: {
+        name: 'Wolframite Powder',
+        tags: ['forge:dusts', 'forge:dusts/wolframite', 'supplementaries:hourglass_dusts', 'kubejs:metal_powders'],
+        texture: 'thermal:item/lead_dust'
+    },
+
+    unrefined_tungsten_powder: {
+        name: 'Unrefined Tungsten Powder',
+        tags: ['forge:dusts', 'supplementaries:hourglass_dusts'],
+        texture: 'thermal:item/netherite_dust'
+    },
+
+    tungsten_powder: {
+        name: 'Tungsten Powder',
+        tags: ['forge:dusts', 'forge:dusts/tungsten', 'supplementaries:hourglass_dusts', 'kubejs:metal_powders'],
+        texture: 'thermal:item/tin_dust'
+    },
+    tungsten_carbide_parts: {
+        name: 'Tungsten Carbide Parts',
+        texture: 'thermal:item/lead_gear'
+    }
+
+
 };
 
 /**
@@ -109,9 +185,9 @@ function registerItem(event, name, def) {
 		});
 	}
 
-    if (def.texture) {
-        item.texture(def.texture);
-    }
+	if (def.texture) {
+		item.texture(def.texture);
+	}
 
 	if (def.unstackable) {
 		item.unstackable();
@@ -128,137 +204,62 @@ StartupEvents.registry('item', (event) => {
 		registerItem(event, name, def);
 	}
 
-	/*let item = event.create('umbrella')
-    item.displayName("Umbrella")
-    item.unstackable()
-    item.maxDamage(100)
-    item.modelJson('kubejs:item/umbrella.json')*/
+	event
+		.create('unfinished_upgrade_augment_3', 'create:sequenced_assembly')
+		.displayName('Unfinished High-Efficiency Component Replacement');
 
-	//Musket part registry.
-	/*event.create('pistol_barrel').displayName('Pistol Barrel');
-    event.create('musket_barrel').displayName('Musket Barrel');
-    event.create('musket_ball').displayName('Musket Balls');
-    event.create('chromite_powder').displayName('Chromite Powder');
-    event.create('unfired_andesite_alloy').displayName("Unfired Cerametal");
-    event.create('chromium_wire').displayName("Chromium Wire");
-    event.create('copper_bullet').displayName('Copper Bullet')
-    event.create('unfinished_distillation_controller').displayName('Unfinished Distillation Controller')
-    event.create('unfinished_oil_scanner').displayName('Unfinished Oil Detector')
 
-    event.create('handheld_mortar').displayName("Handheld Mortar").unstackable().maxDamage(100);
 
-    event.create('autocannon').displayName("Handheld Autocannon").unstackable().maxDamage(100);*/
-
-    event.create('manganite_chunk').texture('thermal:item/rich_slag').displayName('Manganite Chunk');
-    event.create('rhodocrosite_fragment').texture('thermal:item/raw_nickel').displayName('Rhodocrosite Fragment');
-
-	let aluminum_items = {
+	let metal_item_types = {
 		ingot: 'Ingot',
 		double_ingot: 'Double Ingot',
 		sheet: 'Sheet',
 		double_sheet: 'Double Sheet',
+		rod: 'Rod',
 	};
 
-	for (const [name, _item] of Object.entries(aluminum_items)) {
-		let item = event
-			.create(`metal/${name}/aluminum`)
-			.displayName(`Aluminum ${_item}`);
-		item.tag('tfc:metal/item/aluminum');
+	let new_metals = [
+		'Aluminum',
+		'Mangalloy',
+		'Manganese',
+		'Titanium',
+		'Tungsten',
+	];
 
-		switch (name) {
-			case 'ingot':
-				item.tag('tfc:pileable_ingots');
-				item.tag('forge:ingots');
-				item.tag('forge:ingots/aluminum');
-				break;
-			case 'double_ingot':
-				item.tag('tfc:pileable_double_ingots');
-				item.tag('forge:double_ingots');
-				item.tag('forge:double_ingots/aluminum');
-				break;
-			case 'sheet':
-				item.tag('tfc:pileable_sheets');
-				item.tag('forge:sheets');
-				item.tag('forge:sheets/aluminum');
-				break;
-			case 'double_sheet':
-				item.tag('forge:double_sheets');
-				item.tag('forge:double_sheets/aluminum');
-				break;
+	new_metals.forEach((metal) => {
+		for (const [name, _item] of Object.entries(metal_item_types)) {
+			let item = event
+				.create(`metal/${name}/${metal.toLowerCase()}`)
+				.displayName(`${metal} ${_item}`);
+			item.tag(`tfc:metal_item/${metal.toLowerCase()}`);
+
+			switch (name) {
+				case 'ingot':
+					item.tag('tfc:pileable_ingots');
+					item.tag('forge:ingots');
+					item.tag(`forge:ingots/${metal.toLowerCase()}`);
+					break;
+				case 'double_ingot':
+					item.tag('tfc:pileable_double_ingots');
+					item.tag('forge:double_ingots');
+					item.tag(`forge:double_ingots/${metal.toLowerCase()}`);
+					break;
+				case 'sheet':
+					item.tag('tfc:pileable_sheets');
+					item.tag('forge:sheets');
+					item.tag(`forge:sheets/${metal.toLowerCase()}`);
+					break;
+				case 'double_sheet':
+					item.tag('forge:double_sheets');
+					item.tag(`forge:double_sheets/${metal.toLowerCase()}`);
+					break;
+				case 'rod':
+					item.tag('forge:rods');
+					item.tag(`forge:rods/${metal.toLowerCase()}`);
+					break;
+			}
 		}
-	}
-
-	let mangalloy_items = {
-		ingot: 'Ingot',
-		double_ingot: 'Double Ingot',
-		sheet: 'Sheet',
-		double_sheet: 'Double Sheet',
-	};
-
-	for (const [name, _item] of Object.entries(mangalloy_items)) {
-		let item = event
-			.create(`metal/${name}/mangalloy`)
-			.displayName(`Mangalloy ${_item}`);
-		item.tag('tfc:metal/item/mangalloy');
-
-		switch (name) {
-			case 'ingot':
-				item.tag('tfc:pileable_ingots');
-				item.tag('forge:ingots');
-				item.tag('forge:ingots/mangalloy');
-				break;
-			case 'double_ingot':
-				item.tag('tfc:pileable_double_ingots');
-				item.tag('forge:double_ingots');
-				item.tag('forge:double_ingots/mangalloy');
-				break;
-			case 'sheet':
-				item.tag('tfc:pileable_sheets');
-				item.tag('forge:sheets');
-				item.tag('forge:sheets/mangalloy');
-				break;
-			case 'double_sheet':
-				item.tag('forge:double_sheets');
-				item.tag('forge:double_sheets/mangalloy');
-				break;
-		}
-	}
-
-	let manganese_items = {
-		ingot: 'Ingot',
-		double_ingot: 'Double Ingot',
-		sheet: 'Sheet',
-		double_sheet: 'Double Sheet',
-	};
-
-	for (const [name, _item] of Object.entries(manganese_items)) {
-		let item = event
-			.create(`metal/${name}/manganese`)
-			.displayName(`Manganese ${_item}`);
-		item.tag('tfc:metal/item/manganese');
-
-		switch (name) {
-			case 'ingot':
-				item.tag('tfc:pileable_ingots');
-				item.tag('forge:ingots');
-				item.tag('forge:ingots/manganese');
-				break;
-			case 'double_ingot':
-				item.tag('tfc:pileable_double_ingots');
-				item.tag('forge:double_ingots');
-				item.tag('forge:double_ingots/manganese');
-				break;
-			case 'sheet':
-				item.tag('tfc:pileable_sheets');
-				item.tag('forge:sheets');
-				item.tag('forge:sheets/manganese');
-				break;
-			case 'double_sheet':
-				item.tag('forge:double_sheets');
-				item.tag('forge:double_sheets/manganese');
-				break;
-		}
-	}
+	});
 
 	event.createCustom(
 		'flint_and_pyrite',

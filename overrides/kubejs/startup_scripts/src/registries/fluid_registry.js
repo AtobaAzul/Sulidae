@@ -29,11 +29,16 @@ StartupEvents.registry('fluid', (event) => {
     event.create('molten_aluminum').stillTexture('supplementaries:block/lumisene/lumisene').flowingTexture('supplementaries:block/lumisene/lumisene').displayName("Molten Aluminum").bucketColor(Color.GRAY)
 
     event.create('alumina_slurry').thinTexture('WHITE').displayName("Alumina Slurry").bucketColor(Color.WHITE) //TODO
-    event.create('molten_alumina').thickTexture(Color.LIGHT_GRAY_DYE).displayName("Molten Alumina").bucketColor(Color.LIGHT_GRAY_DYE) //TODO
+    event.create('molten_alumina').thickTexture(Color.LIGHT_GRAY_DYE).displayName("Molten Alumina").bucketColor(Color.LIGHT_GRAY_DYE) //TODO?
     event.create('kaolinite_mixture').stillTexture('kubejs:fluid/kaolinite_mixture').flowingTexture('kubejs:fluid/kaolinite_mixture').displayName("Kaolinite Mixture").bucketColor(Color.PINK_DYE) //TODO
 
-    event.create('molten_manganese').displayName("Molten Manganese").bucketColor(Color.CYAN_DYE).thickTexture(Color.CYAN_DYE)
-    event.create('molten_raw_manganese').displayName("Molten Raw Manganese").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)
-    event.create('molten_mangalloy').displayName("Molten Mangalloy").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)
+    event.create('molten_manganese').displayName("Molten Manganese").bucketColor(Color.CYAN_DYE).thickTexture(Color.CYAN_DYE)//TODO?
+    event.create('molten_raw_manganese').displayName("Molten Crude Manganese").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)//TODO?
+    event.create('molten_mangalloy').displayName("Molten Mangalloy").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)//TODO?
 
+    event.create('liquid_hydrogen').noBucket().noBlock().displayName("Liquid Hydrogen").thinTexture(Color.LIGHT_BLUE_DYE)//TODO? This looks fine.
+    event.create('lubricant').displayName("Lubricant").thinTexture(Color.ORANGE_DYE)//TODO
+
+    event.create('molten_titanium').displayName("Molten Titanium").bucketColor(Color.CYAN_DYE).flowingTexture('kubejs:fluid/molten_titanium_flow').stillTexture('kubejs:fluid/molten_titanium_still')
+    event.create('molten_tungsten').displayName("Molten Tungsten").bucketColor(Color.CYAN_DYE).flowingTexture('kubejs:fluid/molten_tungsten_flow').stillTexture('kubejs:fluid/molten_tungsten_still')
 });
