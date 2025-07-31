@@ -158,8 +158,7 @@ ServerEvents.recipes((e) => {
 			V: '#create:valve_handles',
 			C: Item.of(
 				'createdieselgenerators:canister',
-				'{BlockEntityTag:{Tanks:[{Level:{Speed:0.25f,Target:1.0f,Value:1.0f},TankContent:{Amount:16000,FluidName:"createdieselgenerators:' +
-					fuel +
+				'{BlockEntityTag:{Tanks:[{Level:{Speed:0.25f,Target:1.0f,Value:1.0f},TankContent:{Amount:16000,FluidName:"' + fuel +
 					'"}}]}}'
 			).strongNBT(),
 		});

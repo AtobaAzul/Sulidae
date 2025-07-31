@@ -65,11 +65,8 @@ ServerEvents.recipes((e) => {
 		C: '#minecraft:planks',
 		D: 'tfc:metal/rod/gold',
 	});
-	e.shaped('4x supplementaries:bomb', [' AB', 'ACA', ' A '], {
-		A: 'tfc:metal/sheet/cast_iron',
-		B: 'supplementaries:rope',
-		C: 'createbigcannons:packed_gunpowder',
-	});
+
+    e.shapeless('2x supplementaries:bomb', ['tfc:metal/sheet/cast_iron', 'supplementaries:rope', 'createbigcannons:packed_gunpowder']);
     
 	e.shaped('supplementaries:blackboard', ['ABA', 'BBB', 'ABA'], {
 		A: '#tfc:lumber',
@@ -159,13 +156,13 @@ ServerEvents.recipes((e) => {
 
 	e.recipes.tfc.anvil(
 		'supplementaries:faucet',
-		'tfc:metal/sheet/steel',
+		'tfc:metal/sheet/wrought_iron',
 		['bend_last', 'draw_second_last', 'hit_third_last']
-	).tier(3);
+	).tier(2);
 
     ADDED_ANVIL_RECIPES.push([
         'supplementaries:faucet',
-        'tfc:metal/sheet/steel',3])
+        'tfc:metal/sheet/wrought_iron',2])
 
 	e.shaped('supplementaries:lock_block', ['ABA', 'BCB', 'ABA'], {
 		A: 'tfc:metal/rod/wrought_iron',
@@ -267,7 +264,7 @@ ServerEvents.recipes((e) => {
 		B: '#tfc:lumber',
 	});
 
-    WOOD_TYPES.forEach((type) => {
+    TFC_WOOD_TYPES.forEach((type) => {
         e.shapeless(`2x supplementaries:tfc/sign_post_${type}`, [`tfc:wood/sign/${type}`]);
     })
 

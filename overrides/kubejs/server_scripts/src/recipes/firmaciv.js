@@ -66,4 +66,6 @@ ServerEvents.recipes((e) => {
     e.recipes.tfc.heating('alekiships:anchor', 1540).resultFluid(Fluid.of('tfc:metal/cast_iron', 400));
     e.recipes.tfc.heating('alekiships:cleat', 1540).resultFluid(Fluid.of('tfc:metal/cast_iron', 200));
     e.recipes.tfc.heating('alekiships:oarlock', 1535).resultFluid(Fluid.of('tfc:metal/cast_iron', 100));
+
+    e.remove({id: /afc:crafting\/wood\/.*_boat/})
 });
