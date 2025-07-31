@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Sulidae",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "",
   "files": [
     {
@@ -531,7 +531,7 @@
     },
     {
       "projectID": 993733,
-      "fileID": 5872796,
+      "fileID": 5765673,
       "required": true
     },
     {
