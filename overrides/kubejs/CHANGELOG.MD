@@ -1,25 +1,97 @@
-- Fixed not being able to frame paitings, for real this time.
-- Iron Spear is now craftable.
+- Added Manganite ore, Magnanese metal, Mangalloy Metal, Heavy Gun Parts.
+- Gun Parts now use a Brass Mechanism instead of a Precision one.
+- Several guns now require heavy gun parts.
+- Nethersteel cannons (renamed) are now craftable with Mangalloy.
+- Ballistic Armor is now made with Mangalloy.
+- Fixed vanilla chests being craftable.
+- Fixed safe specifically requiring an aspen trapped chest instead of any wooden chest.
+- Fixed copper backtank being hidden in EMI.
+- Fixed being unable to unframe paintings.
+- Fixed jar shelves made out of ArborFirmaCraft woods not being craftable.
+- Fixed insulation values not working. (Technically Cold Sweat's fault)
+- Disabled Quark's Vertical Slabs (See Added Mods section.)
+- Fixed Induction Heater dropping an extra, useless item.
+- Fixed Chestnut blocks from Everycomp not being craftable.
+- Made all advanced shaped(less) recipes manual only.
+- Increased Forge version to 47.3.0
+- Sugar from Sugarcane juice recipe now uses 500mb, instead of 1000mb.
+- Vanilla bucket is now craftable with 5 double sheets of aluminum and both colored steel buckets.
+- Flux Bore now has efficiency 5.
+- Trampolines are now craftable.
+- Fixed dupe with metal blocks.
+- Fixed several custom block temperatures being reverted.
+- Added diesel generator block temperature.
+- Fixed Aluminum sheet block missing texture.
+- And more! I think.
+
+# Added mods:
+- Sounds
+- Additional Placements
+- Attribute Setter
+- TFC Scraping Knives
+- Flerovium
+  
+# Removed mods:
+- Redirector
+- Vertical Slab Compat
 
 # Updated mods:
-- TFC Cold Sweat
-- TFC Textile
-- Explosive Enhancement
-- Subtle Effects
-- Corpse
-- Every Compat
 - ModernFix
-- Scorched Guns
-- Cold Sweat
-- Chalk
-- Not Enough Animations
+- Better Mob Combat
+- TFC
+- Mob Player Animator
+- Jade
 - Fzzy Config
-- FirmaLife
+- Fusion
+- EMI
+- Sodium/Embeddium Options API
+- Polymorph
+- Rhino
+- Create Big Cannons
+- TFC GenViewer
+- Shoulder Surfing
+- Every Compat
+- Simple Voice Chat
 - Moonlight Lib
-- Sound Physics
+- FTB Library
+- FTB Quests
+- FTB Teams
+- Cold Sweat
+- Packet Fixer
+- Vertical Slabs compat
+- Not Enough Animations
+- TFC Cold Sweat
 - More Create Burners
-- Entity Culling
-
-# Removed mods:
-- Lootr
-- Better Fog (Started crashing :<)
+- Connectivity
+- Immersive UI
+- Sodium/Embeddium Dynamic Lights
+- Subtle Effects
+- EMI
+- Amendmends
+- Auroras
+- Sodium/Embeddium Options API
+- Aleki's Nifty Ships
+- KubeJS TFC
+- Fusion
+- TFC Canes
+- TFC Textile
+- JEI
+- JEED
+- Fzzy Config
+- Create Connected
+- Firmalife
+- Create: Big Cannons
+- Cold Sweat
+- Radiant Gear
+- Curios API
+- Geckolib
+- Chat Heads
+- Moonlight Lib
+- Create Crafts and Additions
+- Connectivity
+- Immersive Aircraft
+- Scorched Guns (Downgraded to before Animation Update.)
+- Corpse
+- Supplementaries
+- Patchouli
+- Furniture Mod

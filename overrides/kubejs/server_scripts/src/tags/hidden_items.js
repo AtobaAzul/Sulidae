@@ -60,8 +60,6 @@ const REMOVED_ITEMS = [
 	'create:chocolate_glazed_berries',
 	'create:chromatic_compound',
 	'create:cinder_flour',
-	'create:copper_backtank',
-	'create:copper_backtank_placeable',
 	'create:copper_bars',
 	'create:copper_ladder',
 	'create:copper_nugget',
@@ -497,7 +495,6 @@ const REMOVED_ITEMS = [
 	'createbigcannons:bronze_autocannon_breech',
 	'createbigcannons:bronze_autocannon_breech_extractor',
 	'createbigcannons:bronze_autocannon_recoil_spring',
-	'createbigcannons:bronze_scrap',
 	'createbigcannons:built_up_nethersteel_cannon_barrel',
 	'createbigcannons:built_up_nethersteel_cannon_chamber',
 	'createbigcannons:cannon_builder',
@@ -508,7 +505,6 @@ const REMOVED_ITEMS = [
 	'createbigcannons:cast_iron_autocannon_recoil_spring',
 	'createbigcannons:cast_iron_block',
 	'createbigcannons:cast_iron_ingot',
-	'createbigcannons:cast_iron_nugget',
 	'createbigcannons:congealed_nitro',
 	'createbigcannons:empty_powder_charge',
 	'createbigcannons:hardened_nitro',
@@ -532,12 +528,6 @@ const REMOVED_ITEMS = [
 	'createbigcannons:molten_steel_bucket',
 	'createbigcannons:mortar_stone_projectile',
 	'createbigcannons:nethersteel_block',
-	'createbigcannons:nethersteel_cannon_barrel',
-	'createbigcannons:nethersteel_cannon_chamber',
-	'createbigcannons:nethersteel_ingot',
-	'createbigcannons:nethersteel_nugget',
-	'createbigcannons:nethersteel_screw_breech',
-	'createbigcannons:nethersteel_screw_lock',
 	'createbigcannons:packed_guncotton',
 	'createbigcannons:pair_of_cannon_wheels',
 	'createbigcannons:partial_bronze_autocannon_breech_extractor',
@@ -551,7 +541,6 @@ const REMOVED_ITEMS = [
 	'createbigcannons:spring_wire',
 	'createbigcannons:steel_scrap',
 	'createbigcannons:steel_screw_lock',
-	'createbigcannons:thick_nethersteel_cannon_chamber',
 	'createbigcannons:traffic_cone',
 	'createbigcannons:unbored_bronze_autocannon_barrel',
 	'createbigcannons:unbored_bronze_autocannon_breech',
@@ -559,12 +548,6 @@ const REMOVED_ITEMS = [
 	'createbigcannons:unbored_cast_iron_autocannon_barrel',
 	'createbigcannons:unbored_cast_iron_autocannon_breech',
 	'createbigcannons:unbored_cast_iron_autocannon_recoil_spring',
-	'createbigcannons:unbored_large_nethersteel_cannon_layer',
-	'createbigcannons:unbored_medium_nethersteel_cannon_layer',
-	'createbigcannons:unbored_nethersteel_screw_breech',
-	'createbigcannons:unbored_small_nethersteel_cannon_layer',
-	'createbigcannons:unbored_very_large_nethersteel_cannon_layer',
-	'createbigcannons:unbored_very_small_nethersteel_cannon_layer',
 	'createbigcannons:very_large_cast_mould',
 	'createbigcannons:very_large_nethersteel_cannon_layer',
 	'createbigcannons:very_large_steel_cannon_layer',
@@ -1075,7 +1058,6 @@ const REMOVED_ITEMS = [
 	'minecraft:brown_shulker_box',
 	'minecraft:bubble_coral',
 	'minecraft:bubble_coral_fan',
-	'minecraft:bucket',
 	'minecraft:budding_amethyst',
 	'minecraft:bundle',
 	'minecraft:cactus',
@@ -1867,7 +1849,6 @@ const REMOVED_ITEMS = [
 	'quark:acacia_leaf_carpet',
 	'quark:acacia_post',
 	'quark:acacia_trapped_chest',
-	'quark:acacia_vertical_slab',
 	'quark:ancient_boat',
 	'quark:ancient_bookshelf',
 	'quark:ancient_button',
@@ -1886,7 +1867,6 @@ const REMOVED_ITEMS = [
 	'quark:ancient_planks',
 	'quark:ancient_planks_slab',
 	'quark:ancient_planks_stairs',
-	'quark:ancient_planks_vertical_slab',
 	'quark:ancient_post',
 	'quark:ancient_pressure_plate',
 	'quark:ancient_sapling',
@@ -1898,10 +1878,8 @@ const REMOVED_ITEMS = [
 	'quark:andesite_bricks',
 	'quark:andesite_bricks_slab',
 	'quark:andesite_bricks_stairs',
-	'quark:andesite_bricks_vertical_slab',
 	'quark:andesite_bricks_wall',
 	'quark:andesite_pillar',
-	'quark:andesite_vertical_slab',
 	'quark:apple_crate',
 	'quark:azalea_boat',
 	'quark:azalea_bookshelf',
@@ -1919,7 +1897,6 @@ const REMOVED_ITEMS = [
 	'quark:azalea_planks',
 	'quark:azalea_planks_slab',
 	'quark:azalea_planks_stairs',
-	'quark:azalea_planks_vertical_slab',
 	'quark:azalea_post',
 	'quark:azalea_pressure_plate',
 	'quark:azalea_sign',
@@ -1929,10 +1906,10 @@ const REMOVED_ITEMS = [
 	'quark:bamboo_chest',
 	'quark:bamboo_ladder',
 	'quark:bamboo_mat',
-	'quark:bamboo_mosaic_vertical_slab',
+
 	'quark:bamboo_post',
 	'quark:bamboo_trapped_chest',
-	'quark:bamboo_vertical_slab',
+
 	'quark:beetroot_crate',
 	'quark:berry_sack',
 	'quark:birch_bookshelf',
@@ -1942,22 +1919,22 @@ const REMOVED_ITEMS = [
 	'quark:birch_leaf_carpet',
 	'quark:birch_post',
 	'quark:birch_trapped_chest',
-	'quark:birch_vertical_slab',
+
 	'quark:black_corundum',
 	'quark:black_corundum_cluster',
 	'quark:black_corundum_pane',
 	'quark:black_crystal_lamp',
 	'quark:black_framed_glass',
 	'quark:black_framed_glass_pane',
-	'quark:black_shingles_vertical_slab',
+
 	'quark:black_stool',
 	'quark:blackstone_bricks',
 	'quark:blackstone_bricks_slab',
 	'quark:blackstone_bricks_stairs',
-	'quark:blackstone_bricks_vertical_slab',
+
 	'quark:blackstone_bricks_wall',
 	'quark:blackstone_furnace',
-	'quark:blackstone_vertical_slab',
+
 	'quark:blaze_lantern',
 	'quark:blossom_boat',
 	'quark:blossom_bookshelf',
@@ -1973,7 +1950,7 @@ const REMOVED_ITEMS = [
 	'quark:blossom_planks',
 	'quark:blossom_planks_slab',
 	'quark:blossom_planks_stairs',
-	'quark:blossom_planks_vertical_slab',
+
 	'quark:blossom_post',
 	'quark:blossom_pressure_plate',
 	'quark:blossom_sign',
@@ -1993,29 +1970,29 @@ const REMOVED_ITEMS = [
 	'quark:blue_nether_bricks',
 	'quark:blue_nether_bricks_slab',
 	'quark:blue_nether_bricks_stairs',
-	'quark:blue_nether_bricks_vertical_slab',
+
 	'quark:blue_nether_bricks_wall',
-	'quark:blue_shingles_vertical_slab',
+
 	'quark:blue_stool',
 	'quark:bonded_leather',
 	'quark:bonded_rabbit_hide',
 	'quark:bonded_ravager_hide',
 	'quark:bottled_cloud',
-	'quark:brick_vertical_slab',
+
 	'quark:brown_framed_glass',
 	'quark:brown_framed_glass_pane',
-	'quark:brown_shingles_vertical_slab',
+
 	'quark:brown_stool',
 	'quark:cactus_block',
 	'quark:calcite_bricks',
 	'quark:calcite_bricks_slab',
 	'quark:calcite_bricks_stairs',
-	'quark:calcite_bricks_vertical_slab',
+
 	'quark:calcite_bricks_wall',
 	'quark:calcite_pillar',
 	'quark:calcite_slab',
 	'quark:calcite_stairs',
-	'quark:calcite_vertical_slab',
+
 	'quark:calcite_wall',
 	'quark:carrot_crate',
 	'quark:carved_mud_bricks',
@@ -2027,7 +2004,7 @@ const REMOVED_ITEMS = [
 	'quark:cherry_leaf_carpet',
 	'quark:cherry_post',
 	'quark:cherry_trapped_chest',
-	'quark:cherry_vertical_slab',
+
 	'quark:chiseled_andesite_bricks',
 	'quark:chiseled_calcite_bricks',
 	'quark:chiseled_diorite_bricks',
@@ -2044,13 +2021,13 @@ const REMOVED_ITEMS = [
 	'quark:chorus_weeds',
 	'quark:chute',
 	'quark:cloud',
-	'quark:cobbled_deepslate_vertical_slab',
+
 	'quark:cobblestone_bricks',
 	'quark:cobblestone_bricks_slab',
 	'quark:cobblestone_bricks_stairs',
-	'quark:cobblestone_bricks_vertical_slab',
+
 	'quark:cobblestone_bricks_wall',
-	'quark:cobblestone_vertical_slab',
+
 	'quark:cocoa_beans_sack',
 	'quark:crab_bucket',
 	'quark:crab_shell',
@@ -2061,17 +2038,17 @@ const REMOVED_ITEMS = [
 	'quark:crimson_ladder',
 	'quark:crimson_post',
 	'quark:crimson_trapped_chest',
-	'quark:crimson_vertical_slab',
-	'quark:cut_copper_vertical_slab',
-	'quark:cut_red_sandstone_vertical_slab',
-	'quark:cut_sandstone_vertical_slab',
+
+
+
+
 	'quark:cut_soul_sandstone',
 	'quark:cut_soul_sandstone_slab',
-	'quark:cut_soul_sandstone_vertical_slab',
+
 	'quark:cut_vine',
 	'quark:cyan_framed_glass',
 	'quark:cyan_framed_glass_pane',
-	'quark:cyan_shingles_vertical_slab',
+
 	'quark:cyan_stool',
 	'quark:dark_oak_bookshelf',
 	'quark:dark_oak_chest',
@@ -2080,38 +2057,38 @@ const REMOVED_ITEMS = [
 	'quark:dark_oak_leaf_carpet',
 	'quark:dark_oak_post',
 	'quark:dark_oak_trapped_chest',
-	'quark:dark_oak_vertical_slab',
-	'quark:dark_prismarine_vertical_slab',
-	'quark:deepslate_brick_vertical_slab',
+
+
+
 	'quark:deepslate_furnace',
-	'quark:deepslate_tile_vertical_slab',
+
 	'quark:diorite_bricks',
 	'quark:diorite_bricks_slab',
 	'quark:diorite_bricks_stairs',
-	'quark:diorite_bricks_vertical_slab',
+
 	'quark:diorite_bricks_wall',
 	'quark:diorite_pillar',
-	'quark:diorite_vertical_slab',
+
 	'quark:dirt_bricks',
 	'quark:dirt_bricks_slab',
 	'quark:dirt_bricks_stairs',
-	'quark:dirt_bricks_vertical_slab',
+
 	'quark:dirt_bricks_wall',
 	'quark:dragon_scale',
 	'quark:dripstone_block_slab',
 	'quark:dripstone_block_stairs',
-	'quark:dripstone_block_vertical_slab',
+
 	'quark:dripstone_block_wall',
 	'quark:dripstone_bricks',
 	'quark:dripstone_bricks_slab',
 	'quark:dripstone_bricks_stairs',
-	'quark:dripstone_bricks_vertical_slab',
+
 	'quark:dripstone_bricks_wall',
 	'quark:dripstone_pillar',
 	'quark:duskbound_block',
 	'quark:duskbound_block_slab',
 	'quark:duskbound_block_stairs',
-	'quark:duskbound_block_vertical_slab',
+
 	'quark:duskbound_lantern',
 	'quark:dusky_myalite',
 	'quark:egg_parrot_blue',
@@ -2119,9 +2096,9 @@ const REMOVED_ITEMS = [
 	'quark:egg_parrot_green',
 	'quark:egg_parrot_red_blue',
 	'quark:egg_parrot_yellow_blue',
-	'quark:end_stone_brick_vertical_slab',
+
 	'quark:ender_watcher',
-	'quark:exposed_cut_copper_vertical_slab',
+
 	'quark:feeding_trough',
 	'quark:flowering_azalea_hedge',
 	'quark:flowering_azalea_leaf_carpet',
@@ -2141,14 +2118,14 @@ const REMOVED_ITEMS = [
 	'quark:granite_bricks',
 	'quark:granite_bricks_slab',
 	'quark:granite_bricks_stairs',
-	'quark:granite_bricks_vertical_slab',
+
 	'quark:granite_bricks_wall',
 	'quark:granite_pillar',
-	'quark:granite_vertical_slab',
+
 	'quark:gravisand',
 	'quark:gray_framed_glass',
 	'quark:gray_framed_glass_pane',
-	'quark:gray_shingles_vertical_slab',
+
 	'quark:gray_stool',
 	'quark:green_corundum',
 	'quark:green_corundum_cluster',
@@ -2156,7 +2133,7 @@ const REMOVED_ITEMS = [
 	'quark:green_crystal_lamp',
 	'quark:green_framed_glass',
 	'quark:green_framed_glass_pane',
-	'quark:green_shingles_vertical_slab',
+
 	'quark:green_stool',
 	'quark:gunpowder_sack',
 	'quark:hammer',
@@ -2182,18 +2159,18 @@ const REMOVED_ITEMS = [
 	'quark:iron_plate',
 	'quark:iron_plate_slab',
 	'quark:iron_plate_stairs',
-	'quark:iron_plate_vertical_slab',
+
 	'quark:iron_rod',
 	'quark:jasper',
 	'quark:jasper_bricks',
 	'quark:jasper_bricks_slab',
 	'quark:jasper_bricks_stairs',
-	'quark:jasper_bricks_vertical_slab',
+
 	'quark:jasper_bricks_wall',
 	'quark:jasper_pillar',
 	'quark:jasper_slab',
 	'quark:jasper_stairs',
-	'quark:jasper_vertical_slab',
+
 	'quark:jasper_wall',
 	'quark:jungle_bookshelf',
 	'quark:jungle_chest',
@@ -2202,33 +2179,33 @@ const REMOVED_ITEMS = [
 	'quark:jungle_leaf_carpet',
 	'quark:jungle_post',
 	'quark:jungle_trapped_chest',
-	'quark:jungle_vertical_slab',
+
 	'quark:lavender_blossom_hedge',
 	'quark:lavender_blossom_leaf_carpet',
 	'quark:lavender_blossom_leaves',
 	'quark:lavender_blossom_sapling',
 	'quark:light_blue_framed_glass',
 	'quark:light_blue_framed_glass_pane',
-	'quark:light_blue_shingles_vertical_slab',
+
 	'quark:light_blue_stool',
 	'quark:light_gray_framed_glass',
 	'quark:light_gray_framed_glass_pane',
-	'quark:light_gray_shingles_vertical_slab',
+
 	'quark:light_gray_stool',
 	'quark:lime_framed_glass',
 	'quark:lime_framed_glass_pane',
-	'quark:lime_shingles_vertical_slab',
+
 	'quark:lime_stool',
 	'quark:limestone',
 	'quark:limestone_bricks',
 	'quark:limestone_bricks_slab',
 	'quark:limestone_bricks_stairs',
-	'quark:limestone_bricks_vertical_slab',
+
 	'quark:limestone_bricks_wall',
 	'quark:limestone_pillar',
 	'quark:limestone_slab',
 	'quark:limestone_stairs',
-	'quark:limestone_vertical_slab',
+
 	'quark:limestone_wall',
 	'quark:lootr_acacia_chest',
 	'quark:lootr_acacia_trapped_chest',
@@ -2266,7 +2243,7 @@ const REMOVED_ITEMS = [
 	'quark:lootr_warped_trapped_chest',
 	'quark:magenta_framed_glass',
 	'quark:magenta_framed_glass_pane',
-	'quark:magenta_shingles_vertical_slab',
+
 	'quark:magenta_stool',
 	'quark:magnet',
 	'quark:magnetized_block',
@@ -2277,24 +2254,24 @@ const REMOVED_ITEMS = [
 	'quark:mangrove_leaf_carpet',
 	'quark:mangrove_post',
 	'quark:mangrove_trapped_chest',
-	'quark:mangrove_vertical_slab',
+
 	'quark:matrix_enchanter',
 	'quark:midori_block',
 	'quark:midori_block_slab',
 	'quark:midori_block_stairs',
-	'quark:midori_block_vertical_slab',
+
 	'quark:midori_pillar',
 	'quark:monster_box',
 	'quark:moss_paste',
 	'quark:mossy_cobblestone_bricks',
 	'quark:mossy_cobblestone_bricks_slab',
 	'quark:mossy_cobblestone_bricks_stairs',
-	'quark:mossy_cobblestone_bricks_vertical_slab',
+
 	'quark:mossy_cobblestone_bricks_wall',
-	'quark:mossy_cobblestone_vertical_slab',
-	'quark:mossy_stone_brick_vertical_slab',
+
+
 	'quark:mud_brick_lattice',
-	'quark:mud_brick_vertical_slab',
+
 	'quark:mud_pillar',
 	'quark:music_disc_chatter',
 	'quark:music_disc_clock',
@@ -2309,30 +2286,30 @@ const REMOVED_ITEMS = [
 	'quark:myalite_bricks',
 	'quark:myalite_bricks_slab',
 	'quark:myalite_bricks_stairs',
-	'quark:myalite_bricks_vertical_slab',
+
 	'quark:myalite_bricks_wall',
 	'quark:myalite_crystal',
 	'quark:myalite_pillar',
 	'quark:myalite_slab',
 	'quark:myalite_stairs',
-	'quark:myalite_vertical_slab',
+
 	'quark:myalite_wall',
 	'quark:nether_brick_chest',
 	'quark:nether_brick_fence_gate',
 	'quark:nether_brick_trapped_chest',
-	'quark:nether_brick_vertical_slab',
+
 	'quark:nether_wart_sack',
 	'quark:netherrack_bricks',
 	'quark:netherrack_bricks_slab',
 	'quark:netherrack_bricks_stairs',
-	'quark:netherrack_bricks_vertical_slab',
+
 	'quark:netherrack_bricks_wall',
 	'quark:oak_chest',
 	'quark:oak_hedge',
 	'quark:oak_leaf_carpet',
 	'quark:oak_post',
 	'quark:oak_trapped_chest',
-	'quark:oak_vertical_slab',
+
 	'quark:orange_blossom_hedge',
 	'quark:orange_blossom_leaf_carpet',
 	'quark:orange_blossom_leaves',
@@ -2343,9 +2320,9 @@ const REMOVED_ITEMS = [
 	'quark:orange_crystal_lamp',
 	'quark:orange_framed_glass',
 	'quark:orange_framed_glass_pane',
-	'quark:orange_shingles_vertical_slab',
+
 	'quark:orange_stool',
-	'quark:oxidized_cut_copper_vertical_slab',
+
 	'quark:paper_lantern',
 	'quark:paper_lantern_sakura',
 	'quark:pathfinders_quill',
@@ -2353,78 +2330,78 @@ const REMOVED_ITEMS = [
 	'quark:permafrost_bricks',
 	'quark:permafrost_bricks_slab',
 	'quark:permafrost_bricks_stairs',
-	'quark:permafrost_bricks_vertical_slab',
+
 	'quark:permafrost_bricks_wall',
 	'quark:permafrost_slab',
 	'quark:permafrost_stairs',
-	'quark:permafrost_vertical_slab',
+
 	'quark:permafrost_wall',
 	'quark:pink_framed_glass',
 	'quark:pink_framed_glass_pane',
-	'quark:pink_shingles_vertical_slab',
+
 	'quark:pink_stool',
-	'quark:polished_andesite_vertical_slab',
-	'quark:polished_blackstone_brick_vertical_slab',
-	'quark:polished_blackstone_vertical_slab',
+
+
+
 	'quark:polished_calcite',
 	'quark:polished_calcite_slab',
 	'quark:polished_calcite_stairs',
-	'quark:polished_calcite_vertical_slab',
-	'quark:polished_deepslate_vertical_slab',
-	'quark:polished_diorite_vertical_slab',
+
+
+
 	'quark:polished_dripstone',
 	'quark:polished_dripstone_slab',
 	'quark:polished_dripstone_stairs',
-	'quark:polished_dripstone_vertical_slab',
-	'quark:polished_granite_vertical_slab',
+
+
 	'quark:polished_jasper',
 	'quark:polished_jasper_slab',
 	'quark:polished_jasper_stairs',
-	'quark:polished_jasper_vertical_slab',
+
 	'quark:polished_limestone',
 	'quark:polished_limestone_slab',
 	'quark:polished_limestone_stairs',
-	'quark:polished_limestone_vertical_slab',
+
 	'quark:polished_myalite',
 	'quark:polished_myalite_slab',
 	'quark:polished_myalite_stairs',
-	'quark:polished_myalite_vertical_slab',
+
 	'quark:polished_shale',
 	'quark:polished_shale_slab',
 	'quark:polished_shale_stairs',
-	'quark:polished_shale_vertical_slab',
+
 	'quark:polished_tuff',
 	'quark:polished_tuff_slab',
 	'quark:polished_tuff_stairs',
-	'quark:polished_tuff_vertical_slab',
+
 	'quark:potato_crate',
-	'quark:prismarine_brick_vertical_slab',
+
 	'quark:prismarine_chest',
 	'quark:prismarine_trapped_chest',
-	'quark:prismarine_vertical_slab',
+
 	'quark:purple_framed_glass',
 	'quark:purple_framed_glass_pane',
-	'quark:purple_shingles_vertical_slab',
+
 	'quark:purple_stool',
 	'quark:purpur_chest',
 	'quark:purpur_trapped_chest',
-	'quark:purpur_vertical_slab',
-	'quark:quartz_vertical_slab',
+
+
 	'quark:ravager_hide',
 	'quark:raw_copper_bricks',
 	'quark:raw_copper_bricks_slab',
 	'quark:raw_copper_bricks_stairs',
-	'quark:raw_copper_bricks_vertical_slab',
+
 	'quark:raw_copper_bricks_wall',
 	'quark:raw_gold_bricks',
 	'quark:raw_gold_bricks_slab',
 	'quark:raw_gold_bricks_stairs',
-	'quark:raw_gold_bricks_vertical_slab',
+
 	'quark:raw_gold_bricks_wall',
 	'quark:raw_iron_bricks',
 	'quark:raw_iron_bricks_slab',
 	'quark:raw_iron_bricks_stairs',
-	'quark:raw_iron_bricks_vertical_slab',
+
 	'quark:raw_iron_bricks_wall',
 	'quark:red_blossom_hedge',
 	'quark:red_blossom_leaf_carpet',
@@ -2436,58 +2413,58 @@ const REMOVED_ITEMS = [
 	'quark:red_crystal_lamp',
 	'quark:red_framed_glass',
 	'quark:red_framed_glass_pane',
-	'quark:red_nether_brick_vertical_slab',
+
 	'quark:red_sandstone_bricks',
 	'quark:red_sandstone_bricks_slab',
 	'quark:red_sandstone_bricks_stairs',
-	'quark:red_sandstone_bricks_vertical_slab',
+
 	'quark:red_sandstone_bricks_wall',
-	'quark:red_sandstone_vertical_slab',
-	'quark:red_shingles_vertical_slab',
+
+
 	'quark:red_stool',
 	'quark:rusty_iron_plate',
 	'quark:rusty_iron_plate_slab',
 	'quark:rusty_iron_plate_stairs',
-	'quark:rusty_iron_plate_vertical_slab',
+
 	'quark:sandstone_bricks',
 	'quark:sandstone_bricks_slab',
 	'quark:sandstone_bricks_stairs',
-	'quark:sandstone_bricks_vertical_slab',
+
 	'quark:sandstone_bricks_wall',
-	'quark:sandstone_vertical_slab',
+
 	'quark:shale',
 	'quark:shale_bricks',
 	'quark:shale_bricks_slab',
 	'quark:shale_bricks_stairs',
-	'quark:shale_bricks_vertical_slab',
+
 	'quark:shale_bricks_wall',
 	'quark:shale_pillar',
 	'quark:shale_slab',
 	'quark:shale_stairs',
-	'quark:shale_vertical_slab',
+
 	'quark:shale_wall',
 	'quark:shiba_spawn_egg',
-	'quark:shingles_vertical_slab',
+
 	'quark:slime_in_a_bucket',
 	'quark:smithing_template_rune',
-	'quark:smooth_quartz_vertical_slab',
-	'quark:smooth_red_sandstone_vertical_slab',
-	'quark:smooth_sandstone_vertical_slab',
+
+
+
 	'quark:smooth_soul_sandstone',
 	'quark:smooth_soul_sandstone_slab',
 	'quark:smooth_soul_sandstone_stairs',
-	'quark:smooth_soul_sandstone_vertical_slab',
-	'quark:smooth_stone_vertical_slab',
+
+
 	'quark:soul_bead',
 	'quark:soul_sandstone',
 	'quark:soul_sandstone_bricks',
 	'quark:soul_sandstone_bricks_slab',
 	'quark:soul_sandstone_bricks_stairs',
-	'quark:soul_sandstone_bricks_vertical_slab',
+
 	'quark:soul_sandstone_bricks_wall',
 	'quark:soul_sandstone_slab',
 	'quark:soul_sandstone_stairs',
-	'quark:soul_sandstone_vertical_slab',
+
 	'quark:soul_sandstone_wall',
 	'quark:spruce_bookshelf',
 	'quark:spruce_chest',
@@ -2496,12 +2473,12 @@ const REMOVED_ITEMS = [
 	'quark:spruce_leaf_carpet',
 	'quark:spruce_post',
 	'quark:spruce_trapped_chest',
-	'quark:spruce_vertical_slab',
+
 	'quark:stick_block',
 	'quark:stone_brick_lamp',
-	'quark:stone_brick_vertical_slab',
+
 	'quark:stone_lamp',
-	'quark:stone_vertical_slab',
+
 	'quark:stoneling_spawn_egg',
 	'quark:stripped_acacia_post',
 	'quark:stripped_ancient_log',
@@ -2528,19 +2505,19 @@ const REMOVED_ITEMS = [
 	'quark:thatch',
 	'quark:thatch_slab',
 	'quark:thatch_stairs',
-	'quark:thatch_vertical_slab',
+
 	'quark:tiny_potato',
 	'quark:torch_arrow',
 	'quark:toretoise_spawn_egg',
 	'quark:tuff_bricks',
 	'quark:tuff_bricks_slab',
 	'quark:tuff_bricks_stairs',
-	'quark:tuff_bricks_vertical_slab',
+
 	'quark:tuff_bricks_wall',
 	'quark:tuff_pillar',
 	'quark:tuff_slab',
 	'quark:tuff_stairs',
-	'quark:tuff_vertical_slab',
+
 	'quark:tuff_wall',
 	'quark:vertical_acacia_planks',
 	'quark:vertical_ancient_planks',
@@ -2565,28 +2542,28 @@ const REMOVED_ITEMS = [
 	'quark:warped_ladder',
 	'quark:warped_post',
 	'quark:warped_trapped_chest',
-	'quark:warped_vertical_slab',
+
 	'quark:waxed_black_corundum',
 	'quark:waxed_blue_corundum',
-	'quark:waxed_cut_copper_vertical_slab',
-	'quark:waxed_exposed_cut_copper_vertical_slab',
+
+
 	'quark:waxed_green_corundum',
 	'quark:waxed_indigo_corundum',
 	'quark:waxed_orange_corundum',
-	'quark:waxed_oxidized_cut_copper_vertical_slab',
+
 	'quark:waxed_red_corundum',
 	'quark:waxed_violet_corundum',
-	'quark:waxed_weathered_cut_copper_vertical_slab',
+
 	'quark:waxed_white_corundum',
 	'quark:waxed_yellow_corundum',
-	'quark:weathered_cut_copper_vertical_slab',
+
 	'quark:white_corundum',
 	'quark:white_corundum_cluster',
 	'quark:white_corundum_pane',
 	'quark:white_crystal_lamp',
 	'quark:white_framed_glass',
 	'quark:white_framed_glass_pane',
-	'quark:white_shingles_vertical_slab',
+
 	'quark:white_stool',
 	'quark:wraith_spawn_egg',
 	'quark:yellow_blossom_hedge',
@@ -2599,7 +2576,7 @@ const REMOVED_ITEMS = [
 	'quark:yellow_crystal_lamp',
 	'quark:yellow_framed_glass',
 	'quark:yellow_framed_glass_pane',
-	'quark:yellow_shingles_vertical_slab',
+
 	'quark:yellow_stool',
 	'railways:big_buffer',
 	'railways:black_brass_wrapped_locometal',
@@ -4467,3 +4444,4 @@ const REMOVED_FLUIDS = [
 	/lithicaddon:glass\/.*/,
 	'kubejs:any_potion',
 ];
+

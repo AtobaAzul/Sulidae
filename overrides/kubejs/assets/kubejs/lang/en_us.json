@@ -11,5 +11,8 @@
     "block.kubejs.limestone_kaolinite.prospected": "Kaolinite",
     "block.kubejs.claystone_kaolinite.prospected": "Kaolinite",
     "block.kubejs.shale_kaolinite.prospected": "Kaolinite",
-    "metal.kubejs.aluminum": "Aluminum"
+    "metal.kubejs.aluminum": "Aluminum",
+    "metal.kubejs.manganese": "Manganese",
+    "metal.kubejs.mangalloy": "Mangalloy"
+
 }

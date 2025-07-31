@@ -69,7 +69,7 @@ ServerEvents.tags('item', (e) => {
 		'firmalife:metal/item/stainless_steel'
 	);
 
-	e.add('everycomp:chests', /everycomp:.*_chest.*/);
+	e.add('everycomp:chests', /everycomp:.*_chest/);
 
 	e.add('forge:rods/wooden', 'minecraft:bamboo');
 
@@ -110,4 +110,6 @@ ServerEvents.tags('item', (e) => {
     e.add('minecraft:creeper_igniters', 'kubejs:flint_and_pyrite')
     e.add('supplementaries:fire_sources', 'kubejs:flint_and_pyrite')
     e.add('tfc:starts_fires_with_durability', 'kubejs:flint_and_pyrite')
+
+    e.add('tfc:fluxstone', 'thermal:slag')
 });

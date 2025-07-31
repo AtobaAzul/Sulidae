@@ -1,7 +1,10 @@
 //Register new items here.
-const $FlintAndSteelItem = Java.loadClass("net.minecraft.world.item.FlintAndSteelItem");
-const $ItemProperties = Java.loadClass("net.minecraft.world.item.Item$Properties");
-
+const $FlintAndSteelItem = Java.loadClass(
+	'net.minecraft.world.item.FlintAndSteelItem'
+);
+const $ItemProperties = Java.loadClass(
+	'net.minecraft.world.item.Item$Properties'
+);
 
 const registryDef = {
 	//pistol_barrel: {name: "Pistol Barrel"},
@@ -43,35 +46,45 @@ const registryDef = {
 
 	kaolinite_sludge: { name: 'Kaolinite Sludge' },
 	hardened_kaolinite_sludge: { name: 'Dried Kaolinite Sludge' },
-    alumina_powder: {name: "Alumina Powder"},
+	alumina_powder: { name: 'Alumina Powder' },
+    processed_manganite_powder: { name: 'Processed Manganite Powder' },
 	unfinished_gun_parts: { name: 'Unfinished Gun Parts' },
+	unfinished_heavy_gun_parts: { name: 'Unfinished Heavy Gun Parts' },
 
 	rocket_fuel: { name: 'Rocket Fuel' },
 	wood_pulp: { name: 'Wood Pulp' },
 	washed_wood_pulp: { name: 'Washed Wood Pulp' },
 	scrap: { name: 'Unknown Metal Scrap' },
 
-
-    //relics
+	//relics
 	horse_relic: { name: 'Horse Relic' },
-    horse_relic_gold: { name: 'Golden Horse Relic' },
+	horse_relic_gold: { name: 'Golden Horse Relic' },
 	humanlike_relic: { name: 'Human-like Relic' },
-    humanlike_relic_gold: { name: 'Golden Human-like Relic' },
+	humanlike_relic_gold: { name: 'Golden Human-like Relic' },
 	rusty_sword: { name: 'Rusty Copper Sword' },
-    rusty_axe: { name: 'Rusty Copper Axe' },
-    rusty_shovel: { name: 'Rusty Copper Shovel' },
-    rusty_scythe: { name: 'Rusty Copper Scythe' },
-    rusty_mace: { name: 'Rusty Copper Mace' },
-    rusty_pickaxe: { name: 'Rusty Copper Pickaxe'},
-    straw_doll_0: {name: "Lost Doll"},
-    straw_doll_1: {name: "Lost Doll"},
-    automaton_head: {name: "Automaton Head"},
-    bee_trinket: {name: "Bee Trinket"},
+	rusty_axe: { name: 'Rusty Copper Axe' },
+	rusty_shovel: { name: 'Rusty Copper Shovel' },
+	rusty_scythe: { name: 'Rusty Copper Scythe' },
+	rusty_mace: { name: 'Rusty Copper Mace' },
+	rusty_pickaxe: { name: 'Rusty Copper Pickaxe' },
+	straw_doll_0: { name: 'Lost Doll' },
+	straw_doll_1: { name: 'Lost Doll' },
+	automaton_head: { name: 'Automaton Head' },
+	bee_trinket: { name: 'Bee Trinket' },
 
-    //diamond steel set
-    unfinished_diamond_steel_helmet: {name: "Unfinished Caoivish Helmet", unstackable: true},
-    unfinished_diamond_steel_chestplate: {name: "Unfinished Caoivish Chestplate", unstackable: true},
-    unfinished_diamond_steel_boots: {name: "Unfinished Caoivish Boots", unstackable: true},
+	//diamond steel set
+	unfinished_diamond_steel_helmet: {
+		name: 'Unfinished Caoivish Helmet',
+		unstackable: true,
+	},
+	unfinished_diamond_steel_chestplate: {
+		name: 'Unfinished Caoivish Chestplate',
+		unstackable: true,
+	},
+	unfinished_diamond_steel_boots: {
+		name: 'Unfinished Caoivish Boots',
+		unstackable: true,
+	},
 };
 
 /**
@@ -127,6 +140,8 @@ StartupEvents.registry('item', (event) => {
 
     event.create('autocannon').displayName("Handheld Autocannon").unstackable().maxDamage(100);*/
 
+    event.create('manganite_chunk').texture('thermal:item/rich_slag').displayName('Manganite Chunk');
+
 	let aluminum_items = {
 		ingot: 'Ingot',
 		double_ingot: 'Double Ingot',
@@ -135,7 +150,6 @@ StartupEvents.registry('item', (event) => {
 	};
 
 	for (const [name, _item] of Object.entries(aluminum_items)) {
-
 		let item = event
 			.create(`metal/${name}/aluminum`)
 			.displayName(`Aluminum ${_item}`);
@@ -146,24 +160,101 @@ StartupEvents.registry('item', (event) => {
 				item.tag('tfc:pileable_ingots');
 				item.tag('forge:ingots');
 				item.tag('forge:ingots/aluminum');
-                break
+				break;
 			case 'double_ingot':
 				item.tag('tfc:pileable_double_ingots');
 				item.tag('forge:double_ingots');
 				item.tag('forge:double_ingots/aluminum');
-                break
+				break;
 			case 'sheet':
 				item.tag('tfc:pileable_sheets');
 				item.tag('forge:sheets');
 				item.tag('forge:sheets/aluminum');
-                break
+				break;
 			case 'double_sheet':
 				item.tag('forge:double_sheets');
 				item.tag('forge:double_sheets/aluminum');
-                break
+				break;
 		}
 	}
 
-    event.createCustom("flint_and_pyrite", () => new $FlintAndSteelItem(new $ItemProperties().defaultDurability(32).durability(32)));
-});
+	let mangalloy_items = {
+		ingot: 'Ingot',
+		double_ingot: 'Double Ingot',
+		sheet: 'Sheet',
+		double_sheet: 'Double Sheet',
+	};
 
+	for (const [name, _item] of Object.entries(mangalloy_items)) {
+		let item = event
+			.create(`metal/${name}/mangalloy`)
+			.displayName(`Mangalloy ${_item}`);
+		item.tag('tfc:metal/item/mangalloy');
+
+		switch (name) {
+			case 'ingot':
+				item.tag('tfc:pileable_ingots');
+				item.tag('forge:ingots');
+				item.tag('forge:ingots/mangalloy');
+				break;
+			case 'double_ingot':
+				item.tag('tfc:pileable_double_ingots');
+				item.tag('forge:double_ingots');
+				item.tag('forge:double_ingots/mangalloy');
+				break;
+			case 'sheet':
+				item.tag('tfc:pileable_sheets');
+				item.tag('forge:sheets');
+				item.tag('forge:sheets/mangalloy');
+				break;
+			case 'double_sheet':
+				item.tag('forge:double_sheets');
+				item.tag('forge:double_sheets/mangalloy');
+				break;
+		}
+	}
+
+	let manganese_items = {
+		ingot: 'Ingot',
+		double_ingot: 'Double Ingot',
+		sheet: 'Sheet',
+		double_sheet: 'Double Sheet',
+	};
+
+	for (const [name, _item] of Object.entries(manganese_items)) {
+		let item = event
+			.create(`metal/${name}/manganese`)
+			.displayName(`Manganese ${_item}`);
+		item.tag('tfc:metal/item/manganese');
+
+		switch (name) {
+			case 'ingot':
+				item.tag('tfc:pileable_ingots');
+				item.tag('forge:ingots');
+				item.tag('forge:ingots/manganese');
+				break;
+			case 'double_ingot':
+				item.tag('tfc:pileable_double_ingots');
+				item.tag('forge:double_ingots');
+				item.tag('forge:double_ingots/manganese');
+				break;
+			case 'sheet':
+				item.tag('tfc:pileable_sheets');
+				item.tag('forge:sheets');
+				item.tag('forge:sheets/manganese');
+				break;
+			case 'double_sheet':
+				item.tag('forge:double_sheets');
+				item.tag('forge:double_sheets/manganese');
+				break;
+		}
+	}
+
+	event.createCustom(
+		'flint_and_pyrite',
+		() =>
+			new $FlintAndSteelItem(
+				new $ItemProperties().defaultDurability(32).durability(32)
+			)
+	);
+});

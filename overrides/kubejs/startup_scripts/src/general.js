@@ -34,3 +34,24 @@ BlockEvents.modification(e => {
 StartupEvents.init(() => {
     Platform.mods.kubejs.name = 'Sulidae'
 })
+
+
+TFCEvents.registerItemStackModifier(event => {
+    event.withInventory('kubejs:damage_saws_only', (input, output, inventory) => {
+        console.info(input)
+        console.info(output)
+        console.info(inventory)
+        inventory.forEach(item => {
+            console.info(item)
+        })
+        
+        return output
+    })
+})
+
+TFCEvents.birthdays(event => {
+    event.add('march', 24, 'Atobá')
+    event.add('february', 2, 'Albatroz')
+
+})
+

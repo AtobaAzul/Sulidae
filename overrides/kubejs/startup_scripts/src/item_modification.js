@@ -41,52 +41,44 @@ function uuid() {
 }
 
 const filled_fuel_cans = [
-    'diesel_fuel_can',
-    'gasoline_fuel_can',
-    'biodiesel_fuel_can',
-    'ethanol_fuel_can'
-]
+	'diesel_fuel_can',
+	'gasoline_fuel_can',
+	'biodiesel_fuel_can',
+	'ethanol_fuel_can',
+];
 
 ItemEvents.modification((event) => {
-    event.modify('gunpowder', (item) => {
-        item.setMaxStackSize(32);
-    });
-    event.modify('tfc:ore/bituminous_coal', (item) => {
-        item.burnTime = 16000;
-    });
+	event.modify('gunpowder', (item) => {
+		item.setMaxStackSize(32);
+	});
+	event.modify('tfc:ore/bituminous_coal', (item) => {
+		item.burnTime = 16000;
+	});
 
+	filled_fuel_cans.forEach((name) => {
+		event.modify('kubejs:' + name, (item) => {
+			item.burnTime = 32000;
+			item.setCraftingRemainder('kubejs:empty_fuel_can');
+		});
+	});
 
-    filled_fuel_cans.forEach((name) => {
-        event.modify('kubejs:' + name, item => {
-            item.burnTime = 32000
-            item.setCraftingRemainder('kubejs:empty_fuel_can')
-        })
-    })
+	event.modify('scguns:diamond_steel_leggings', (item) => {
+		item.armorKnockbackResistance = 0;
+		item.armorToughness = 0;
+		item.armorProtection = 0;
+	});
 
-    event.modify('tfccanes:walking_cane', item => {
-        item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
-    })
-    event.modify('tfccanes:refined_walking_cane', item => {
-            item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
-    })
-
-    event.modify('scguns:diamond_steel_leggings', item => {
-        item.armorKnockbackResistance = 0
-        item.armorToughness = 0
-        item.armorProtection = 0
-    })
-
-    event.modify('scguns:diamond_steel_boots', item => {
-        item.armorToughness = 0
-        item.armorProtection = 2
-    })
-    event.modify('scguns:diamond_steel_helmet', item => {
-        item.armorToughness = 0
-        item.armorProtection = 2
-    })
-    event.modify('scguns:diamond_steel_chestplate', item => {
-        item.armorToughness = 1
-        item.armorProtection = 5
-    })
-
+	event.modify('scguns:diamond_steel_boots', (item) => {
+		item.armorToughness = 0;
+		item.armorProtection = 2;
+	});
+	event.modify('scguns:diamond_steel_helmet', (item) => {
+		item.armorToughness = 0;
+		item.armorProtection = 2;
+	});
+	event.modify('scguns:diamond_steel_chestplate', (item) => {
+		item.armorToughness = 1;
+		item.armorProtection = 5;
+	});
 });
+

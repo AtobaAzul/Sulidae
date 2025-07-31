@@ -138,3 +138,26 @@ const SEDIMENTARY_ROCKS = [
 	'claystone',
 	'shale',
 ];
+
+const ALL_ROCKS = [
+    'chalk',
+	'chert',
+	'conglomerate',
+	'dolomite',
+	'limestone',
+	'claystone',
+	'shale',
+    'granite',
+    'diorite',
+    'rhyolite',
+    'basalt',
+    'andesite',
+    'dacite',
+    'quartzite',
+    'slate',
+    'phyllite',
+    'schist',
+    'gneiss',
+    'marble',
+    'gabbro'
+]

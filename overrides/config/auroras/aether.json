@@ -1,5 +1,5 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.2",
   "shouldAutoUpdate": true,
   "allowedDimensions": [
     "aether:the_aether",
@@ -33,7 +33,7 @@
   "auroraMaxPoleOffset": 5000,
   "auroraRotationSpeed": 0.5,
   "auroraVisiblityOctaves": 1,
-  "aboveHeadPosition": false,
+  "aboveHeadPosition": true,
   "playerMovementFactor": 1.0E-4,
   "playerAltitudeFactor": 1,
   "auroraBandDistanceFactor": 1600,

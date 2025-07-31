@@ -25,7 +25,7 @@ _version = 2
 				maxHorizontalResolution = "BLOCK"
 				#
 				# The radius of the mod's render distance. (measured in chunks)
-				lodChunkRenderDistanceRadius = 256
+				lodChunkRenderDistanceRadius = 128
 				#
 				# This indicates how well LODs will represent 
 				# overhangs, caves, floating islands, etc. 
@@ -243,7 +243,7 @@ _version = 2
 				# Holes are most likely to appear when flying through unloaded terrain. 
 				# 
 				# Increasing the vanilla render distance increases the effectiveness of this setting.
-				overdrawPrevention = "0.4"
+				overdrawPrevention = "0.8"
 				# Buggy experimental option that will attempt to match up 
 				# Distant Horizons' and Minecraft's near/far clip planes, 
 				# reducing overdraw. 
@@ -349,7 +349,7 @@ _version = 2
 				enableBeaconRendering = true
 				#
 				# If true LOD clouds will be rendered.
-				enableCloudRendering = false
+				enableCloudRendering = true
 
 		[client.advanced.worldGenerator]
 			#
@@ -374,7 +374,7 @@ _version = 2
 			# FEATURES 
 			# Generate everything except structures. 
 			# WARNING: This may cause world generator bugs or instability when paired with certain world generator mods.
-			distantGeneratorMode = "FEATURES"
+			distantGeneratorMode = "PRE_EXISTING_ONLY"
 			#
 			# How long should a world generator thread run for before timing out? 
 			# Note: If you are experiencing timeout errors it is better to lower your CPU usage first 
@@ -710,7 +710,7 @@ _version = 2
 			# DEFAULT: Default lod renderer 
 			# DEBUG: Debug testing renderer 
 			# DISABLED: Disable rendering
-			rendererMode = "DEFAULT"
+			rendererMode = "DISABLED"
 			#
 			# Should specialized colors/rendering modes be used? 
 			# 

@@ -385,6 +385,8 @@ ServerEvents.recipes((e) => {
 	});
 
     e.shaped('refurbished_furniture:wrench', ['A', 'B'], { A: 'kubejs:metal/ingot/aluminum', B: '#forge:rods/wooden' });
+
+    e.shaped('refurbished_furniture:white_trampoline', [' A ','ABA',' A '], {A: 'tfc:metal/rod/wrought_iron',B: 'afc:rubber_bar'})
 });
 
 let limit = [];
@@ -397,6 +399,7 @@ limit.forEach((item) => {
 
 ServerEvents.tags('block', (event) => {
 	event.add('kubejs:ceiling_fans', /.*ceiling_fan.*/);
+    event.add('kubejs:electricity_generators', /.*electricity_generator.*/)
 });
 
 ServerEvents.highPriorityData((event) => {

@@ -1,4 +1,4 @@
-const usableInAllBuckets = ['createdieselgenerators:plant_oil', 'thermal:creosote'];
+const usableInAllBuckets = ['createdieselgenerators:plant_oil', 'thermal:creosote', 'kubejs:kaolinite_sludge', 'kubejs:alumina_slurry'];
 const usableInMetalBuckets = [
 	'createdieselgenerators:crude_oil',
 	'createdieselgenerators:ethanol',
@@ -7,9 +7,9 @@ const usableInMetalBuckets = [
 	'createdieselgenerators:diesel',
 	'kubejs:kerosene',
 ];
-const usableInBarrels = ['createdieselgenerators:plant_oil'];
-const usableInPot = ['createdieselgenerators:plant_oil'];
-const usableInJug = ['createdieselgenerators:plant_oil'];
+const usableInBarrels = ['createdieselgenerators:plant_oil', 'kubejs:kaolinite_sludge', 'kubejs:alumina_slurry'];
+const usableInPot = ['createdieselgenerators:plant_oil', 'kubejs:kaolinite_sludge', 'kubejs:alumina_slurry'];
+const usableInJug = ['createdieselgenerators:plant_oil', 'kubejs:kaolinite_sludge', 'kubejs:alumina_slurry'];
 
 ServerEvents.tags('fluid', (event) => {
 	usableInAllBuckets.forEach((fluid) => {

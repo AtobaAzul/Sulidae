@@ -64,6 +64,7 @@ ServerEvents.tags('worldgen/placed_feature', (event) => {
 	event.add('tfc:in_biome/veins', 'tfc:vein/graphite_small');
 
 	event.add('tfc:in_biome/veins', 'tfc:vein/kaolinite');
+	event.add('tfc:in_biome/veins', 'tfc:vein/manganite');
 
 	for (let [plant, def] of Object.entries(plant_defs)) {
 		event.add('tfc:feature/land_plants', 'tfc:plant/' + plant + '_patch');
@@ -72,6 +73,7 @@ ServerEvents.tags('worldgen/placed_feature', (event) => {
 
 ServerEvents.tags('worldgen/biome', (event) => {
 	event.add('createdieselgenerators:oil_biomes', '#tfc:is_ocean');
+    event.add('tfc:lowlands', 'tfc:lowlands')
 });
 
 //global modifier for all ores for them to be rarer and bigger.

@@ -58,6 +58,10 @@ ServerEvents.recipes((e) => {
 		A: 'thermal:slag',
 	});
 
+    e.shaped('4x thermal:polished_slag', ['AA', 'AA'], {
+        A: 'thermal:slag_block',
+    })
+
 	//TODO: smithing recipes instead?
 	//drill head
 	e.recipes.tfc

@@ -44,3 +44,4 @@ ServerEvents.recipes((event) => {
 
     event.shapeless('6x firstaid:bandage', ['#tfc:high_quality_cloth', '#forge:string'])
 })
+

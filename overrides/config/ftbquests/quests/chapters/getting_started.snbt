@@ -198,6 +198,11 @@
 				"Kaolinite ore is an alternitive source of Kaolinite powder, which, unlike Kaolin Clay, generates in all climates. It generates in Sedimentary rocks around sea level in very small and rare veins."
 				""
 				"Later on, Kaolinite Powder is used to make &lAluminum&r, a key ingredient for &lAircraft&r"
+				""
+				"{@pagebreak}"
+				""
+				"&lManganite"
+				"Manganite is an ore found in all rock types on &olowlands.&r It can be processed into Manganese, which is used to make &lMangalloy&r, used for heavy weapons and powerful cannons."
 			]
 			icon: "kubejs:kaolinite"
 			id: "0B953C1C60CA1413"

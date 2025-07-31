@@ -93,15 +93,15 @@ ServerEvents.recipes((event) => {
 		.damageIngredient('#tfc:saws', 10);
 
 	event.shaped('scguns:adrien_chestplate', ['ABA', 'CDC', 'BAB'], {
-		A: 'tfc:metal/sheet/steel',
+		A: 'kubejs:metal/sheet/mangalloy',
 		B: 'minecraft:leather',
 		C: 'firmaciv:copper_bolt',
-		D: 'tfc:metal/double_sheet/steel',
+		D: 'kubejs:metal/double_sheet/mangalloy',
 	});
 	event.shaped('scguns:adrien_helm', ['ABA', 'CDC'], {
 		A: 'firmaciv:copper_bolt',
-		B: 'tfc:metal/double_sheet/steel',
-		C: 'tfc:metal/sheet/steel',
+		B: 'kubejs:metal/double_sheet/mangalloy',
+		C: 'kubejs:metal/sheet/mangalloy',
 		D: 'minecraft:leather',
 	});
 
@@ -223,7 +223,7 @@ ServerEvents.recipes((event) => {
 });
 
 
-ColdSweatEvents.registries(event => {
+/*ColdSweatEvents.registries(event => {
     event.addInsulator(insulator => {
         insulator.items('scguns:diamond_steel_chestplate')
         .slot('armor')
@@ -244,4 +244,4 @@ ColdSweatEvents.registries(event => {
         .slot('armor')
         .insulation(7, 2)
     })
-})
+})*/

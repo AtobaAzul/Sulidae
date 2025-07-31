@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	event.remove({ mod: 'zetter', not: [{id: "zetter:copying_painting"}, {id: "zetter:frame_painting"}]});
+	event.remove({ mod: 'zetter', not: [{id: "zetter:copying_painting"}, {id: "zetter:frame_painting"}, {id: "zetter:unframe_painting"}]});
 	event.shapeless('zetter:oak_plated_frame', [
 		'zetter:oak_basic_frame',
 		'firmalife:bottle_label',

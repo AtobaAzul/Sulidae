@@ -42,8 +42,11 @@ ServerEvents.recipes((event) => {
 	event.remove({ id: 'firmaciv:anvil/cleat' });
 	event.remove({ id: 'firmaciv:anvil/oarlock' });
 
-        
-
+	//FOR SOME REASON, OARS RECIPE DOESN'T WORK. WHAT
+	event.shaped('alekiships:oar', ['  A', ' A ', 'B  '], {
+		A: '#forge:rods/wooden',
+		B: '#tfc:lumber',
+	});
 
 	event.custom({
 		type: 'tfc:anvil',

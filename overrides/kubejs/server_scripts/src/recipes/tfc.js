@@ -1,4 +1,21 @@
 ServerEvents.recipes((e) => {
+	e.forEachRecipe(
+		[
+			{ type: 'tfc:advanced_shapeless_crafting' },
+			{ type: 'tfc:advanced_shaped_crafting' },
+		],
+		(recipe) => {
+			let json = recipe.json;
+			let _id = recipe.getId();
+
+			e.remove({ id: _id });
+			e.custom(json).id(_id + '_manual_only');
+		}
+	);
+
+	e.remove({ output: 'minecraft:chest' });
+	e.remove({ output: 'minecraft:trapped_chest' });
+
 	e.custom({
 		type: 'tfc:pot',
 		ingredients: [],
@@ -105,7 +122,7 @@ ServerEvents.recipes((e) => {
 	}
 
 	//fix aluminum coins not being craftable.
-	e.custom({		
+	e.custom({
 		type: 'tfc:casting',
 		mold: {
 			item: 'lithiccoins:ceramic/coin_mold',
@@ -583,7 +600,7 @@ ServerEvents.recipes((e) => {
 		ingredients: [],
 		fluid_ingredient: {
 			ingredient: 'kubejs:sugarcane_juice',
-			amount: 1000,
+			amount: 500,
 		},
 		duration: 2000,
 		temperature: 600,
@@ -609,7 +626,7 @@ ServerEvents.recipes((e) => {
 	e.recipes.create
 		.mixing(
 			Item.of('minecraft:sugar', 5),
-			Fluid.of('kubejs:sugarcane_juice', 1000)
+			Fluid.of('kubejs:sugarcane_juice', 500)
 		)
 		.lowheated();
 
@@ -619,7 +636,7 @@ ServerEvents.recipes((e) => {
 	//cheaper plated blocks
 
 	e.remove({ id: /tfc:crafting\/metal\/block.*/ });
-	e.remove({ id: /heating:metal\/.*_block/ });
+	e.remove({ id: /.*heating\/metal\/.*_block/ });
 
 	METAL_DEFS.forEach((metal) => {
 		e.shapeless(`8x tfc:metal/block/${metal}`, [
@@ -671,5 +688,31 @@ ServerEvents.recipes((e) => {
 		duration: 4000,
 	});
 
-    e.shapeless('kubejs:flint_and_pyrite', ['flint', 'tfc:ore/pyrite'])
+	e.shapeless('kubejs:flint_and_pyrite', ['flint', 'tfc:ore/pyrite']);
+
+	AFC_WOOD_TYPES.forEach((wood) => {
+		e.shaped(
+			Item.of(`afc:wood/jar_shelf/${wood}`, 2),
+			['AAA', 'B B', 'C C'],
+			{
+				A: `afc:wood/planks/${wood}`,
+				B: `afc:wood/lumber/${wood}`,
+				C: '#forge:rods/wooden',
+			}
+		);
+	});
+
+    
+	e.shaped('minecraft:bucket', ['ABA', 'ACA', ' A '], {
+		A: 'kubejs:metal/double_sheet/aluminum',
+		B: 'tfc:metal/bucket/blue_steel',
+		C: 'tfc:metal/bucket/red_steel',
+	});
+
+	e.shaped('minecraft:bucket', ['ABA', 'ACA', ' A '], {
+		A: 'kubejs:metal/double_sheet/aluminum',
+		B: 'tfc:metal/bucket/red_steel',
+		C: 'tfc:metal/bucket/blue_steel',
+	});
 });
+

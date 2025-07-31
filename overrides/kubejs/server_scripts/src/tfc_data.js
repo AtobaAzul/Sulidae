@@ -33,6 +33,7 @@ TFCEvents.data((event) => {
 	event.itemHeat('create:andesite_alloy', 0.5, null, null);
 	event.itemHeat('createbigcannons:recoil_spring', 1.429, 924, 1232);
 	event.itemHeat('createbigcannons:steel_scrap', 0.171, 924, 1232);
+    event.itemHeat('createbigcannons:nethersteel_ingot', 0.171, 924, 1232);
 	event.itemHeat('createbigcannons:cast_iron_nugget', 1.143, 921, 1228);
 	event.itemHeat('createbigcannons:bronze_scrap', 0.171, 570, 760);
     event.itemHeat('#kubejs:available_guns', 2.857, 921, 1228) 
@@ -53,9 +54,21 @@ TFCEvents.data((event) => {
         'double_sheet': 11.428572
     }
 
+    let metals = [
+        'aluminum',
+        'mangalloy',
+        'manganese',
+    ]
+
     for (const [metal, heat] of Object.entries(aluminum_items)) {
-        event.itemHeat(`kubejs:metal/${metal}/aluminum`, heat, 891.00006, 1188.0);
+        metals.forEach((metal) => {
+            event.itemHeat(`kubejs:metal/${metal}/${metal}`, heat, 891.00006, 1188.0);
+
+        })
     }
 
     event.metal('kubejs:molten_aluminum', 1485.0, 0.00857, 'kubejs:metal/ingot/aluminum', 'kubejs:metal/double_ingot/aluminum', 'kubejs:metal/sheet/aluminum', 5, 'kubejs:aluminum');
+    event.metal('kubejs:molten_mangalloy', 1485.0, 0.00857, 'kubejs:metal/ingot/mangalloy', 'kubejs:metal/double_ingot/mangalloy', 'kubejs:metal/sheet/mangalloy', 5, 'kubejs:mangalloy');
+    event.metal('kubejs:molten_manganese', 1485.0, 0.00857, 'kubejs:metal/ingot/manganese', 'kubejs:metal/double_ingot/manganese', 'kubejs:metal/sheet/manganese', 3, 'kubejs:manganese');
+
 });

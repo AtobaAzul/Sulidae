@@ -279,6 +279,8 @@ LootJS.modifiers((e) => {
 			.addLoot('kubejs:kaolinite');
 	});
 
+    e.addBlockLootModifier(/.*manganite.*/).removeLoot(/.*/).addLoot('kubejs:manganite_chunk');
+
 	//I'M GOING TO GO INSANE AAAAAAAAAAA
 	let clear_glasses = [
 		'create:vertical_framed_glass',

@@ -3,9 +3,17 @@ ServerEvents.recipes((e) => {
 		mod: 'createbigcannons',
 		not: [
 			{ id: /.*fuzing.*/ },
-			{ input: 'createbigcannons:tracer_tip'},
+			{ input: 'createbigcannons:tracer_tip' },
+			{ id: /.*fuze_removal.*/ },
+			{ id: /.*tracer_removal.*/ },
+			{ id: /.*tracer_deployer.*/ },
 		],
 	});
+
+	e.shapeless('4x createbigcannons:wired_fuze', [
+		'tfc:metal/rod/copper',
+		'redstone',
+	]);
 
 	e.shapeless('2x scguns:nitro_powder', [
 		'tfc:pure_nitrogen',
@@ -244,7 +252,7 @@ ServerEvents.recipes((e) => {
 
 	e.shapeless('createbigcannons:bag_of_grapeshot', [
 		'tfc:burlap_cloth',
-		'8x #tfc:loose_rocks',
+		'8x #tfc:rock_knapping',
 	]);
 
 	//shells
@@ -307,18 +315,20 @@ ServerEvents.recipes((e) => {
 		A: 'create:andesite_alloy',
 	});
 
-	e.shapeless('createbigcannons:yaw_controller', [
-		'create:andesite_casing',
-		'create:shaft',
-	]);
-	e.shaped('createbigcannons:cannon_mount', ['S', 'P', 'C'], {
+	e.shaped('createbigcannons:fixed_cannon_mount', ['S', 'P', 'C'], {
 		S: 'create:shaft',
 		P: 'tfc:metal/double_sheet/cast_iron',
 		C: 'create:andesite_casing',
 	});
 
+	e.shapeless('createbigcannons:cannon_mount', [
+		'createbigcannons:fixed_cannon_mount',
+		'create:precision_mechanism',
+		'tfc:metal/double_sheet/cast_iron',
+	]);
+
 	e.shaped('createbigcannons:cannon_carriage', [' ML', 'WLW'], {
-		M: 'createbigcannons:cannon_mount',
+		M: 'createbigcannons:fixed_cannon_mount',
 		L: '#tfc:lumber',
 		W: '#tfcastikorcarts:cart_wheel',
 	});
@@ -429,6 +439,14 @@ ServerEvents.recipes((e) => {
 		.tier(4);
 
 	e.recipes.tfc
+		.anvil(
+			'createbigcannons:nethersteel_screw_lock',
+			'kubejs:metal/ingot/mangalloy',
+			['bend_last', 'hit_second_last', 'hit_third_last']
+		)
+		.tier(4);
+
+	e.recipes.tfc
 		.anvil('createbigcannons:recoil_spring', 'tfc:metal/rod/red_steel', [
 			'bend_last',
 			'hit_second_last',
@@ -443,6 +461,10 @@ ServerEvents.recipes((e) => {
 	e.recipes.tfc
 		.heating('createbigcannons:cast_iron_nugget', 1535)
 		.resultFluid(Fluid.of(`tfc:metal/cast_iron`, 5));
+
+	e.recipes.tfc
+		.heating('createbigcannons:nethersteel_nugget', 1535)
+		.resultFluid(Fluid.of(`kubejs:molten_mangalloy`, 5));
 
 	e.recipes.tfc
 		.heating('createbigcannons:bronze_scrap', 985)
@@ -519,6 +541,16 @@ const cannonParts = [
 	'createbigcannons:unbored_very_large_nethersteel_cannon_layer',
 	'createbigcannons:unbored_cast_iron_autocannon_recoil_spring',
 	'createbigcannons:unbored_steel_autocannon_recoil_spring',
+	'createbigcannons:nethersteel_screw_breech',
+	'createbigcannons:thick_nethersteel_cannon_chamber',
+	'createbigcannons:nethersteel_cannon_chamber',
+	'createbigcannons:nethersteel_cannon_barrel',
+	'createbigcannons:unbored_very_small_nethersteel_cannon_layer',
+	'createbigcannons:unbored_small_nethersteel_cannon_layer',
+	'createbigcannons:unbored_medium_nethersteel_cannon_layer',
+	'createbigcannons:unbored_large_nethersteel_cannon_layer',
+	'createbigcannons:unbored_very_large_nethersteel_cannon_layer',
+	'createbigcannons:unbored_nethersteel_screw_breech',
 ];
 LootJS.modifiers((e) => {
 	cannonParts.forEach((part) => {

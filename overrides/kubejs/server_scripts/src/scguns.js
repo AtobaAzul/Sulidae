@@ -57,4 +57,3 @@ ServerEvents.highPriorityData((event) => {
 		}
 	}
 });
-

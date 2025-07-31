@@ -32,5 +32,8 @@ StartupEvents.registry('fluid', (event) => {
     event.create('molten_alumina').thickTexture(Color.LIGHT_GRAY_DYE).displayName("Molten Alumina").bucketColor(Color.LIGHT_GRAY_DYE) //TODO
     event.create('kaolinite_mixture').stillTexture('kubejs:fluid/kaolinite_mixture').flowingTexture('kubejs:fluid/kaolinite_mixture').displayName("Kaolinite Mixture").bucketColor(Color.PINK_DYE) //TODO
 
+    event.create('molten_manganese').displayName("Molten Manganese").bucketColor(Color.CYAN_DYE).thickTexture(Color.CYAN_DYE)
+    event.create('molten_processed_manganite').displayName("Molten Processed Manganese").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)
+    event.create('molten_mangalloy').displayName("Molten Mangalloy").bucketColor(Color.BROWN_DYE).thickTexture(Color.BROWN_DYE)
 
 });

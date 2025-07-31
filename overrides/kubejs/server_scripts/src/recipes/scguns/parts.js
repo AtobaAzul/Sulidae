@@ -8,17 +8,40 @@ ServerEvents.recipes((event) => {
 		.tier(4)
 		.bonus(true);
 
+        event.recipes.tfc
+		.anvil('kubejs:unfinished_heavy_gun_parts', 'kubejs:metal/double_sheet/mangalloy', [
+			'punch_last',
+			'bend_second_last',
+			'draw_third_last',
+		])
+		.tier(5)
+		.bonus(true);
+
+
 	event.recipes.tfc.advanced_shaped_crafting(
 		TFC.itemStackProvider.of('scguns:gun_parts').copyForgingBonus(),
 		['AB', 'BC'],
 		{
 			A: 'kubejs:unfinished_gun_parts',
 			B: 'firmaciv:copper_bolt',
+			C: 'tfc:brass_mechanisms',
+		},
+		0,
+		0
+	);
+
+    event.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:heavy_gun_parts').copyForgingBonus(),
+		['AB', 'BC'],
+		{
+			A: 'kubejs:unfinished_heavy_gun_parts',
+			B: 'firmaciv:copper_bolt',
 			C: 'create:precision_mechanism',
 		},
 		0,
 		0
 	);
+
 
 	event.recipes.tfc
 		.anvil('scguns:iron_gun_frame', 'tfc:metal/double_sheet/steel', [
