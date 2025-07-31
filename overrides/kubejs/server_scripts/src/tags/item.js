@@ -14,12 +14,10 @@ ServerEvents.tags('item', (e) => {
 		e.add('kubejs:chains', chain);
 	});
 
-	STONE_DEFS.forEach((stone) => {
-		e.add('kubejs:copper_deposit', `tfc:deposit/native_copper/${stone}`);
-		e.add('kubejs:silver_deposit', `tfc:deposit/native_silver/${stone}`);
-		e.add('kubejs:gold_deposit', `tfc:deposit/native_gold/${stone}`);
-		e.add('kubejs:tin_deposit', `tfc:deposit/cassiterite/${stone}`);
-	});
+		e.add('kubejs:copper_deposit', /tfc:deposit\/native_copper\/.*/);
+		e.add('kubejs:silver_deposit', /tfc:deposit\/native_silver\/.*/);
+		e.add('kubejs:gold_deposit', /tfc:deposit\/native_gold\/.*/);
+		e.add('kubejs:tin_deposit', /tfc:deposit\/cassiterite\/.*/);
 
 	METAL_BARS.forEach((bar) => {
 		e.add('kubejs:metal_bars', bar);
@@ -126,4 +124,8 @@ ServerEvents.tags('item', (e) => {
 	e.add('railways:brass_wrapped_locometal', /.*brass_wrapped.*/);
 	e.add('railways:iron_wrapped_locometal', /.*iron_wrapped.*/);
 	e.add('railways:copper_wrapped_locometal', /.*copper_wrapped.*/);
+    
+    e.add(`minecraft:stone_buttons`, /tfc:rock\/button\/.*/)
+
+    e.add('tfc:metal/double_ingot/any_bronze', ['tfc:metal/double_ingot/bismuth_bronze', 'tfc:metal/double_ingot/black_bronze', 'tfc:metal/double_ingot/bronze'])
 });

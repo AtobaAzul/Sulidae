@@ -384,9 +384,9 @@ ServerEvents.recipes((e) => {
 		'createbigcannons:very_large_cast_mould',
 		'createbigcannons:screw_breech_cast_mould',
 		'createbigcannons:sliding_breech_cast_mould',
-		//'createbigcannons:autocannon_breech_cast_mould',
-		//'createbigcannons:autocannon_recoil_spring_cast_mould',
-		//'createbigcannons:autocannon_barrel_cast_mould',
+		'createbigcannons:autocannon_breech_cast_mould',
+		'createbigcannons:autocannon_recoil_spring_cast_mould',
+		'createbigcannons:autocannon_barrel_cast_mould',
 		'createbigcannons:cannon_end_cast_mould',
 		'createbigcannons:very_small_cast_mould',
 	].forEach((mould) => {

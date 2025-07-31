@@ -2966,7 +2966,6 @@ const REMOVED_ITEMS = [
 	'refurbished_furniture:dark_toaster',
 	'refurbished_furniture:deepslate_stepping_stones',
 	'refurbished_furniture:diorite_stepping_stones',
-	'refurbished_furniture:door_mat',
 	'refurbished_furniture:doorbell',
 	'refurbished_furniture:dough',
 	'refurbished_furniture:frying_pan',

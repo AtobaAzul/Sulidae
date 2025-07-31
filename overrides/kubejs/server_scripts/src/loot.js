@@ -345,7 +345,7 @@ LootJS.modifiers((e) => {
 	TFC_WOOD_TYPES.forEach((type) => {
 		e.addBlockLootModifier(
 			`everycomp:c/tfc/${type}_window`
-		).addAlternativesLoot(
+		).removeLoot(/.*/).addAlternativesLoot(
 			LootEntry.of(`everycomp:c/tfc/${type}_window`).when((e) =>
 				e.matchMainHand('tfc:gem_saw')
 			)
@@ -353,7 +353,7 @@ LootJS.modifiers((e) => {
 
 		e.addBlockLootModifier(
 			`everycomp:c/tfc/${type}_window_pane`
-		).addAlternativesLoot(
+		).removeLoot(/.*/).addAlternativesLoot(
 			LootEntry.of(`everycomp:c/tfc/${type}_window_pane`).when((e) =>
 				e.matchMainHand('tfc:gem_saw')
 			)
@@ -363,7 +363,7 @@ LootJS.modifiers((e) => {
 	AFC_WOOD_TYPES.forEach((type) => {
 		e.addBlockLootModifier(
 			`everycomp:c/tfc/${type}_window`
-		).addAlternativesLoot(
+		).removeLoot(/.*/).addAlternativesLoot(
 			LootEntry.of(`everycomp:c/afc/${type}_window`).when((e) =>
 				e.matchMainHand('tfc:gem_saw')
 			)
@@ -371,7 +371,7 @@ LootJS.modifiers((e) => {
 
 		e.addBlockLootModifier(
 			`everycomp:c/tfc/${type}_window_pane`
-		).addAlternativesLoot(
+		).removeLoot(/.*/).addAlternativesLoot(
 			LootEntry.of(`everycomp:c/afc/${type}_window_pane`).when((e) =>
 				e.matchMainHand('tfc:gem_saw')
 			)

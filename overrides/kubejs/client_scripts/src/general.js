@@ -163,4 +163,6 @@ ClientEvents.lang('en_us', (event) => {
 
     event.renameItem('scguns:treated_brass_gun_frame', 'Carotine Gun Frame')
 
+    event.renameBlock('refurbished_furniture:door_mat', "Painted Doormat")
+
 });

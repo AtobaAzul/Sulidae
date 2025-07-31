@@ -75,6 +75,12 @@ BlockEvents.placed((e) => {
 			`data modify block ${x} ${y} ${z} Enabled set value 1b`
 		);
 	}
+
+	if (e.block.id == 'createdieselgenerators:chemical_turret') {
+		e.server.runCommandSilent(
+			`data modify block ${x} ${y} ${z} LighterUpgrade set value 1b`
+		);
+	}
 });
 
 BlockEvents.rightClicked((event) => {

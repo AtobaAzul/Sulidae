@@ -12,7 +12,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Sulidae",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": "",
   "files": [
     {
@@ -297,7 +297,7 @@
     },
     {
       "projectID": 1128085,
-      "fileID": 6288782,
+      "fileID": 6826161,
       "required": true
     },
     {
@@ -308,6 +308,11 @@
     {
       "projectID": 897116,
       "fileID": 6623931,
+      "required": true
+    },
+    {
+      "projectID": 711034,
+      "fileID": 4833041,
       "required": true
     },
     {
@@ -721,11 +726,6 @@
       "required": true
     },
     {
-      "projectID": 508933,
-      "fileID": 6791186,
-      "required": true
-    },
-    {
       "projectID": 404468,
       "fileID": 6130786,
       "required": true
@@ -771,13 +771,13 @@
       "required": true
     },
     {
-      "projectID": 495693,
-      "fileID": 5531397,
+      "projectID": 1036246,
+      "fileID": 5960819,
       "required": true
     },
     {
-      "projectID": 1036246,
-      "fileID": 5960819,
+      "projectID": 495693,
+      "fileID": 5531397,
       "required": true
     },
     {
@@ -856,13 +856,13 @@
       "required": true
     },
     {
-      "projectID": 633412,
-      "fileID": 5016280,
+      "projectID": 351264,
+      "fileID": 5402061,
       "required": true
     },
     {
-      "projectID": 351264,
-      "fileID": 5402061,
+      "projectID": 633412,
+      "fileID": 5016280,
       "required": true
     },
     {

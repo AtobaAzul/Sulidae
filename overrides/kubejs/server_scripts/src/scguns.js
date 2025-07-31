@@ -13,6 +13,10 @@ ServerEvents.highPriorityData((event) => {
 			_json.projectile.speed = _json.projectile.speed * 5;
 		}
 
+        if (datapath.match(/.*carabine.*/)) {
+            _json.general.fireMode = "scguns:automatic"
+        }
+
 		if (_json.projectile) {
 			_json.projectile.advantage = 'scguns:none';
 
@@ -75,3 +79,5 @@ ServerEvents.highPriorityData((event) => {
 		}
 	}
 });
+
+

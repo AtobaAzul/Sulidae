@@ -52,4 +52,6 @@ ServerEvents.tags('block', (e) => {
 
     e.add('tfc:needs_colored_steel_tool', ['minecraft:amethyst_block', 'minecraft:amethyst_cluster'])
     e.remove('scguns:fragile', ['amethyst_cluster'])
+
+    e.add('create:chest_mounted_storage', /(tfc|afc):wood\/.*chest\//)
 });
