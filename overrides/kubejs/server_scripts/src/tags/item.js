@@ -62,6 +62,8 @@ ServerEvents.tags('item', (e) => {
     e.add('tfc:metal_item/stainless_steel', 'firmalife:metal/item/stainless_steel')
 
     e.add('everycomp:chests', /everycomp:.*_chest.*/)
+
+    e.add('forge:rods/wooden', 'minecraft:bamboo')
 });
 
 

@@ -17,7 +17,7 @@
 	night_end_fog = 100
 
 [cave_fog]
-	enabled = true
+	enabled = false
 	#y value where cave fog starts
 	y_start = 100
 	#y value where the cave fog ends

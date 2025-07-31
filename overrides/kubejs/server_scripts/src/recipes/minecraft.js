@@ -58,4 +58,13 @@ ServerEvents.recipes((event) => {
         A: 'paper',
         B: ['tfc:glue', '#forge:slimeballs']
     })
+
+    event.remove({output:'minecraft:scaffolding'})
+    event.shaped('8x scaffolding', ['ABA', 'C C', 'C C'], {
+        A: '#tfc:lumber',
+        B: 'tfc:jute_fiber',
+        C: '#forge:rods/wooden'
+    })
+
+    event.remove({id: 'minecraft:stick_from_bamboo_item'})
 });

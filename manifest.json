@@ -11,9 +11,14 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Sulidae",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "",
   "files": [
+    {
+      "projectID": 1068445,
+      "fileID": 5815914,
+      "required": true
+    },
     {
       "projectID": 1017637,
       "fileID": 5338560,
@@ -21,17 +26,12 @@
     },
     {
       "projectID": 324717,
-      "fileID": 5672013,
-      "required": true
-    },
-    {
-      "projectID": 1068445,
-      "fileID": 5815914,
+      "fileID": 5776962,
       "required": true
     },
     {
       "projectID": 1130934,
-      "fileID": 5862755,
+      "fileID": 5874747,
       "required": true
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "projectID": 412082,
-      "fileID": 5871547,
+      "fileID": 5875807,
       "required": true
     },
     {
@@ -60,13 +60,18 @@
       "required": true
     },
     {
+      "projectID": 1036246,
+      "fileID": 5746945,
+      "required": true
+    },
+    {
       "projectID": 877545,
       "fileID": 5525258,
       "required": true
     },
     {
       "projectID": 404465,
-      "fileID": 5567591,
+      "fileID": 5874882,
       "required": true
     },
     {
@@ -76,7 +81,7 @@
     },
     {
       "projectID": 453394,
-      "fileID": 5775257,
+      "fileID": 5873052,
       "required": true
     },
     {
@@ -175,13 +180,13 @@
       "required": true
     },
     {
-      "projectID": 306770,
-      "fileID": 4966125,
+      "projectID": 968891,
+      "fileID": 5376473,
       "required": true
     },
     {
-      "projectID": 968891,
-      "fileID": 5376473,
+      "projectID": 306770,
+      "fileID": 4966125,
       "required": true
     },
     {
@@ -191,7 +196,7 @@
     },
     {
       "projectID": 238222,
-      "fileID": 5626488,
+      "fileID": 5846810,
       "required": true
     },
     {
@@ -280,18 +285,8 @@
       "required": true
     },
     {
-      "projectID": 580555,
-      "fileID": 5793030,
-      "required": false
-    },
-    {
       "projectID": 836630,
       "fileID": 4676065,
-      "required": true
-    },
-    {
-      "projectID": 1010046,
-      "fileID": 5590292,
       "required": true
     },
     {
@@ -300,13 +295,13 @@
       "required": true
     },
     {
-      "projectID": 532286,
-      "fileID": 5589681,
+      "projectID": 32274,
+      "fileID": 5789363,
       "required": true
     },
     {
-      "projectID": 32274,
-      "fileID": 5789363,
+      "projectID": 532286,
+      "fileID": 5589681,
       "required": true
     },
     {
@@ -411,7 +406,7 @@
     },
     {
       "projectID": 506194,
-      "fileID": 5858997,
+      "fileID": 5874633,
       "required": true
     },
     {
@@ -531,7 +526,7 @@
     },
     {
       "projectID": 993733,
-      "fileID": 5765673,
+      "fileID": 5872796,
       "required": true
     },
     {
@@ -581,7 +576,7 @@
     },
     {
       "projectID": 1105290,
-      "fileID": 5851970,
+      "fileID": 5871593,
       "required": true
     },
     {
@@ -611,7 +606,7 @@
     },
     {
       "projectID": 448233,
-      "fileID": 5672088,
+      "fileID": 5866395,
       "required": true
     },
     {
@@ -791,7 +786,7 @@
     },
     {
       "projectID": 520110,
-      "fileID": 5138899,
+      "fileID": 5838149,
       "required": true
     },
     {
@@ -850,11 +845,6 @@
       "required": true
     },
     {
-      "projectID": 1036246,
-      "fileID": 5746945,
-      "required": true
-    },
-    {
       "projectID": 272515,
       "fileID": 5454907,
       "required": true
@@ -862,6 +852,11 @@
     {
       "projectID": 301051,
       "fileID": 5070502,
+      "required": true
+    },
+    {
+      "projectID": 1010046,
+      "fileID": 5869457,
       "required": true
     }
   ],

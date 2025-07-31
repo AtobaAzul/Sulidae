@@ -18,6 +18,8 @@
 			]
 			hide_dependency_lines: false
 			id: "0CD8033D7C86A941"
+			shape: "octagon"
+			size: 2.0d
 			subtitle: "TerraFirmaCraft, expanded."
 			tasks: [{
 				id: "66FFCDFFDCE15C62"
@@ -25,7 +27,7 @@
 				type: "checkmark"
 			}]
 			title: "Read This First"
-			x: -5.5d
+			x: -5.0d
 			y: 0.0d
 		}
 		{
@@ -33,6 +35,8 @@
 			description: ["This chapter will cover custom mechanics, unrelated to things like recipes."]
 			icon: "refurbished_furniture:wrench"
 			id: "75B46FAA46D43E53"
+			shape: "rsquare"
+			size: 1.5d
 			subtitle: "A couple neat features"
 			tasks: [{
 				id: "2C16A0CE81F6AB10"
@@ -40,8 +44,8 @@
 				type: "checkmark"
 			}]
 			title: "Custom Mechanics"
-			x: -3.5d
-			y: -2.0d
+			x: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["75B46FAA46D43E53"]
@@ -60,22 +64,51 @@
 				type: "checkmark"
 			}]
 			title: "Walking Cane Durability"
-			x: -3.5d
-			y: -3.5d
+			x: -2.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["75B46FAA46D43E53"]
-			description: ["Taking explosive damage deafens you."]
-			icon: "scguns:stun_grenade"
+			description: [
+				"\"Bonus Chest\" option on world creation has been replaced by \"Starter Items\", which hands players a set of starting items to skip the pre-copper grind."
+				""
+				"{@pagebreak}"
+				""
+				"Loot:"
+				"16-30 Torches/Basic Poultices"
+				"Random Colored Small Vessel"
+				"Copper Axe/Shovel/Propick"
+				"Leather/Raw Pants"
+				"Leather/Raw Shirt"
+				"Leather/Raw Hat"
+				"Leather/Raw Boots"
+				"Ceramic Jug"
+				"Copper Pickaxe"
+				"Copper Saw"
+			]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:metal/pickaxe/copper"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "06EA7DBBFA06BDF2"
+			subtitle: "The new bonus chest"
 			tasks: [{
 				id: "3B193D2D5EEC6C5F"
 				title: "I Understand"
 				type: "checkmark"
 			}]
-			title: "Stun"
-			x: -2.0d
-			y: -2.0d
+			title: "Starter Items"
+			x: -3.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0CD8033D7C86A941"]
@@ -85,6 +118,7 @@
 			]
 			icon: "tfc:rock/mossy_loose/slate"
 			id: "529000CCCC295A5F"
+			size: 1.5d
 			tasks: [{
 				id: "08BF8E1A714AB158"
 				title: "I Understand"
@@ -106,7 +140,7 @@
 			}]
 			title: "Mechanical Power"
 			x: -9.0d
-			y: 1.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
@@ -132,10 +166,10 @@
 			}]
 			title: "Ore Processing"
 			x: -9.5d
-			y: 0.0d
+			y: -0.5d
 		}
 		{
-			dependencies: ["529000CCCC295A5F"]
+			dependencies: ["75B46FAA46D43E53"]
 			description: [
 				"Brews are made by cooking any fruit, flower and spice on a pot. Brews provide a randomized, seed-based effect, similar to Suspicious Stews in the base game."
 				"Brews can also be distilled into their pure potion effect, to be used in things such as Liquid Shells or Chemical Sprayer. &lPure potions cannot be drinked.&r"
@@ -148,8 +182,8 @@
 				type: "checkmark"
 			}]
 			title: "Brews"
-			x: -9.0d
-			y: -1.0d
+			x: -1.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["75B46FAA46D43E53"]
@@ -165,11 +199,11 @@
 				type: "checkmark"
 			}]
 			title: "Oil Shale"
-			x: -3.5d
-			y: -0.5d
+			x: -0.5d
+			y: 0.5d
 		}
 		{
-			dependencies: ["529000CCCC295A5F"]
+			dependencies: ["75B46FAA46D43E53"]
 			description: ["Foods can be fried in oil on a cooking pot. Frying foods in olive or seed oil decreases how fast they spoil."]
 			icon: {
 				Count: 1
@@ -188,11 +222,11 @@
 				type: "checkmark"
 			}]
 			title: "Frying"
-			x: -8.0d
+			x: -1.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["529000CCCC295A5F"]
+			dependencies: ["75B46FAA46D43E53"]
 			description: [
 				"Pure Nutrients can be obtained by super-heated mixing any fertilizer to extract the pure nutrient."
 				"Pure nutrients, as well as being able to be used as fertilizer, are necessary for high-grade explosives and tracers."
@@ -205,8 +239,8 @@
 				type: "checkmark"
 			}]
 			title: "Nutrient Extraction"
-			x: -7.0d
-			y: 1.0d
+			x: -2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
@@ -228,21 +262,22 @@
 				type: "checkmark"
 			}]
 			title: "Tweaked Ore Generation"
-			x: -8.0d
-			y: -1.5d
+			x: -9.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0CD8033D7C86A941"]
 			description: ["Several mods have had their recipes adapted to work within TFC's custom enviroment, with &orecipes remade from scratch&r; and some have had their mechanics adjusted to better fit TFC."]
 			id: "3FFD60F6DD717CFF"
+			size: 1.5d
 			tasks: [{
 				id: "302F63351BFB7F77"
 				title: "I Understand"
 				type: "checkmark"
 			}]
 			title: "Mod Integration"
-			x: -4.0d
-			y: 1.5d
+			x: -4.928571428571438d
+			y: 2.9464285714285694d
 		}
 		{
 			dependencies: ["3FFD60F6DD717CFF"]
@@ -255,8 +290,8 @@
 				type: "checkmark"
 			}]
 			title: "Immersive Aircraft"
-			x: -2.5d
-			y: 3.0d
+			x: -6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3FFD60F6DD717CFF"]
@@ -281,7 +316,7 @@
 			}]
 			title: "Scorched Guns"
 			x: -4.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3FFD60F6DD717CFF"]
@@ -294,8 +329,8 @@
 				type: "checkmark"
 			}]
 			title: "Quark"
-			x: -5.5d
-			y: 3.0d
+			x: -5.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
@@ -308,8 +343,8 @@
 				type: "checkmark"
 			}]
 			title: "Irrigation"
-			x: -7.0d
-			y: -1.0d
+			x: -9.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["75B46FAA46D43E53"]
@@ -325,8 +360,22 @@
 				type: "checkmark"
 			}]
 			title: "Wood Paper"
-			x: -5.0d
-			y: -2.0d
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["75B46FAA46D43E53"]
+			description: ["Taking explosive damage deafens you."]
+			icon: "scguns:stun_grenade"
+			id: "3742E4F7CCC527FC"
+			tasks: [{
+				id: "0057AB91FEB9D765"
+				title: "I Understand"
+				type: "checkmark"
+			}]
+			title: "Stun"
+			x: -0.5d
+			y: -0.5d
 		}
 	]
 	title: "About the Modpack"
