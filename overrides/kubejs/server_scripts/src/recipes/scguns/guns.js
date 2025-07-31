@@ -1,5 +1,3 @@
-console.info('loaded recipes/scguns/gunns.js');
-
 ServerEvents.recipes((event) => {
 	event.recipes.tfc.advanced_shaped_crafting(
 		TFC.itemStackProvider.of('scguns:musket').copyForgingBonus(),

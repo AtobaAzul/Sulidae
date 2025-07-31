@@ -1,5 +1,5 @@
 #Range: 0 ~ 11
-newFrontierShape = 11
+newFrontierShape = 2
 #Range: 0 ~ 999
 newFrontierShapeWidth = 10
 #Range: 0 ~ 999
@@ -13,7 +13,7 @@ newFrontierChunkShapeLength = 5
 #Allowed Values: Vertex, Chunk
 newFrontierMode = "Vertex"
 #Allowed Values: Info, Edit, Nothing
-afterCreatingFrontier = "Info"
+afterCreatingFrontier = "Edit"
 pasteName = false
 pasteVisibility = true
 pasteColor = true

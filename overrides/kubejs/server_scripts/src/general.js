@@ -20,7 +20,7 @@ const UPDATE_FREQUENCY = 400;
 PlayerEvents.tick((event) => {
 	let player = event.player;
 
-    if (player.hasEffect('bad_omen')) {
+	if (player.hasEffect('bad_omen')) {
 		player.removeEffect('bad_omen');
 	}
 
@@ -113,9 +113,28 @@ LootJS.modifiers((event) => {
 });
 
 BlockEvents.placed((e) => {
+	let { x, y, z } = e.block.pos;
 	if (e.block.id == 'moreburners:electric_burner') {
 		e.block.set('moreburners:electric_burner', {
 			upgraded: true,
 		});
+	}
+
+	if (
+		e.block.id == 'refurbished_furniture:light_electricity_generator' ||
+		e.block.id == 'refurbished_furniture:dark_electricity_generator'
+	) {
+		e.server.runCommandSilent(
+			`data modify block ${x} ${y} ${z} Enabled set value 1b`
+		);
+	}
+});
+
+BlockEvents.rightClicked((event) => {
+	if (
+		event.block.id == 'refurbished_furniture:dark_electricity_generator' ||
+		event.block.id == 'refurbished_furniture:light_electricity_generator'
+	) {
+		event.cancel();
 	}
 });

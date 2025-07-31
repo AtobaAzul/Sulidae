@@ -1,5 +1,3 @@
-console.info('loaded recipes/scguns/extra.js');
-
 ServerEvents.recipes((event) => {
 	event.shaped('4x scguns:grenade', ['A', 'B', 'C'], {
 		A: 'tfc:metal/sheet/zinc',
@@ -56,7 +54,7 @@ ServerEvents.recipes((event) => {
 		A: 'firmaciv:copper_bolt',
 		B: 'tfc:wood/lumber/acacia',
 		C: 'tfc:metal/rod/steel',
-		D: 'minecraft:leather',
+		D: 'afc:rubber_bar',
 	});
 	event.shaped('scguns:wooden_stock', ['AAB', 'AA '], {
 		A: 'tfc:wood/lumber/acacia',
@@ -115,7 +113,7 @@ ServerEvents.recipes((event) => {
 	]);
 	event.shapeless('4x scguns:honey_sulfur_poultice', [
 		'quark:moss_paste',
-		['tfc:unrefined_paper', 'paper'],
+		'paper',
 		'firmalife:raw_honey',
 		'tfc:powder/sulfur',
 	]);

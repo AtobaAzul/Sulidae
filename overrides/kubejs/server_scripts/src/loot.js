@@ -207,6 +207,39 @@ LootJS.modifiers((e) => {
 		.addWeightedLoot(
 			[1, 2],
 			[
+				'scguns:medium_brass_casing',
+				'scguns:small_brass_casing',
+				'firmalife:pottery_sherd',
+				'tfccanes:walking_cane',
+				'tfc:ceramic/jug',
+				'quark:dirty_shard',
+				'minecraft:mourner_pottery_sherd',
+				'minecraft:miner_pottery_sherd',
+				'minecraft:angler_pottery_sherd',
+				'kubejs:scrap',
+				'kubejs:horse_relic',
+				'kubejs:humanlike_relic',
+				'kubejs:rusty_sword',
+				'kubejs:rusty_axe',
+				'kubejs:rusty_shovel',
+				'kubejs:rusty_scythe',
+				'kubejs:rusty_mace',
+				'kubejs:rusty_pickaxe',
+				'kubejs:straw_doll_0',
+				'kubejs:straw_doll_1',
+			]
+		);
+
+	e.addLootTableModifier('minecraft:archaeology/trail_ruins_rare')
+		.removeLoot(/.*/)
+		.addWeightedLoot(
+			[1, 2],
+			[
+				'tfc:gem/topaz',
+				'tfc:gem/sapphire',
+				'tfc:gem/emerald',
+				'tfc:gem/ruby',
+
 				'minecraft:archer_pottery_sherd',
 				'minecraft:arms_up_pottery_sherd',
 				'minecraft:plenty_pottery_sherd',
@@ -224,52 +257,26 @@ LootJS.modifiers((e) => {
 				'minecraft:heart_pottery_sherd',
 				'minecraft:heartbreak_pottery_sherd',
 				'minecraft:howl_pottery_sherd',
-				'scguns:medium_brass_casing',
-				'scguns:small_brass_casing',
-				'firmalife:pottery_sherd',
-				'tfccanes:walking_cane',
-				'tfc:ceramic/jug',
-				'quark:dirty_shard',
-				'minecraft:mourner_pottery_sherd',
-				'minecraft:miner_pottery_sherd',
-				'minecraft:angler_pottery_sherd',
-                'kubejs:scrap',
-                'kubejs:horse_relic',
-                'kubejs:humanlike_relic',
-                'kubejs:rusty_sword'
-
+				'kubejs:automaton_head',
+				'kubejs:bee_trinket',
+				'kubejs:horse_relic_gold',
+				'kubejs:humanlike_relic_gold',
 			]
-		).damage([0.05, 0.33]);
+		);
 
-	e.addLootTableModifier('minecraft:archaeology/trail_ruins_rare')
-		.removeLoot(/.*/)
-		.addWeightedLoot(
-			[1, 2],
-			[
-				'tfc:metal/ingot/copper',
-				'tfc:metal/ingot/bismuth',
-				'tfc:gem/topaz',
-				'tfc:gem/sapphire',
-				'tfc:gem/emerald',
-				'tfc:gem/ruby',
-				
-				'tfc:metal/lamp/copper',
-				'tfc:gem/amethyst',
-				'tfc:gem/diamond',
-				'tfc:gem/opal',
-				'create:andesite_alloy',
-				'tfc:metal/ingot/bismuth_bronze',
-				'tfc:metal/ingot/bronze',
-				'tfc:metal/ingot/gold',
-				'tfc:metal/sword/bronze',
-				'tfc:metal/sword/bismuth_bronze',
-				'tfc:metal/sword/black_bronze',
-				'tfc:metal/mace/black_bronze',
-				'tfc:metal/mace/bronze',
-				'tfc:metal/mace/copper',
-                'kubejs:horse_relic',
-                'kubejs:humanlike_relic'
-			]
-		)
-		.damage([0.05, 0.1]);
+	let kaolin_ores = [
+		'kubejs:limestone_kaolinite',
+		'kubejs:chalk_kaolinite',
+		'kubejs:conglomerate_kaolinite',
+		'kubejs:shale_kaolinite',
+		'kubejs:claystone_kaolinite',
+		'kubejs:dolomite_kaolinite',
+		'kubejs:chert_kaolinite',
+	];
+
+	kaolin_ores.forEach((ore) => {
+		e.addBlockLootModifier(ore)
+			.removeLoot(/.*/)
+			.addLoot('kubejs:kaolinite');
+	});
 });

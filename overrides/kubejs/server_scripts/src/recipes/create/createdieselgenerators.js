@@ -63,12 +63,12 @@ ServerEvents.recipes((e) => {
 
 	e.recipes.tfc.anvil(
 		'createdieselgenerators:engine_turbocharger',
-		'firmalife:metal/double_sheet/chromium',
+		'kubejs:metal/sheet/aluminum',
 		['bend_last', 'hit_second_last', 'draw_third_last']
 	);
 	e.recipes.tfc.anvil(
 		'createdieselgenerators:engine_silencer',
-		'firmalife:metal/double_sheet/chromium',
+		'firmalife:metal/double_sheet/stainless_steel',
 		['draw_last', 'hit_second_last', 'upset_third_last']
 	);
 	e.recipes.tfc.anvil(

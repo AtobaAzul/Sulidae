@@ -1,7 +1,4 @@
 //FUCKING REFURBUSHED RELEASED
-
-console.info('loaded recipes/furniture.js');
-
 ServerEvents.recipes((e) => {
 	e.remove({ mod: 'refurbished_furniture' });
 	e.remove({ output: /everycomp:rfm.*/ });
@@ -265,6 +262,129 @@ ServerEvents.recipes((e) => {
 		A: 'tfc:metal/double_sheet/blue_steel',
 		B: 'tfc:metal/sheet/steel',
 	});
+
+	//electrical
+	e.shaped('refurbished_furniture:white_lamp', ['ABA', ' C ', '   '], {
+		A: 'minecraft:paper',
+		B: 'createaddition:small_light_connector',
+		C: '#tfc:lumber',
+	});
+
+	ALL_COLORS.forEach((color) => {
+		e.shapeless('refurbished_furniture:' + color + '_lamp', [
+			'#refurbished_furniture:lamps',
+			'#forge:dyes/' + color,
+		]);
+	});
+
+	e.shaped(
+		'refurbished_furniture:light_electricity_generator',
+		['ABA', 'BCB', ' B '],
+		{
+			A: 'createaddition:capacitor',
+			B: 'kubejs:metal/sheet/aluminum',
+			C: 'createaddition:gold_spool',
+		}
+	);
+
+	e.shapeless('refurbished_furniture:light_electricity_generator', [
+		'refurbished_furniture:dark_electricity_generator',
+		'#forge:dyes/white',
+	]);
+
+	e.shapeless('refurbished_furniture:dark_electricity_generator', [
+		'refurbished_furniture:light_electricity_generator',
+		'#forge:dyes/black',
+	]);
+
+	e.shaped('refurbished_furniture:recycle_bin', [' A ', ' B ', ' C '], {
+		A: 'kubejs:metal/sheet/aluminum',
+		B: 'create:millstone',
+		C: 'createaddition:connector',
+	});
+	e.shapeless('4x refurbished_furniture:light_ceiling_light', [
+		'kubejs:metal/sheet/aluminum',
+		'createaddition:small_light_connector',
+		'createaddition:small_light_connector',
+		'createaddition:small_light_connector',
+		'createaddition:small_light_connector',
+	]);
+
+	e.shapeless('refurbished_furniture:dark_ceiling_light', [
+		'refurbished_furniture:light_ceiling_light',
+		'#forge:dyes/black',
+	]);
+
+	e.shapeless('refurbished_furniture:light_ceiling_light', [
+		'refurbished_furniture:dark_ceiling_light',
+		'#forge:dyes/white',
+	]);
+
+	e.shapeless('4x refurbished_furniture:light_lightswitch', [
+		'minecraft:redstone',
+		'kubejs:metal/ingot/aluminum',
+		'createaddition:connector',
+	]);
+
+	e.shapeless('refurbished_furniture:dark_lightswitch', [
+		'refurbished_furniture:light_lightswitch',
+		'#forge:dyes/black',
+	]);
+
+	e.shapeless('refurbished_furniture:light_lightswitch', [
+		'refurbished_furniture:dark_lightswitch',
+		'#forge:dyes/white',
+	]);
+
+	e.shapeless('refurbished_furniture:doorbell', [
+		'minecraft:note_block',
+		'kubejs:metal/ingot/aluminum',
+		'createaddition:connector',
+	]);
+
+	WOOD_TYPES.forEach((type) => {
+		e.shaped(
+			`everycomp:rfm/tfc/${type}_light_ceiling_fan`,
+			[' A ', 'ABA', ' A '],
+			{
+				A: 'tfc:wood/lumber/' + type,
+				B: 'kubejs:metal/ingot/aluminum',
+			}
+		);
+
+		e.shapeless(`everycomp:rfm/tfc/${type}_dark_ceiling_fan`, [
+			`everycomp:rfm/tfc/${type}_light_ceiling_fan`,
+			'#forge:dyes/black',
+		]);
+
+		e.shapeless(`everycomp:rfm/tfc/${type}_light_ceiling_fan`, [
+			`everycomp:rfm/tfc/${type}_dark_ceiling_fan`,
+			'#forge:dyes/white',
+		]);
+	});
+
+	AFC_WOOD_TYPES.forEach((type) => {
+		e.shaped(
+			`everycomp:rfm/afc/${type}_light_ceiling_fan`,
+			[' A ', 'ABA', ' A '],
+			{
+				A: 'afc:wood/lumber/' + type,
+				B: 'kubejs:metal/ingot/aluminum',
+			}
+		);
+
+		e.shapeless(`everycomp:rfm/afc/${type}_dark_ceiling_fan`, [
+			`everycomp:rfm/afc/${type}_light_ceiling_fan`,
+			'#forge:dyes/black',
+		]);
+
+		e.shapeless(`everycomp:rfm/afc/${type}_light_ceiling_fan`, [
+			`everycomp:rfm/afc/${type}_dark_ceiling_fan`,
+			'#forge:dyes/white',
+		]);
+	});
+
+    e.shaped('refurbished_furniture:wrench', ['A', 'B'], { A: 'kubejs:metal/ingot/aluminum', B: '#forge:rods/wooden' });
 });
 
 let limit = [];
@@ -272,5 +392,31 @@ let limit = [];
 limit.forEach((item) => {
 	TFCEvents.limitContainer(item, (event) => {
 		event.limit('large');
+	});
+});
+
+ServerEvents.tags('block', (event) => {
+	event.add('kubejs:ceiling_fans', /.*ceiling_fan.*/);
+});
+
+ServerEvents.highPriorityData((event) => {
+	event.addJson('kubejs:cold_sweat/block/block_temp/ceiling_fans', {
+		blocks: ['#kubejs:ceiling_fans'],
+		temperature: -0.5,
+		// The maximum temperature change that this BlockTemp can cause
+		// Used for capping the effect when multiple of this block are nearby
+		max_effect: 2.0,
+        min_temp: 0.75,
+		// Flag that causes the effect of the block to fade with range. Defaults to true
+		fade: true,
+		// The radius of the block's area-of-effect
+		range: 7,
+		conditions: [
+			{
+				state: {
+					powered: true,
+				},
+			},
+		],
 	});
 });

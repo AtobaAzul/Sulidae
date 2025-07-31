@@ -9,6 +9,8 @@ JEIEvents.information((event) => {
 });*/
 
 JEIEvents.hideItems((event) => {
+
+    //So, fun fact. This doesn't work with JEI.
 	REMOVED_ITEMS.forEach((item) => {
 		event.hide(Ingredient.of(item));
 	});
@@ -33,4 +35,8 @@ ClientEvents.lang('en_us', (event) => {
 	);
 
 	event.renameItem('quark:rope', 'Thick Rope');
+
+    event.renameBlock('refurbished_furniture:light_electricity_generator', "Light Househoud Transformer")
+    event.renameBlock('refurbished_furniture:dark_electricity_generator', "Dark Househoud Transformer")
+
 });

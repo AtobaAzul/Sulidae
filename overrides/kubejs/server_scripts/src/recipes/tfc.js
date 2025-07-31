@@ -12,10 +12,22 @@ ServerEvents.recipes((e) => {
 			{
 				item: 'tfc:powder/salt',
 			},
+			{
+				item: 'tfc:powder/salt',
+			},
+			{
+				item: 'tfc:powder/salt',
+			},
+			{
+				item: 'tfc:powder/salt',
+			},
+			{
+				item: 'tfc:powder/salt',
+			},
 		],
 	});
 
-    e.remove({id: /.*powderkeg.*/})
+	e.remove({ id: /.*powderkeg.*/ });
 
 	e.recipes.create
 		.mixing(Item.of('tfc:powder/salt'), Fluid.of('tfc:salt_water', 1000))
@@ -66,23 +78,21 @@ ServerEvents.recipes((e) => {
 	e.remove({ output: /afc:wood\/clutch\/.*/ });
 
 	e.remove({ id: 'tfc:barrel/dye/bleach_windmill_blades' });
+	e.remove({ input: 'tfc:ore/cryolite' });
 
 	e.forEachRecipe({ type: 'tfc:quern' }, (recipe) => {
 		let ingredient = recipe.json.get('ingredient');
 
-        //essentially removes the old moss to lime dye recipe.
-		if (ingredient.item != null && !ingredient.item == 'tfc:plant/moss' || ingredient.item == null) {
-			e.recipes.create.milling(recipe.originalRecipeResult, ingredient);
+		e.recipes.create.milling(recipe.originalRecipeResult, ingredient);
 
-			let crushingResult = [recipe.originalRecipeResult];
-			crushingResult.push(
-				Item.of(
-					recipe.originalRecipeResult,
-					Math.ceil(recipe.originalRecipeResult.count * 0.25)
-				).withChance(0.25)
-			);
-			e.recipes.create.crushing(crushingResult, ingredient);
-		}
+		let crushingResult = [recipe.originalRecipeResult];
+		crushingResult.push(
+			Item.of(
+				recipe.originalRecipeResult,
+				Math.ceil(recipe.originalRecipeResult.count * 0.25)
+			).withChance(0.25)
+		);
+		e.recipes.create.crushing(crushingResult, ingredient);
 	});
 
 	e.remove({ type: 'tfc:quern' });
@@ -93,6 +103,23 @@ ServerEvents.recipes((e) => {
 			`firmalife:ore/${ore}_chromite`
 		);
 	}
+
+	//fix aluminum coins not being craftable.
+	e.custom({		
+		type: 'tfc:casting',
+		mold: {
+			item: 'lithiccoins:ceramic/coin_mold',
+		},
+		fluid: {
+			ingredient: 'kubejs:molten_aluminum',
+			amount: 100,
+		},
+		result: {
+			item: 'lithiccoins:blank_coin/aluminum',
+			count: 4,
+		},
+		break_chance: 0.1,
+	});
 
 	e.recipes.tfc
 		.heating(`kubejs:scrap`, 400)
@@ -405,6 +432,19 @@ ServerEvents.recipes((e) => {
 		});
 	});
 
+	e.forEachRecipe({ type: 'tfc:scraping' }, (recipe) => {
+		let ingredient = Item.of(recipe.json.get('ingredient'));
+
+		e.recipes.create
+			.sequenced_assembly([recipe.originalRecipeResult], ingredient, [
+				e.recipes.create
+					.deploying(ingredient, [ingredient, '#tfc:knives'])
+					.keepHeldItem(),
+			])
+			.transitionalItem(ingredient)
+			.loops(16);
+	});
+
 	e.recipes.create.splashing(
 		[
 			Item.of('tfc:ore/small_native_copper'),
@@ -497,19 +537,6 @@ ServerEvents.recipes((e) => {
 	e.remove({ output: /everycomp:q\/afc\/.*_chest/ });
 	e.remove({ output: /everycomp.*storage_jar.*/ });
 
-	e.shaped('firmalife:pumping_station', ['ABA', 'CDC', 'AEA'], {
-		A: 'firmalife:treated_lumber',
-		B: 'tfc:brass_mechanisms',
-		C: '#forge:double_sheets/any_bronze',
-		D: 'create:fluid_tank',
-		E: 'create:mechanical_pump',
-	});
-	e.shaped('firmalife:irrigation_tank', ['ABA', 'ACA', 'ABA'], {
-		A: 'firmalife:treated_lumber',
-		B: 'create:fluid_tank',
-		C: 'firmalife:copper_pipe',
-	});
-
 	e.remove({ output: 'sns:straw_basket' });
 	e.shaped('sns:straw_basket', ['AA', 'BB'], {
 		A: 'tfc:straw',
@@ -592,8 +619,8 @@ ServerEvents.recipes((e) => {
 	//cheaper plated blocks
 
 	e.remove({ id: /tfc:crafting\/metal\/block.*/ });
-    e.remove({id: /heating:metal\/.*_block/})
-    
+	e.remove({ id: /heating:metal\/.*_block/ });
+
 	METAL_DEFS.forEach((metal) => {
 		e.shapeless(`8x tfc:metal/block/${metal}`, [
 			`tfc:metal/sheet/${metal}`,

@@ -26,6 +26,19 @@ ServerEvents.recipes((e) => {
         },
     });
 
+    
+    e.custom({
+        type: 'createaddition:rolling',
+        input: {
+            item: `firmalife:metal/ingot/stainless_steel`,
+        },
+        result: {
+            item: `firmalife:metal/rod/stainless_steel`,
+            count: 2,
+        },
+    });
+
+
     for (const [rod, wire] of Object.entries(WIRE_METALS)) {
         e.custom({
             type: 'createaddition:rolling',
@@ -99,7 +112,7 @@ ServerEvents.recipes((e) => {
     ]).replaceIngredient('createaddition:gold_spool', 'createaddition:spool');
 
     e.shaped('createaddition:rolling_mill', ['PSP', 'ASA', 'ACA'], {
-        P: 'tfc:metal/sheet/cast_iron',
+        P: 'tfc:metal/sheet/wrought_iron',
         S: 'create:shaft',
         A: 'create:andesite_alloy',
         C: 'create:andesite_casing',

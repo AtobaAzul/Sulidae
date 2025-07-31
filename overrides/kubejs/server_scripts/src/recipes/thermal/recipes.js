@@ -1,5 +1,3 @@
-console.info('loaded recipes/thermal/recipes.js');
-
 ServerEvents.recipes((e) => {
 	// Remove old recipes
 	e.remove({ mod: 'thermal' });
@@ -117,7 +115,7 @@ ServerEvents.recipes((e) => {
 
 	//capacitor
 	e.shaped('thermal:flux_capacitor', ['SSS', 'SPS', 'SSS'], {
-		S: 'createaddition:copper_spool',
+		S: 'createaddition:capacitor',
 		P: 'tfc:metal/sheet/blue_steel',
 	});
 
@@ -215,4 +213,13 @@ ServerEvents.recipes((e) => {
 		'thermal:coal_coke'
 	);
 
+	e.shaped('thermal:machine_refinery', ['ABA', 'CDC', 'BEB'], {
+		A: 'createaddition:capacitor',
+		B: 'tfc:metal/sheet/black_steel',
+		C: 'createaddition:gold_spool',
+		D: 'create:fluid_tank',
+		E: 'thermal:machine_frame',
+	});
+
+    e.recipes.thermal.refinery(Fluid.of('tfc:lye', 500), Fluid.of('tfc:salt_water')).energy(20000);
 });

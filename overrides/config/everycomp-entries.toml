@@ -513,7 +513,7 @@
 			ash_bricks = true
 			stone_tile = true
 			blackstone_tile = true
-			cabin_siding = true
+			fine_wood = true
 
 		[types.cut_block_type.firmalife]
 			rustic_bricks = true

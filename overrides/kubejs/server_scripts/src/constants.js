@@ -446,7 +446,6 @@ const USABLE_ON_TOOL_RACK = [
 ];
 
 const AVAILABLE_GUNS = [
-	
 	'scguns:mas_55',
 	'scguns:krauser',
 	'scguns:uppercut',
@@ -466,5 +465,47 @@ const AVAILABLE_GUNS = [
 	'scguns:m3_carabine',
 	'scguns:iron_javelin',
 	'scguns:greaser_smg',
-    //'scguns:rocket_rifle'
+	'scguns:rocket_rifle'
 ];
+
+//only to be used for getting temp data, since it has both chromium and stainless steel here too.
+const METAL_HEATING_DEFS = {
+	bismuth: {forging_temp: 162, welding_temp: 216},
+	bismuth_bronze: {forging_temp: 591, welding_temp: 788},
+	black_bronze: {forging_temp: 642, welding_temp: 856},
+	bronze: {forging_temp: 570, welding_temp: 760},
+	brass: {forging_temp: 558, welding_temp: 744},
+	copper: {forging_temp: 648, welding_temp:  864},
+	gold: {forging_temp: 636, welding_temp: 848},
+	nickel: {forging_temp: 872, welding_temp: 1162},
+	rose_gold: {forging_temp: 576, welding_temp:  768},
+	silver: {forging_temp: 577, welding_temp: 769},
+	tin: {forging_temp: 138, welding_temp: 184},
+	zinc: {forging_temp: 252, welding_temp: 336},
+	sterling_silver: {forging_temp: 570, welding_temp: 760},
+	wrought_iron: {forging_temp: 921, welding_temp: 1228},
+	cast_iron: {forging_temp: 921, welding_temp: 1228},
+	steel: {forging_temp: 924, welding_temp: 1232},
+	black_steel: {forging_temp: 891, welding_temp: 1188},
+	blue_steel: {forging_temp: 924, welding_temp: 1232},
+	red_steel: {forging_temp: 591, welding_temp: 788},
+	chromium: {forging_temp: 750, welding_temp: 1000},
+	stainless_steel: {forging_temp: 924, welding_temp: 1232},
+};
+
+/**
+ * @param {string} metal - The metal to get the forging temperature for. Without a namespace (e.g. "stainless_steel")
+ * @returns {number} The forging temperature of the metal
+ */
+function getForgingTemp(metal) {
+    return METAL_HEATING_DEFS[metal].forging_temp;
+}
+
+
+/**
+ * @param {string} metal - The metal to get the welding temperature for. Without a namespace (e.g. "stainless_steel")
+ * @returns {number} The welding temperature of the metal
+ */
+function getWeldingTemp(metal) {
+    return METAL_HEATING_DEFS[metal].welding_temp;
+}

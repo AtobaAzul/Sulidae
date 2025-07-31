@@ -1,5 +1,3 @@
-console.info('loaded recipes/create/sawmill.js');
-
 ServerEvents.recipes((event) => {
 	WOOD_TYPES.forEach((type) => {
 		event.recipes.create.cutting(

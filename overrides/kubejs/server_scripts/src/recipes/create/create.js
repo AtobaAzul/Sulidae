@@ -120,7 +120,7 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('create:gearbox', [' C ', 'CBC', ' C '], {
 		C: 'create:cogwheel',
-		B: 'create:andesite_casing',
+		B: '#minecraft:planks',
 	});
 
 	e.shapeless('create:vertical_gearbox', ['create:gearbox']);
@@ -169,12 +169,12 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('2x create:andesite_tunnel', [' A ', 'ALA'], {
 		A: 'create:andesite_alloy',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 	});
 
 	e.shaped('2x create:andesite_funnel', ['A', 'L'], {
 		A: 'create:andesite_alloy',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 	});
 
 	e.shaped('3x create:item_vault', [' S ', 'CCC', ' S '], {
@@ -185,7 +185,7 @@ ServerEvents.recipes((e) => {
 	e.shaped('create:portable_storage_interface', ['CSL'], {
 		C: 'create:andesite_casing',
 		S: 'create:chute',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 	});
 
 	e.shaped('create:basin', ['A A', 'AAA'], {
@@ -217,14 +217,15 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('create:rope_pulley', ['C', 'R', 'S'], {
 		C: 'create:andesite_casing',
-		R: 'firmaciv:rope_coil',
+		R: 'quark:rope',
 		S: 'tfc:metal/sheet/cast_iron',
 	});
 
-	e.shaped('create:mechanical_bearing', ['T', 'M', 'S'], {
+	e.shaped('create:mechanical_bearing', ['LTL', 'SMS',], {
 		T: 'create:turntable',
-		M: 'tfc:brass_mechanisms',
-		S: 'create:andesite_casing',
+		L: '#tfc:lumber',
+		S: 'create:andesite_alloy',
+        M: 'create:shaft'
 	});
 
 	e.shaped('create:clockwork_bearing', ['T', 'M', 'S'], {
@@ -235,7 +236,7 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('create:windmill_bearing', ['STS', 'SMS'], {
 		T: 'create:turntable',
-		M: 'tfc:brass_mechanisms',
+		M: 'create:shaft',
 		S: 'create:andesite_alloy',
 	});
 
@@ -255,7 +256,7 @@ ServerEvents.recipes((e) => {
 		A: 'create:andesite_alloy',
 	});
 
-	e.shaped('create:white_sail', ['LSL', 'SCS', 'LSL'], {
+	e.shaped('4x create:white_sail', ['LSL', 'SCS', 'LSL'], {
 		L: '#tfc:lumber',
 		S: '#forge:rods/wooden',
 		C: ['#tfc:high_quality_cloth', 'tfc:burlap_cloth'],
@@ -408,13 +409,13 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('4x create:brass_tunnel', [' E ', 'BLB'], {
 		B: 'tfc:metal/sheet/brass',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 		E: 'create:electron_tube',
 	});
 
 	e.shaped('2x create:brass_funnel', ['E', 'B', 'L'], {
 		B: 'tfc:metal/sheet/brass',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 		E: 'create:electron_tube',
 	});
 
@@ -552,7 +553,7 @@ ServerEvents.recipes((e) => {
 	e.shaped('create:hose_pulley', ['PCS', ' L ', ' L '], {
 		C: 'create:copper_casing',
 		P: 'create:fluid_pipe',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 		S: 'create:shaft',
 	});
 
@@ -605,14 +606,14 @@ ServerEvents.recipes((e) => {
 
 	e.shaped('create:spout', ['C', 'G', 'L'], {
 		C: 'create:copper_casing',
-		G: 'firmalife:reinforced_glass',
-		L: '#tfc:leather_knapping',
+		G: 'tfc:brass_mechanisms',
+		L: 'afc:rubber_bar',
 	});
 
 	e.shaped('create:portable_fluid_interface', ['CSL'], {
 		C: 'create:copper_casing',
 		S: 'create:chute',
-		L: '#tfc:leather_knapping',
+		L: 'afc:rubber_bar',
 	});
 
 	e.shaped('create:steam_engine', [' R ', ' M ', 'DRD'], {
@@ -632,18 +633,11 @@ ServerEvents.recipes((e) => {
 		M: 'tfc:brass_mechanisms',
 	});
 
-	e.shaped('create:gearbox', [' C ', 'CBC', ' C '], {
-		C: 'create:cogwheel',
-		B: 'create:andesite_casing',
-	});
 
 	e.shaped('create:track_observer', ['P', 'C'], {
 		P: 'minecraft:heavy_weighted_pressure_plate',
 		C: 'create:railway_casing',
 	});
-
-	e.shapeless('create:vertical_gearbox', ['create:gearbox']);
-	e.shapeless('create:gearbox', ['create:vertical_gearbox']);
 
 	e.shapeless('create:rotation_speed_controller', [
 		'create:brass_casing',
@@ -923,6 +917,12 @@ ServerEvents.recipes((e) => {
 	e.custom({
 		type: 'liquidburner:liquidburning',
 		fluid: 'createdieselgenerators:gasoline',
+		burntime: '10000',
+		superheattime: '0',
+	});
+    e.custom({
+		type: 'liquidburner:liquidburning',
+		fluid: 'createdieselgenerators:ethanol',
 		burntime: '10000',
 		superheattime: '0',
 	});

@@ -1,5 +1,3 @@
-console.info('loaded recipes/scguns/parts.js');
-
 ServerEvents.recipes((event) => {
 	event.recipes.tfc
 		.anvil('kubejs:unfinished_gun_parts', 'tfc:metal/sheet/steel', [

@@ -31,6 +31,8 @@ TFCEvents.data((event) => {
 	event.itemHeat('createbigcannons:steel_scrap', 0.171, 924, 1232);
 	event.itemHeat('createbigcannons:cast_iron_nugget', 1.143, 921, 1228);
 	event.itemHeat('createbigcannons:bronze_scrap', 0.171, 570, 760);
+    event.itemHeat('#kubejs:available_guns', 2.857, 921, 1228) 
+    event.itemHeat('scguns:plasgun', 0.5, 921, 1228)
 
     //fuel
     event.fuel('thermal:coal_coke', 1415, 2200, 1)
@@ -38,4 +40,18 @@ TFCEvents.data((event) => {
     //lamp fuel
     event.lampFuel('thermal:creosote', '#tfc:lamps', 8000)
     event.lampFuel('kubejs:kerosene', '#tfc:lamps', 16000)
+
+    //891.00006 1188.0
+    let aluminum_items = {
+        'ingot': 2.857143,
+        'double_ingot': 5.714286,
+        'sheet': 5.714286,
+        'double_sheet': 11.428572
+    }
+
+    for (const [metal, heat] of Object.entries(aluminum_items)) {
+        event.itemHeat(`kubejs:metal/${metal}/aluminum`, heat, 891.00006, 1188.0);
+    }
+
+    event.metal('kubejs:molten_aluminum', 1485.0, 0.00857, 'kubejs:metal/ingot/aluminum', 'kubejs:metal/double_ingot/aluminum', 'kubejs:metal/sheet/aluminum', 5, 'kubejs:aluminum');
 });

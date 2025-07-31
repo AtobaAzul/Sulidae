@@ -23,5 +23,12 @@ StartupEvents.registry('fluid', (event) => {
 
     event.create('kerosene').stillTexture('kubejs:fluid/kerosene_still').flowingTexture('kubejs:fluid/kerosene_flow').displayName("Kerosene").bucketColor(Color.AQUA);
 
-    event.create('sugarcane_juice').thinTexture('DARK_GREEN').displayName("Sugarcane Juice").bucketColor(Color.DARK_GREEN);
+    event.create('sugarcane_juice').stillTexture('kubejs:fluid/sugarcane_juice_still').flowingTexture('kubejs:fluid/sugarcane_juice_flow').displayName("Sugarcane Juice").bucketColor(Color.DARK_GREEN);
+
+    event.create('molten_aluminum').stillTexture('supplementaries:block/lumisene/lumisene').flowingTexture('supplementaries:block/lumisene/lumisene').displayName("Molten Aluminum").bucketColor(Color.GRAY)
+
+    event.create('alumina_slurry').thinTexture('WHITE').displayName("Alumina Slurry").bucketColor(Color.WHITE) //TODO
+    event.create('molten_alumina').thickTexture(Color.LIGHT_GRAY_DYE).displayName("Molten Alumina").bucketColor(Color.LIGHT_GRAY_DYE) //TODO
+    event.create('kaolinite_mixture').stillTexture('kubejs:fluid/kaolinite_mixture').flowingTexture('kubejs:fluid/kaolinite_mixture').displayName("Kaolinite Mixture").bucketColor(Color.PINK_DYE) //TODO
+
 });

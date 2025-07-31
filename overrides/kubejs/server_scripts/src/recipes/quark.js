@@ -44,6 +44,7 @@ ServerEvents.recipes((e) => {
         .tier(5);
 
     e.shaped('8x quark:rope', ['A', 'A',], { A: 'supplementaries:rope' });
+
     e.shaped('quark:abacus', ['ABA', 'CCC', 'ABA'], {
         A: '#forge:rods/wooden',
         B: '#tfc:lumber',
@@ -51,7 +52,7 @@ ServerEvents.recipes((e) => {
     });
     e.shaped('quark:seed_pouch', ['ABA', ' A '], {
         A: 'tfc:straw',
-        B: 'quark:rope',
+        B: 'supplementaries:rope',
     });
     e.shaped('8x quark:pipe', ['AAA', 'BBB', 'AAA'], {
         A: 'tfc:metal/rod/copper',
@@ -81,10 +82,10 @@ ServerEvents.recipes((e) => {
     });
 
     ALL_COLORS.forEach((color) => {
-        e.shaped(`2x quark:${color}_shingles`, ['A', 'A'], {
+        e.shaped(`8x quark:${color}_shingles`, ['A', 'A'], {
             A: `minecraft:${color}_terracotta`,
         });
-        e.shaped(`4x quark:${color}_shingles_stairs`, ['A  ', 'AA ', `AAA`], {
+        e.shaped(`8x quark:${color}_shingles_stairs`, ['A  ', 'AA ', `AAA`], {
             A: `quark:${color}_shingles`,
         });
 
@@ -93,11 +94,11 @@ ServerEvents.recipes((e) => {
         });
     });
 
-    e.shaped('2x quark:shingles', ['A', 'A'], {
+    e.shaped('8x quark:shingles', ['A', 'A'], {
         A: 'minecraft:terracotta',
     });
 
-    e.shaped(`4x quark:shingles_stairs`, ['A  ', 'AA ', `AAA`], {
+    e.shaped(`8x quark:shingles_stairs`, ['A  ', 'AA ', `AAA`], {
         A: `quark:shingles`,
     });
 

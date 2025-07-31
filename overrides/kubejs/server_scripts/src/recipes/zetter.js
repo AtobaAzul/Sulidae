@@ -1,5 +1,3 @@
-console.info('loaded recipes/zetter.js');
-
 ServerEvents.recipes((event) => {
 	event.remove({ mod: 'zetter' });
 	event.shapeless('zetter:oak_plated_frame', [

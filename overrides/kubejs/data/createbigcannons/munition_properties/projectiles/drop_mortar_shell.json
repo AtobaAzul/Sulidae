@@ -16,7 +16,7 @@
   "entity_damaging_explosive_power": 8,
   "block_damaging_explosive_power": 4,
   "mortar_power": 6,
-  "mortar_spread": 2,
+  "mortar_spread": 4,
   "mortar_recoil": 0.1,
   "penetration": 1,
   "toughness": 1,

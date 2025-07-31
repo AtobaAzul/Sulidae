@@ -682,9 +682,36 @@
         "type": "patchouli:spotlight",
         "anchor": "kaolinite",
         "item": "tfc:kaolin_clay",
-        "title": "Kaolinite",
+        "title": "Kaolin Clay",
         "link_recipes": false,
         "text": "Kaolinite is a soft $(thing)Mineral$() which is used in the construction of $(l:mechanics/fire_clay)Fire Clay$(). It can be found spawning at high altitudes in Plateaus, Old Mountains, and Highlands, at a $(l:the_world/climate#temperature)temperature$() of at least 18°C, with a $(l:the_world/climate#rainfall)rainfall$() of at least 300mm. The $(thing)Blood Lily$() flower grows on Kaolin clay."
+      },
+      {
+        "type": "patchouli:spotlight",
+        "anchor": "kaolinite_",
+        "item": "kubejs:kaolinite",
+        "title": "Kaolinite",
+        "link_recipes": false,
+        "text": "Kaolinite, unlike Kaolin Clay, can be found regardless of climate. It can be rarely found in $(l:the_world/geology#sedimentary)Sedimentary$() rocks around sea level in very small veins."
+      },
+      {
+        "type": "patchouli:multiblock",
+        "multiblock": {
+          "pattern": [
+            [
+              "X"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "mapping": {
+            "X": "kubejs:limestone_kaolinite"
+          }
+        },
+        "name": "",
+        "text": "Kaolinite in Limestone.",
+        "enable_visualize": false
       },
       {
         "type": "tfc:multimultiblock",
@@ -766,7 +793,7 @@
         "item": "tfc:ore/graphite",
         "title": "Graphite",
         "link_recipes": false,
-        "text": "Graphite is a $(thing)Mineral$() which is used in the construction of $(l:mechanics/fire_clay)Fire Clay$(). It can be found in $(thing)Gneiss$(), $(thing)Marble$(), $(thing)Quartzite$(), and $(thing)Schist$() rocks, in elevations below y=60."
+        "text": "Graphite is a $(thing)Mineral$() which is used in the construction of $(l:mechanics/fire_clay)Fire Clay$(). It can be found in $(thing)Gneiss$(), $(thing)Marble$(), $(thing)Quartzite$(), and $(thing)Schist$() rocks, in elevations below y=60 or in very small veins above y=50."
       },
       {
         "type": "patchouli:multiblock",
@@ -820,7 +847,7 @@
         "item": "tfc:ore/cryolite",
         "title": "Cryolite",
         "link_recipes": false,
-        "text": "Cryolite is a $(thing)Mineral$() which can be ground in the $(l:mechanics/quern)Quern$() to obtain $(thing)Redstone Dust$(). It can be found in veins deep underground, in $(thing)Granite$(), and $(thing)Diorite$()."
+        "text": "Cryolite is a $(thing)Mineral$() is used to make $(thing)Aluminum$() as a catalyst in a Blast Furnace with $(thing)Alumina Powder$(). It can be found in veins deep underground, in $(thing)Granite$(), and $(thing)Diorite$()."
       },
       {
         "type": "patchouli:multiblock",
@@ -895,7 +922,8 @@
         "text": "Sulfur in Gabbro.",
         "enable_visualize": false
       },
-  
+     
+
       {
         "type": "patchouli:spotlight",
         "anchor": "oil",

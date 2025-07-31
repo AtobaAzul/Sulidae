@@ -29,7 +29,7 @@
 		improvedHitboxes = false
 		#Damage dealt by the Enemy Guns
 		#Range: 0.0 ~ 1.7976931348623157E308
-		enemyBulletDamage = 4.5
+		enemyBulletDamage = 9.0
 		#Multiplier to adjust the capacity of all ammo boxes.
 		#Range: 0.1 ~ 100.0
 		ammoBoxCapacityMultiplier = 1.0
@@ -79,7 +79,7 @@
 		enabled = true
 		#Any mobs within a sphere of this radius will flee from the shooter of an unsilenced gun.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		unsilencedRange = 20.0
+		unsilencedRange = 60.0
 		#Any mobs within a sphere of this radius will flee from the shooter of a silenced gun.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		silencedRange = 20.0
@@ -90,13 +90,13 @@
 	[common.rockets]
 		#The max distance which the explosion is effective to
 		#Range: 0.0 ~ 1.7976931348623157E308
-		explosionRadius = 5.0
+		explosionRadius = 4.0
 
 	#Properties relating to grenades
 	[common.grenades]
 		#The max distance which the explosion is effective to
 		#Range: 0.0 ~ 1.7976931348623157E308
-		explosionRadius = 5.0
+		explosionRadius = 7.5
 
 	#Properties relating to stun grenades
 	[common.stun_grenades]
@@ -136,13 +136,13 @@
 				radius = 15.0
 				#Effect will have this duration (in ticks) if the grenade is directly at the player's eyes while looking directly at it.
 				#Range: > 0
-				durationMax = 280
+				durationMax = 220
 				#Effect will have this duration (in ticks) if the grenade is the maximum distance from the player's eyes while looking directly at it.
 				#Range: > 0
-				durationMin = 100
+				durationMin = 10
 				#Angle between the eye/looking direction and the eye/grenade direction must be no more than half this many degrees to have an effect.
 				#Range: 0.0 ~ 360.0
-				angleEffect = 360.0
+				angleEffect = 170.0
 				#After duration is attenuated by distance, it will be further attenuated depending on the angle (in degrees) between the eye/looking direction and the eye/grenade direction. This is done by multiplying it by 1 (no attenuation) if the angle is 0; and by this value if the angle is the maximum within the angle of effect.
 				#Range: 0.0 ~ 1.0
 				angleAttenuationMax = 0.75
@@ -165,22 +165,22 @@
 		standard_copper_round_damage = 4.0
 		#Base damage for ADVANCED_ROUND turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
-		advanced_round_damage = 6.0
+		advanced_round_damage = 12.0
 		#Base damage for GIBBS_ROUND turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
-		gibbs_round_damage = 8.0
+		gibbs_round_damage = 16.0
 		#Base damage for COMPACT_COPPER_ROUND turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
 		compact_copper_round_damage = 2.0
 		#Base damage for COMPACT_ADVANCED_ROUND turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
-		compact_advanced_round_damage = 3.5
+		compact_advanced_round_damage = 7.0
 		#Base damage for HOG_ROUND turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
 		hog_round_damage = 5.0
 		#Base damage for SHOTGUN_SHELL turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
-		shotgun_shell_damage = 12.0
+		shotgun_shell_damage = 24.0
 		#Base damage for BEARPACK_SHELL turret projectile
 		#Range: 0.0 ~ 1.7976931348623157E308
 		bearpack_shell_damage = 16.0

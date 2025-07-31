@@ -47,4 +47,26 @@ StartupEvents.registry('block', (event) => {
             .displayName('Oil ' + upperFirst)
             .mapColor('deepslate');
     });
+
+
+    SEDIMENTARY_ROCKS.forEach((rock)=> {
+        event.create(rock+'_kaolinite')
+        .hardness(1.5)
+        .resistance(4)
+        .opaque(true)
+        .tag('forge:ores/kaolinite')
+        .tag('c:ores')
+        .tag('forge:ores')
+        .tagBlock('tfc:can_trigger_collapse')
+        .tagBlock('tfc:prospectable')
+        .tagBlock('tfc:can_collapse')
+        .tagBlock('minecraft:needs_stone_tool')
+        .tagBlock('tfc:can_start_collapse')
+        .tagBlock('tfc:monster_spawns_on')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('tfc:powderkeg_breaking_blocks')
+        .tagBlock('tfc:rock/ores')
+        .tagBlock('precisionprospecting:prospectable_mineral')
+        .stoneSoundType()
+    })
 });

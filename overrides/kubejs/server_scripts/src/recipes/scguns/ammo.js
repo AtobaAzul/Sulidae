@@ -1,5 +1,3 @@
-console.info('loaded recipes/scguns/ammo.js');
-
 ServerEvents.recipes((event) => {
 	event.remove({ mod: 'scguns' });
 
@@ -78,7 +76,7 @@ ServerEvents.recipes((event) => {
     ]).tier(3)
 
 
-    event.shapeless('8x scguns:powder_and_ball', [['tfc:unrefined_paper', 'paper'], 'kubejs:musket_ball', 'gunpowder'])
+    event.shapeless('8x scguns:powder_and_ball', ['paper', 'kubejs:musket_ball', 'gunpowder'])
 
     event.shapeless('scguns:buckshot', ['4x scguns:standard_bullet', 'gunpowder'])
 

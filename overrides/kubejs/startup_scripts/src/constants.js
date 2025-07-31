@@ -128,3 +128,13 @@ const POWDERS = [
     'tetrahedrite',
     'chromite',
 ];
+
+const SEDIMENTARY_ROCKS = [
+	'chalk',
+	'chert',
+	'conglomerate',
+	'dolomite',
+	'limestone',
+	'claystone',
+	'shale',
+];

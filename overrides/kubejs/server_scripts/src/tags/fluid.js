@@ -38,4 +38,9 @@ ServerEvents.tags('fluid', (event) => {
 
     event.add('ptfc_utils:can_evaporate', 'kubejs:kerosene');
     event.add('ptfc_utils:can_evaporate', 'createdieselgenerators:gasoline');
+
+    event.add('tfc:molten_metals', 'kubejs:molten_aluminum')
+    event.add('tfc:usable_in_ingot_mold', 'kubejs:molten_aluminum')
+
+    event.add('c:hidden_from_recipe_viewers', REMOVED_FLUIDS)
 });

@@ -28,7 +28,7 @@
 	#The amount of slots the chest button system should seek when trying to figure out if a container should be eligible for them.
 	"Chest Button Slot Target" = 27
 	#Set this to false to not generate the Quark Programmer Art resource pack
-	"Generate Programmer Art" = true
+	"Generate Programmer Art" = false
 
 	[general.chest_button_offsets]
 		"Player X" = 0
@@ -135,7 +135,7 @@
 	"Sturdy Stone" = true
 	Thatch = true
 	"Variant Bookshelves" = true
-	"Variant Chests" = true
+	"Variant Chests" = false
 	"Variant Furnaces" = true
 	"Variant Ladders" = true
 	"Vertical Planks" = true
@@ -622,7 +622,7 @@
 		"Display Baked Enchantments In Tooltip" = true
 		"Italic Tooltip" = true
 		#Enchantments other than Gold's Fortune/Looting to bake into items. Format is "item+enchant@level", such as "minecraft:stick+sharpness@10".
-		"Baked Enchantments" = ["scguns:mas_55+scguns:collateral", "scguns:iron_javelin+scguns:collateral"]
+		"Baked Enchantments" = ["scguns:mas_55+scguns:collateral", "scguns:iron_javelin+scguns:collateral", "scguns:plasgun+scguns:hot_barrel"]
 
 	[tweaks.grab_chickens]
 		"Needs No Helmet" = true

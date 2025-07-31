@@ -41,7 +41,6 @@ ServerEvents.highPriorityData((event) => {
 				_json.projectile.speed = _json.projectile.speed * 2.5;
 			}
 
-			_json.projectile.trailLengthMultiplier = 80.0;
 			_json.projectile.life = _json.projectile.life * 100;
 
 			_json.projectile.damage = _json.projectile.damage * 2;

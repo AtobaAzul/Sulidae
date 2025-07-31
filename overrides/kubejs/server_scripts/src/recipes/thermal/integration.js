@@ -1,7 +1,4 @@
 //priority: -100
-
-console.info('loaded recipes/thermal/integration.js');
-
 ServerEvents.recipes((e) => {
 	//slag from melting raw ores
 	e.forEachRecipe({ type: 'tfc:heating' }, (recipe) => {

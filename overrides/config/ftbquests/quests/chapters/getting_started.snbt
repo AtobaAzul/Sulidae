@@ -130,7 +130,7 @@
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
-			description: ["Project TFC replaces TFC's mechanical power, and related features with &lCreate&r. So, instead of making a quern, you should make a grindstone, and power it using base Create mechanical power, for example."]
+			description: ["Sulidae replaces TFC's mechanical power, and related features with &lCreate&r. So, instead of making a quern, you should make a grindstone, and power it using base Create mechanical power, for example."]
 			icon: "tfc:wood/water_wheel/acacia"
 			id: "2B0424BD3CE19B70"
 			tasks: [{
@@ -188,17 +188,25 @@
 		{
 			dependencies: ["75B46FAA46D43E53"]
 			description: [
+				"&lOil Shale"
 				"Oil Shales are a mineral-trapped oil. They're a late-game alternitive source of Crude Oil."
 				"Oil shale deposits can be found between Y level -80 to 20 on Shale, Slate, Claystone and Phyllite"
+				""
+				"{@pagebreak}"
+				""
+				"&lKaolinite"
+				"Kaolinite ore is an alternitive source of Kaolinite powder, which, unlike Kaolin Clay, generates in all climates. It generates in Sedimentary rocks around sea level in very small and rare veins."
+				""
+				"Later on, Kaolinite Powder is used to make &lAluminum&r, a key ingredient for &lAircraft&r"
 			]
-			icon: "kubejs:oil_shale"
+			icon: "kubejs:kaolinite"
 			id: "0B953C1C60CA1413"
 			tasks: [{
 				id: "4005839EEB63180F"
 				title: "I Understand"
 				type: "checkmark"
 			}]
-			title: "Oil Shale"
+			title: "New Ores"
 			x: -0.5d
 			y: 0.5d
 		}
@@ -244,7 +252,13 @@
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
-			description: ["Ore veins are rarer, but much denser and bigger. Additionally, sample nuggets are more common and appear from a greater depth."]
+			description: [
+				"Ore veins are rarer, but much denser and bigger. Additionally, sample nuggets are more common and appear from a greater depth."
+				""
+				"{@pagebreak}"
+				""
+				"Graphite spawns at a slightly  higher altitues, and rarer, very small graphite veins can spawn above y=50"
+			]
 			icon: {
 				Count: 1
 				ForgeCaps: {
@@ -267,7 +281,12 @@
 		}
 		{
 			dependencies: ["0CD8033D7C86A941"]
-			description: ["Several mods have had their recipes adapted to work within TFC's custom enviroment, with &orecipes remade from scratch&r; and some have had their mechanics adjusted to better fit TFC."]
+			description: [
+				"Several mods have had their recipes adapted to work within TFC's custom enviroment, with &orecipes remade from scratch&r; and some have had their mechanics adjusted to better fit TFC."
+				""
+				"The following entries are noteworthy integration features aside from recipes."
+			]
+			icon: "createaddition:small_light_connector"
 			id: "3FFD60F6DD717CFF"
 			size: 1.5d
 			tasks: [{
@@ -290,7 +309,7 @@
 				type: "checkmark"
 			}]
 			title: "Immersive Aircraft"
-			x: -6.0d
+			x: -3.5d
 			y: 4.0d
 		}
 		{
@@ -302,6 +321,12 @@
 			]
 			icon: {
 				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
 				id: "scguns:greaser_smg"
 				tag: {
 					AmmoCount: 18
@@ -315,8 +340,8 @@
 				type: "checkmark"
 			}]
 			title: "Scorched Guns"
-			x: -4.0d
-			y: 4.0d
+			x: -5.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["3FFD60F6DD717CFF"]
@@ -329,8 +354,8 @@
 				type: "checkmark"
 			}]
 			title: "Quark"
-			x: -5.0d
-			y: 4.5d
+			x: -6.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["529000CCCC295A5F"]
@@ -376,6 +401,26 @@
 			title: "Stun"
 			x: -0.5d
 			y: -0.5d
+		}
+		{
+			dependencies: ["3FFD60F6DD717CFF"]
+			description: [
+				"Most furniture are craftable, and no longer require the Workbench."
+				""
+				"Electricity Generator (Now renamed to Household Transformer) is powered with electricity instead of burning fuels to generate energy for electrical appliances."
+				""
+				"Ceiling Fans cool you down!"
+			]
+			icon: "everycomp:rfm/tfc/sycamore_chair"
+			id: "3EFE81E07A51ACDB"
+			tasks: [{
+				id: "064927159EE3406E"
+				title: "I Understand"
+				type: "checkmark"
+			}]
+			title: "Refurbished Furniture"
+			x: -4.5d
+			y: 4.5d
 		}
 	]
 	title: "About the Modpack"

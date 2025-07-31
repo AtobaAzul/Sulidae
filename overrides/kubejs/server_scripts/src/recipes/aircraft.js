@@ -1,25 +1,23 @@
-console.info('loaded recipes/aircraft.js');
-
 ServerEvents.recipes((e) => {
     // Remove old recipes
     e.remove({ mod: 'immersive_aircraft' });
     e.remove({ mod: 'man_of_many_planes' });
 
     e.recipes.create.mechanical_crafting(
-        'man_of_many_planes:scarlet_biplane',
+        Item.of('man_of_many_planes:scarlet_biplane', '{display:{color:10329495}}'),
         [
             '  BA    ',
             '  AB    ',
-            ' CDDC AB',
+            ' CDD  AB',
             'HEFGCCCA',
-            ' CDDC AB',
+            ' CDD  AB',
             '  AB    ',
             '  BA    ',
         ],
         {
             A: 'tfc:metal/rod/steel',
             B: 'firmalife:treated_lumber',
-            C: 'tfc:metal/double_sheet/red_steel',
+            C: 'kubejs:metal/sheet/aluminum',
             D: 'create:fluid_pipe',
             E: '#create:seats',
             F: 'createdieselgenerators:diesel_engine',
@@ -29,12 +27,12 @@ ServerEvents.recipes((e) => {
     );
 
     e.recipes.create.mechanical_crafting(
-        'man_of_many_planes:economy_plane',
+        Item.of('man_of_many_planes:economy_plane', '{display:{color:10329495}}'),
         [
             ' AB    ',
             ' BCI   ',
             'DABJ  B',
-            'EFGHCCA',
+            'DFGHCCA',
             'DABJ  B',
             ' BCI   ',
             ' AB    ',
@@ -43,8 +41,7 @@ ServerEvents.recipes((e) => {
             A: 'firmalife:metal/rod/stainless_steel',
             B: 'create:white_sail',
             C: '#tfc:lumber',
-            D: 'tfc:metal/sheet/blue_steel',
-            E: 'tfc:metal/double_sheet/blue_steel',
+            D: 'kubejs:metal/sheet/aluminum',
             F: '#create:seats',
             G: 'createdieselgenerators:diesel_engine',
             H: 'createdieselgenerators:canister',

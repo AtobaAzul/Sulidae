@@ -7,10 +7,10 @@ ServerEvents.recipes((e) => {
 		],
 	});
 
-	e.shapeless('scguns:nitro_powder', [
+	e.shapeless('2x scguns:nitro_powder', [
 		'tfc:pure_nitrogen',
 		'tfc:powder/sulfur',
-		'tfc:powder/charcoal',
+		'tfc:powder/graphite',
 	]);
 	e.shapeless('9x scguns:nitro_powder_dust', ['scguns:nitro_powder']);
 	e.shaped('scguns:nitro_powder', ['AAA', 'AAA', 'AAA'], {

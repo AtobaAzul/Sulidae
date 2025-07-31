@@ -46,7 +46,7 @@ buttonAlignment = "LEFT"
 		#Enables the sprinting animation on weapons for better immersion. This only applies to weapons that support a sprinting animation.
 		sprintingAnimation = true
 		#If enabled, renders a HUD element displaying the gun's ammo count and ammo capacity, as well as pulse weapon charge.
-		displayGunInfo = false
+		displayGunInfo = true
 		#The intensity of the custom bobbing animation while holding a gun
 		#Range: 0.0 ~ 2.0
 		bobbingIntensity = 1.0

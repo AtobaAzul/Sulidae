@@ -5,7 +5,7 @@ EntityEvents.hurt((event) => {
             Math.floor(
 				event.damage +
 					20 * (1 + event.entity.maxHealth / event.entity.health)
-			+ 1),
+			+ 3),
 			0,
 			false,
 			true

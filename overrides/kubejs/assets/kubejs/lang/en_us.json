@@ -1,3 +1,15 @@
 {
-    "kubejs.tooltip.foodtrait.fried": "Fried"
+	"kubejs.tooltip.foodtrait.fried": "Fried",
+	"block.kubejs.oil_shale.prospected": "Oil",
+	"block.kubejs.oil_claystone.prospected": "Oil",
+	"block.kubejs.oil_phyllite.prospected": "Oil",
+	"block.kubejs.oil_slate.prospected": "Oil",
+    "block.kubejs.chalk_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.chert_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.conglomerate_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.dolomite_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.limestone_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.claystone_kaolinite.prospected": "Kaolinite",
+    "block.kubejs.shale_kaolinite.prospected": "Kaolinite",
+    "metal.kubejs.aluminum": "Aluminum"
 }

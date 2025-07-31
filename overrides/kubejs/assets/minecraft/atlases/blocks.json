@@ -1,0 +1,14 @@
+{
+    "sources": [
+      {
+        "type": "single",
+        "resource": "kubejs:block/metal/full/aluminum"
+      },
+      {
+        "type": "single",
+        "resource": "kubejs:block/metal/smooth/aluminum"
+      }
+
+    ]
+  }
+  

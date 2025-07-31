@@ -1,4 +1,3 @@
-console.info('loaded recipes/cleanup.js');
 //this file exists to cleanup some unused recipes.
 
 let remove = [

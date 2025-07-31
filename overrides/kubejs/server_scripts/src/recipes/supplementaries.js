@@ -52,7 +52,7 @@ ServerEvents.recipes((e) => {
 
     e.shaped('4x supplementaries:bomb', [' AB', 'ACA', ' A '], {
         A: 'tfc:metal/sheet/cast_iron',
-        B: 'quark:rope',
+        B: 'supplementaries:rope',
         C: 'createbigcannons:packed_gunpowder',
     });
     e.shaped('supplementaries:blackboard', ['ABA', 'BBB', 'ABA'], {
@@ -60,7 +60,7 @@ ServerEvents.recipes((e) => {
         B: 'create:andesite_alloy',
     });
     e.shaped('supplementaries:slingshot', ['ABA', 'C C', ' C '], {
-        A: 'minecraft:string',
+        A: '#forge:string',
         B: 'minecraft:leather',
         C: '#forge:rods/wooden',
     });
@@ -105,7 +105,7 @@ ServerEvents.recipes((e) => {
         B: '#forge:gems',
     });
     e.shaped('supplementaries:safe', ['ABA', 'BCB', 'ABA'], {
-        A: 'tfc:metal/rod/bismuth_bronze',
+        A: '#tfc:metal/rod/any_bronze',
         B: 'tfc:metal/double_sheet/cast_iron',
         C: 'everycomp:q/tfc/aspen_trapped_chest',
     });
