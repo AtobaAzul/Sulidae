@@ -71,9 +71,9 @@ ServerEvents.recipes((event) => {
         seat: ["create:white_seat", '#create:seats'],
         sofa: ["refurbished_furniture:white_sofa", '#refurbished_furniture:sofas'],
         stool: ["refurbished_furniture:white_stool", '#refurbished_furniture:stools'],
-        toolbox: ["create:toolbox", '#create:toolboxes'],
-        flag: ["refurbished_furniture:flag_white", '#supplementaries:flags'],
-        awning: ["refurbished_furniture:awning", '#supplementaries:awnings'],
+        toolbox: ["create:brown_toolbox", '#create:toolboxes'],
+        flag: ["supplementaries:flag_white", '#supplementaries:flags'],
+        awning: ["supplementaries:awning", '#supplementaries:awnings'],
         chalk: ["chalk:white_chalk", '#chalk:chalks']
     }
 

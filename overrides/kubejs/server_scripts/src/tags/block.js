@@ -24,4 +24,9 @@ ServerEvents.tags('block', (e) => {
     e.remove('tfc:can_landslide', 'gravel')
 
     e.add('createbigcannons:spark_effect_on_impact', /.*metal\/block.*/)
+
+    e.add('tfc:scraping_surface', /.*rfm.*table/)
+    e.add('tfc:scraping_surface', /.*rfm.*desk/)
+    e.add('tfc:metal_plated_blocks', ['firmalife:metal/block/chromium', 'firmalife:metal/block/stainless_steel'])
+
 });

@@ -12,12 +12,12 @@ let potionDefs = {};
 ServerEvents.loaded((event) => {
 	const { server } = event;
 
-	global.seed = server.worldData.worldGenOptions().seed();
+	global.WorldSeed = server.worldData.worldGenOptions().seed();
 
 	server.scheduleInTicks(10, () => server.runCommandSilent('reload'));
 });
 
-let random = Utils.newRandom(global.seed);
+let random = Utils.newRandom(global.WorldSeed);
 
 function randomEntry(array) {
 	let int = Math.floor(random.nextDouble() * array.length);

@@ -41,7 +41,7 @@
 	#Show the config menu button in the Options menu
 	"Enable In-Game Config" = true
 	#The position (offset) of the config button on the screen
-	"Config Button Position" = [0, 0]
+	"Config Button Position" = [0, -68]
 	#Warns the player about a bug that clears armor insulation when in creative mode
 	"Enable Creative Mode Warning" = true
 	#Displays areas that the Hearth is affecting when the F3 debug menu is open

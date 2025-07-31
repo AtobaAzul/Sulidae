@@ -109,11 +109,11 @@ ServerEvents.recipes((event) => {
 
 	event.recipes.create.milling('quark:moss_paste', ['tfc:plant/moss']);
 
-	event.shapeless('scguns:basic_poultice', [
+	event.shapeless('4x scguns:basic_poultice', [
 		'quark:moss_paste',
 		['tfc:unrefined_paper', 'paper'],
 	]);
-	event.shapeless('scguns:honey_sulfur_poultice', [
+	event.shapeless('4x scguns:honey_sulfur_poultice', [
 		'quark:moss_paste',
 		['tfc:unrefined_paper', 'paper'],
 		'firmalife:raw_honey',

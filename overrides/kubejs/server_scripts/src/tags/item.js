@@ -28,6 +28,7 @@ ServerEvents.tags('item', (e) => {
 
     e.add('tfc:deals_piercing_damage', ['musketmod:musket_with_bayonet', 'musketmod:musket', 'musketmod:pistol']);
     e.add('tfc:deals_piercing_damage', AVAILABLE_GUNS)
+    e.add('tfc:usable_on_tool_rack', AVAILABLE_GUNS)
     //e.remove('c:cast_iron_ingots', 'tfc:metal/ingot/cast_iron')
     //e.removeAllTagsFrom('createbigcannons:cast_iron_ingot')
 
@@ -56,7 +57,7 @@ ServerEvents.tags('item', (e) => {
 
     e.add('tfc:bladed_axles', /.*bladed_axle.*/)
 
-    e.add('tfc:metal_plated_block', ['firmalife:metal/block/chromium', 'firmalife:metal/block/stainless_steel'])
+    e.add('tfc:metal_plated_blocks', ['firmalife:metal/block/chromium', 'firmalife:metal/block/stainless_steel'])
 
     e.add('tfc:metal_item/chromium', 'firmalife:metal/item/chromium')
     e.add('tfc:metal_item/stainless_steel', 'firmalife:metal/item/stainless_steel')
@@ -64,6 +65,8 @@ ServerEvents.tags('item', (e) => {
     e.add('everycomp:chests', /everycomp:.*_chest.*/)
 
     e.add('forge:rods/wooden', 'minecraft:bamboo')
+
+    e.remove('tfc:powders', ['minecraft:blaze_powder', 'minecraft:glowstone_dust'])
 });
 
 

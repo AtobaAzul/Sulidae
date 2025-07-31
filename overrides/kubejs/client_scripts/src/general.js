@@ -1,33 +1,36 @@
 // priority: 0
 
 // Visit the wiki for more info - https://kubejs.com/
-
+/*
 JEIEvents.information((event) => {
 	event.addFluid(Ingredient.of('#kubejs:flower_brew'), [
 		'Can be Distilled to extract the pure effect.',
 	]);
-});
+});*/
 
 JEIEvents.hideItems((event) => {
 	REMOVED_ITEMS.forEach((item) => {
-        console.info("hiding item " + item)
-		event.hide(item);
+		event.hide(Ingredient.of(item));
 	});
 });
 
+/*
 JEIEvents.hideFluids((event) => {
     REMOVED_FLUIDS.forEach((fluid) => {
         console.info("hiding fluid " + fluid)
-        event.hide(fluid);
+        //event.hide(fluid);
     });
-})
+})*/
 
-ClientEvents.lang('en_us', (event) => {    
+ClientEvents.lang('en_us', (event) => {
 	event.renameBlock('minecraft:gravel', 'Debris');
 	event.renameBlock('minecraft:suspicious_gravel', 'Suspicious Debris');
-    event.renameBlock('createlowheated:basic_burner', 'Burner')  //TODO rename other references
+	event.renameBlock('createlowheated:basic_burner', 'Burner'); //TODO rename other references
 
-    event.renameItem('immersive_aircraft:hull_reinforcement', "Lightweight Hull")
+	event.renameItem(
+		'immersive_aircraft:hull_reinforcement',
+		'Lightweight Hull'
+	);
 
-    event.renameItem('quark:rope', 'Thick Rope')
+	event.renameItem('quark:rope', 'Thick Rope');
 });

@@ -126,6 +126,8 @@ ServerEvents.recipes((e) => {
     e.remove({id: 'sns:crafting/frame_pack'})
     e.remove({id: 'sns:crafting/pack_frame'})
     e.remove({id: 'sns:crafting/ore_sack'})
+
+    e.shapeless('minecraft:lime_dye', ['quark:moss_paste'])
 });
 
 LootJS.modifiers((e) => {

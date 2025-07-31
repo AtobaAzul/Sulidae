@@ -15,6 +15,8 @@ ServerEvents.recipes((e) => {
 		],
 	});
 
+    e.remove({id: /.*powderkeg.*/})
+
 	e.recipes.create
 		.mixing(Item.of('tfc:powder/salt'), Fluid.of('tfc:salt_water', 1000))
 		.heated();
@@ -62,22 +64,25 @@ ServerEvents.recipes((e) => {
 	e.remove({ output: /afc:wood\/gear_box\/.*/ });
 	e.remove({ output: /afc:wood\/encased_axle\/.*/ });
 	e.remove({ output: /afc:wood\/clutch\/.*/ });
-    
+
 	e.remove({ id: 'tfc:barrel/dye/bleach_windmill_blades' });
 
 	e.forEachRecipe({ type: 'tfc:quern' }, (recipe) => {
 		let ingredient = recipe.json.get('ingredient');
 
-		e.recipes.create.milling(recipe.originalRecipeResult, ingredient);
+        //essentially removes the old moss to lime dye recipe.
+		if (ingredient.item != null && !ingredient.item == 'tfc:plant/moss' || ingredient.item == null) {
+			e.recipes.create.milling(recipe.originalRecipeResult, ingredient);
 
-		let crushingResult = [recipe.originalRecipeResult];
-		crushingResult.push(
-			Item.of(
-				recipe.originalRecipeResult,
-				Math.ceil(recipe.originalRecipeResult.count * 0.25)
-			).withChance(0.25)
-		);
-		e.recipes.create.crushing(crushingResult, ingredient);
+			let crushingResult = [recipe.originalRecipeResult];
+			crushingResult.push(
+				Item.of(
+					recipe.originalRecipeResult,
+					Math.ceil(recipe.originalRecipeResult.count * 0.25)
+				).withChance(0.25)
+			);
+			e.recipes.create.crushing(crushingResult, ingredient);
+		}
 	});
 
 	e.remove({ type: 'tfc:quern' });
@@ -102,19 +107,6 @@ ServerEvents.recipes((e) => {
 			.heating(`kubejs:${def.ore}_powder_block`, def.meltingTemp)
 			.resultFluid(Fluid.of(`tfc:metal/${def.metal}`, 5 * 9));
 
-		e.recipes.thermal
-			.pyrolyzer(
-				Fluid.of(`tfc:metal/${def.metal}`, 5),
-				`tfc:powder/${def.ore}`
-			)
-			.energy(def.meltingTemp * 4);
-		e.recipes.thermal
-			.pyrolyzer(
-				Fluid.of(`tfc:metal/${def.metal}`, 5 * 9),
-				`kubejs:${def.ore}_powder_block`
-			)
-			.energy(def.meltingTemp * 4);
-
 		e.shapeless(`9x tfc:powder/${def.ore}`, [
 			`kubejs:${def.ore}_powder_block`,
 		]);
@@ -129,19 +121,6 @@ ServerEvents.recipes((e) => {
 	e.recipes.tfc
 		.heating('kubejs:chromite_powder_block', 1250)
 		.resultFluid(Fluid.of(`firmalife:metal/chromium`, 5 * 9));
-
-	e.recipes.thermal
-		.pyrolyzer(
-			Fluid.of(`firmalife:metal/chromium`, 5),
-			`kubejs:chromite_powder`
-		)
-		.energy(1250 * 4);
-	e.recipes.thermal
-		.pyrolyzer(
-			Fluid.of(`firmalife:metal/chromium`, 5 * 9),
-			`kubejs:chromite_powder_block`
-		)
-		.energy(1250 * 4);
 
 	e.shapeless(`9x kubejs:chromite_powder`, [`kubejs:chromite_powder_block`]);
 	e.shaped(`kubejs:chromite_powder_block`, ['PPP', 'PPP', 'PPP'], {
@@ -515,7 +494,7 @@ ServerEvents.recipes((e) => {
 	});
 
 	e.remove({ output: /everycomp:q\/tfc\/.*_chest/ });
-    e.remove({ output: /everycomp:q\/afc\/.*_chest/ });
+	e.remove({ output: /everycomp:q\/afc\/.*_chest/ });
 	e.remove({ output: /everycomp.*storage_jar.*/ });
 
 	e.shaped('firmalife:pumping_station', ['ABA', 'CDC', 'AEA'], {
@@ -612,8 +591,9 @@ ServerEvents.recipes((e) => {
 
 	//cheaper plated blocks
 
-	e.remove({ output: '#tfc:metal_plated_blocks' });
-
+	e.remove({ id: /tfc:crafting\/metal\/block.*/ });
+    e.remove({id: /heating:metal\/.*_block/})
+    
 	METAL_DEFS.forEach((metal) => {
 		e.shapeless(`8x tfc:metal/block/${metal}`, [
 			`tfc:metal/sheet/${metal}`,

@@ -419,8 +419,6 @@ const BREW_EFFECTS = [
 ];
 
 const VALID_TFC_POWDERS = Ingredient.of('#tfc:powders').itemIds;
-VALID_TFC_POWDERS.remove('minecraft:blaze_powder');
-VALID_TFC_POWDERS.remove('minecraft:glowstone_dust');
 
 const SPICES = [
 	'firmalife:plant/cilantro',

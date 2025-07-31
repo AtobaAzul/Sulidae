@@ -15,11 +15,14 @@ ServerEvents.loaded((event) => {
 	event.server.persistentData.gameRules = true;
 });
 
-
 const UPDATE_FREQUENCY = 400;
 
 PlayerEvents.tick((event) => {
-    let player = event.player;
+	let player = event.player;
+
+    if (player.hasEffect('bad_omen')) {
+		player.removeEffect('bad_omen');
+	}
 
 	if (player.age % UPDATE_FREQUENCY !== 0) {
 		return;
@@ -110,9 +113,9 @@ LootJS.modifiers((event) => {
 });
 
 BlockEvents.placed((e) => {
-    if (e.block.id == 'moreburners:electric_burner') {
-        e.block.set('moreburners:electric_burner', {
-            upgraded: true,
-        });
-    }
+	if (e.block.id == 'moreburners:electric_burner') {
+		e.block.set('moreburners:electric_burner', {
+			upgraded: true,
+		});
+	}
 });
