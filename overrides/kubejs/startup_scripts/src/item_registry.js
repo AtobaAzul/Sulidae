@@ -56,9 +56,6 @@ function registerItem(event, name, def) {
     if (def.maxDamage) {
         item.maxDamage(def.maxDamage);
     }
-    if (def.whatever) {
-        item.craftin
-    }
     return item
 }
 

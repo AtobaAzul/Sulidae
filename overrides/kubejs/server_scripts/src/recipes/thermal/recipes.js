@@ -211,7 +211,7 @@ ServerEvents.recipes((e) => {
 
 	e.recipes.create.milling('4x tfc:powder/coke', ['thermal:coal_coke']);
 	e.recipes.create.crushing(
-		['4x thermal:coal_coke', Item.of('tfc:powder/coke', 2).withChance(0.5)],
+		['4x tfc:powder/coke', Item.of('tfc:powder/coke', 2).withChance(0.5)],
 		'thermal:coal_coke'
 	);
 

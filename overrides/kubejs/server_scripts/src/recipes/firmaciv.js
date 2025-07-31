@@ -22,4 +22,8 @@ ServerEvents.recipes((event) => {
 		)
 		.transitionalItem('tfc:metal/ingot/copper')
 		.loops(5);
+
+        event.remove({output: 'firmaciv:rope_coil'})
+
+        event.shapeless('4x supplementaries:rope', ['#lithicaddon:spindles', '2x tfc:jute_fiber']).damageIngredient('#lithicaddon:spindles')
 });

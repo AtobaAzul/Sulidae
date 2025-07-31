@@ -27,7 +27,6 @@ function randomEntry(array) {
 for (const flower of BREW_FLOWERS) {
 	let pick = randomEntry(BREW_EFFECTS);
 	potionDefs[flower] = pick;
-	console.info(flower + ', ' + pick);
 }
 
 ServerEvents.lowPriorityData((event) => {

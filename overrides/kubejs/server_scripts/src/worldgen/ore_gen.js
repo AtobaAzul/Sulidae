@@ -21,12 +21,8 @@ ServerEvents.highPriorityData((event) => {
 	);
 	for (let [datapath, _json] of Object.entries(biomeJsonFolder)) {
 		_json = JsonIO.toObject(_json);
-		console.info(_json);
-		console.info(datapath);
-		console.info(_json.creature_spawn_probability);
 		_json.creature_spawn_probability =
 			_json.creature_spawn_probability + 0.07;
-		console.info(_json.creature_spawn_probability);
 
 		event.addJson(datapath, _json);
 	}
@@ -65,14 +61,14 @@ ServerEvents.highPriorityData((event) => {
 		event.addJson(datapath, _json);
 	}
 
-	let jsonFolder2 = global.readJsonFolderFromMod(
+	let FLOreJsonFolder = global.readJsonFolderFromMod(
 		'data',
 		'firmalife',
 		'worldgen',
 		(rl) => rl.path.contains('configured_feature/vein')
 	);
 
-	for (let [datapath, _json] of Object.entries(jsonFolder2)) {
+	for (let [datapath, _json] of Object.entries(FLOreJsonFolder)) {
 		_json = JsonIO.toObject(_json);
 
 		_json.config.rarity = _json.config.rarity * 16;
@@ -97,5 +93,5 @@ ServerEvents.highPriorityData((event) => {
 		}
 
 		event.addJson(datapath, _json);
-	}
+	}    
 });

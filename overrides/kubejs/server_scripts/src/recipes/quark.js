@@ -43,7 +43,7 @@ ServerEvents.recipes((e) => {
         )
         .tier(5);
 
-    e.shaped('8x quark:rope', ['A', 'A',], { A: 'firmaciv:rope_coil' });
+    e.shaped('8x quark:rope', ['A', 'A',], { A: 'supplementaries:rope' });
     e.shaped('quark:abacus', ['ABA', 'CCC', 'ABA'], {
         A: '#forge:rods/wooden',
         B: '#tfc:lumber',

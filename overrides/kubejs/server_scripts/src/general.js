@@ -47,7 +47,6 @@ const $WorldOptions = Java.loadClass(
 );
 
 PlayerEvents.loggedIn((event) => {
-	console.info('HERE');
 	if (
 		!event.player.persistentData.givenStartLoot &&
 		event.level.server.worldData.worldGenOptions().generateBonusChest()

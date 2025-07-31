@@ -229,4 +229,11 @@ ServerEvents.recipes((e) => {
     });
 
     e.shaped('supplementaries:flag_white', ['AA', 'B '], {A: '#tfc:high_quality_cloth', B: '#forge:rods/wooden'})
+
+    e.shapeless(Item.of('supplementaries:bunting', 8, '{Color:"white"}'), ['#tfc:high_quality_cloth', '#forge:string'])
+    e.shaped('8x supplementaries:awning', ['AAA','B B'], {
+        A: 'tfc:burlap_cloth',
+        B: '#tfc:lumber'
+    })
+
 });

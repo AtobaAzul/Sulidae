@@ -10,14 +10,14 @@ JEIEvents.information((event) => {
 
 JEIEvents.hideItems((event) => {
 	REMOVED_ITEMS.forEach((item) => {
-		console.info('hiding ' + item);
+        console.info("hiding item " + item)
 		event.hide(item);
 	});
 });
 
 JEIEvents.hideFluids((event) => {
     REMOVED_FLUIDS.forEach((fluid) => {
-        console.info('hiding ' + fluid);
+        console.info("hiding fluid " + fluid)
         event.hide(fluid);
     });
 })
@@ -28,4 +28,6 @@ ClientEvents.lang('en_us', (event) => {
     event.renameBlock('createlowheated:basic_burner', 'Burner')  //TODO rename other references
 
     event.renameItem('immersive_aircraft:hull_reinforcement', "Lightweight Hull")
+
+    event.renameItem('quark:rope', 'Thick Rope')
 });

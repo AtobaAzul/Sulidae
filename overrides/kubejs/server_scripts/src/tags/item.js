@@ -61,7 +61,7 @@ ServerEvents.tags('item', (e) => {
     e.add('tfc:metal_item/chromium', 'firmalife:metal/item/chromium')
     e.add('tfc:metal_item/stainless_steel', 'firmalife:metal/item/stainless_steel')
 
-    e.add('tfc:pilable_ingots', 'create:andesite_alloy')
+    e.add('everycomp:chests', /everycomp:.*_chest.*/)
 });
 
 

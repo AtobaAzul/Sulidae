@@ -390,7 +390,6 @@ ServerEvents.recipes((e) => {
 				fluid = _fluid_ingredient.ingredient;
 			}
 			let amount = _fluid_ingredient.amount;
-			console.info(fluid);
 
 			if (fluid.tag) {
 				ingredients_actual.push({
@@ -398,7 +397,6 @@ ServerEvents.recipes((e) => {
 					amount: amount,
 				});
 			} else {
-				console.info(amount);
 				ingredients_actual.push({ fluid: fluid, amount: amount });
 			}
 		}
@@ -517,6 +515,7 @@ ServerEvents.recipes((e) => {
 	});
 
 	e.remove({ output: /everycomp:q\/tfc\/.*_chest/ });
+    e.remove({ output: /everycomp:q\/afc\/.*_chest/ });
 	e.remove({ output: /everycomp.*storage_jar.*/ });
 
 	e.shaped('firmalife:pumping_station', ['ABA', 'CDC', 'AEA'], {

@@ -1927,7 +1927,6 @@ const REMOVED_ITEMS = [
 	'supplementaries:sconce_lever',
 	'minecraft:lantern',
 	'minecraft:soul_lantern',
-	'supplementaries:rope',
 	'minecraft:end_rod',
 	'minecraft:redstone_lamp',
 	'supplementaries:stone_lamp',
@@ -1988,7 +1987,6 @@ const REMOVED_ITEMS = [
 	'minecraft:ender_chest',
 	'supplementaries:sack',
 	'minecraft:respawn_anchor',
-	'minecraft:white_banner',
 	'minecraft:wither_skeleton_skull',
 	'minecraft:piglin_head',
 	'minecraft:dragon_head',
@@ -4360,52 +4358,44 @@ const REMOVED_ITEMS = [
 	'moreburners:heat_upgrade',
 	'firstaid:morphine',
 	'lithicaddon:bucket/silver_halide',
-	'lithicaddon:stainless_steel_jar/red_apple',
+
 	'lithicaddon:aluminum_jar/red_apple',
-	'lithicaddon:stainless_steel_jar/plum',
+
 	'lithicaddon:aluminum_jar/plum',
-	'lithicaddon:stainless_steel_jar/peach',
+
 	'lithicaddon:aluminum_jar/peach',
-	'lithicaddon:stainless_steel_jar/orange',
+
 	'lithicaddon:aluminum_jar/lemon',
 	'lithicaddon:aluminum_jar/pumpkin_chunks',
-	'lithicaddon:stainless_steel_jar/pumpkin_chunks',
-	'lithicaddon:stainless_steel_jar/lemon',
+
 	'lithicaddon:aluminum_jar/olive',
 	'lithicaddon:aluminum_jar/melon_slice',
-	'lithicaddon:stainless_steel_jar/melon_slice',
-	'lithicaddon:stainless_steel_jar/olive',
+
 	'lithicaddon:aluminum_jar/orange',
-	'lithicaddon:stainless_steel_jar/wintergreen_berry',
-	'lithicaddon:stainless_steel_jar/snowberry',
-	'lithicaddon:stainless_steel_jar/bunchberry',
+
 	'lithicaddon:aluminum_jar/cloudberry',
 	'lithicaddon:aluminum_jar/strawberry',
-	'lithicaddon:stainless_steel_jar/strawberry',
-	'lithicaddon:stainless_steel_jar/cloudberry',
+
 	'lithicaddon:aluminum_jar/cranberry',
 	'lithicaddon:aluminum_jar/wintergreen_berry',
-	'lithicaddon:stainless_steel_jar/gooseberry',
-	'lithicaddon:stainless_steel_jar/cherry',
+
 	'lithicaddon:aluminum_jar/cherry',
 	'lithicaddon:aluminum_jar/gooseberry',
-	'lithicaddon:stainless_steel_jar/elderberry',
-	'lithicaddon:stainless_steel_jar/banana',
+
 	'lithicaddon:aluminum_jar/banana',
 	'lithicaddon:aluminum_jar/elderberry',
-	'lithicaddon:stainless_steel_jar/cranberry',
+
 	'lithicaddon:aluminum_jar/raspberry',
 	'lithicaddon:aluminum_jar/green_apple',
-	'lithicaddon:stainless_steel_jar/green_apple',
-	'lithicaddon:stainless_steel_jar/raspberry',
+
 	'lithicaddon:aluminum_lid',
 	'lithicaddon:empty_jar_with_aluminum_lid',
 	'lithicaddon:empty_jar_with_stainless_steel_lid',
 	'lithicaddon:aluminum_jar/blackberry',
-	'lithicaddon:stainless_steel_jar/blackberry',
+
 	'lithicaddon:aluminum_jar/snowberry',
 	'lithicaddon:aluminum_jar/bunchberry',
-	'lithicaddon:stainless_steel_jar/blueberry',
+
 	'lithicaddon:aluminum_jar/blueberry',
 	'create:empty_blaze_burner',
 	'#tfc:axles',
@@ -4762,7 +4752,7 @@ const REMOVED_ITEMS = [
 
 	'zetter:crimson_plated_frame',
 	'tfc:hand_wheel_base',
-	'2x zetter:crimson_basic_frame',
+	'zetter:crimson_basic_frame',
 	'zetter:mangrove_plated_frame',
 	'tfc:powderkeg',
 	'tfc:thatch_bed',
@@ -4916,6 +4906,22 @@ const REMOVED_ITEMS = [
 	'everycomp:rfm/afc/ipe_crate',
 	'everycomp:rfm/afc/ipe_storage_jar',
 	'everycomp:rfm/afc/ipe_cutting_board',
+	'firmaciv:rope_coil',
+	'supplementaries:lunch_basket',
+	'supplementaries:fire_pit',
+	'supplementaries:lumisene_bucket',
+	'supplementaries:lumisene_bottle',
+	'supplementaries:cannon',
+	'supplementaries:cannonball',
+	'supplementaries:gravel_bricks',
+	'supplementaries:suspicious_gravel_bricks',
+	'supplementaries:wicker_fence',
+	'supplementaries:slidy_block',
+	'#refurbished_furniture:electronics',
+	'#everycomp:chests',
+	'lithicaddon:mold_ingot',
+	'lithicaddon:mold_lamp',
+	'thermal:press_gear_die',
 ];
 
 const REMOVED_FLUIDS = [
