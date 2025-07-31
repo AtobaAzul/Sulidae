@@ -67,6 +67,6 @@ ItemEvents.modification((event) => {
         item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
     })
     event.modify('tfccanes:refined_walking_cane', item => {
-        item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
+            item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
     })
 });

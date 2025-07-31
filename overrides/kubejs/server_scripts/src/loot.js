@@ -212,7 +212,6 @@ LootJS.modifiers((e) => {
 				'firmalife:pottery_sherd',
 				'tfccanes:walking_cane',
 				'tfc:ceramic/jug',
-				'quark:dirty_shard',
 				'minecraft:mourner_pottery_sherd',
 				'minecraft:miner_pottery_sherd',
 				'minecraft:angler_pottery_sherd',
@@ -278,5 +277,29 @@ LootJS.modifiers((e) => {
 		e.addBlockLootModifier(ore)
 			.removeLoot(/.*/)
 			.addLoot('kubejs:kaolinite');
+	});
+
+	//I'M GOING TO GO INSANE AAAAAAAAAAA
+	let clear_glasses = [
+		'create:vertical_framed_glass',
+		'create:horizontal_framed_glass',
+		'create:framed_glass',
+		'create:tiled_glass',
+		'minecraft:glass',
+	];
+	clear_glasses.forEach((glass) => {
+		e.addBlockLootModifier(glass)
+			.removeLoot(/.*/)
+			.addAlternativesLoot(
+				LootEntry.of(glass).when((e) => e.matchMainHand('tfc:gem_saw')),
+			);
+	});
+
+	ALL_COLORS.forEach((color) => {
+		e.addBlockLootModifier(`minecraft:${color}_stained_glass`)
+			.removeLoot(/.*/)
+			.addAlternativesLoot(
+				LootEntry.of(`minecraft:${color}_stained_glass`).when((e) => e.matchMainHand('tfc:gem_saw')),
+			);
 	});
 });

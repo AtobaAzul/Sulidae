@@ -38,7 +38,7 @@ ServerEvents.tags('item', (e) => {
 	//e.remove('c:cast_iron_ingots', 'minecraft:iron_ingot')
 	//e.removeAllTagsFrom('minecraft:iron_ingot')
 
-	e.add('firmalife:butterfly_grass_mutants', SPICES);
+	e.add('kubejs:brew_ingredients', BREW_INGREDIENTS);
 	e.add('createbigcannons:nitropowder', 'scguns:nitro_powder');
 	e.remove('createbigcannons:nitropowder', 'createbigcannons:nitropowder');
 

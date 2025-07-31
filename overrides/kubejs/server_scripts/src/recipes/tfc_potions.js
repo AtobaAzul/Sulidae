@@ -54,12 +54,14 @@ ServerEvents.lowPriorityData((event) => {
 				},
 				{
 					type: 'tfc:not_rotten',
-					ingredient: {
-						tag: 'tfc:foods/fruits',
-					},
+					ingredient: [
+						{
+							tag: 'tfc:foods/fruits',
+						}
+                    					],
 				},
 				{
-					tag: 'firmalife:butterfly_grass_mutants',
+					tag: 'kubejs:brew_ingredients',
 				},
 				//{
 				//	item: randomEntry(VALID_TFC_POWDERS),
@@ -102,7 +104,10 @@ ServerEvents.lowPriorityData((event) => {
 		event.addJson(`kubejs:tfc/drinkables/${key}`, json);
 		event.addJson(`kubejs:recipes/pot/${key}`, recipeJson);
 		event.addJson(
-			`kubejs:recipes/distilling/brew_${value.replace(/^[^:]*:/, '')}_${key.replace(/^[^:]*:/, '')}`,
+			`kubejs:recipes/distilling/brew_${value.replace(
+				/^[^:]*:/,
+				''
+			)}_${key.replace(/^[^:]*:/, '')}`,
 			distillingJson
 		);
 	}
