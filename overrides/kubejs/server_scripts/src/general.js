@@ -90,19 +90,19 @@ LootJS.modifiers((event) => {
 			'tfc:ceramic/magenta_glazed_vessel',
 		])
 		.addWeightedLoot(1, [
-			'tfc_textile_coldsweat:raw_socks',
+			'textile:raw_socks',
 			'minecraft:leather_boots',
 		])
 		.addWeightedLoot(1, [
-			'tfc_textile_coldsweat:raw_pants',
+			'textile:raw_pants',
 			'minecraft:leather_leggings',
 		])
 		.addWeightedLoot(1, [
-			'tfc_textile_coldsweat:raw_shirt',
+			'textile:raw_shirt',
 			'minecraft:leather_chestplate',
 		])
 		.addWeightedLoot(1, [
-			'tfc_textile_coldsweat:raw_hat',
+			'textile:raw_hat',
 			'minecraft:leather_helmet',
 		])
 		.addLoot([

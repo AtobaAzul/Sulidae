@@ -471,7 +471,7 @@ const AVAILABLE_GUNS = [
 	'scguns:greaser_smg',
 	'scguns:rocket_rifle',
     'scguns:callwell',
-    'scguns:sawed_off_callwell',
+    'scguns:iron_spear'
 ];
 
 //only to be used for getting temp data, since it has both chromium and stainless steel here too.

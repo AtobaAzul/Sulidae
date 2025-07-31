@@ -82,6 +82,21 @@ ServerEvents.recipes((event) => {
 			A: 'scguns:iron_gun_frame',
 			B: 'scguns:firing_unit',
 			C: 'scguns:gun_parts',
+			D: 'scguns:gun_barrel',
+			E: '#tfc:lumber',
+			F: 'scguns:gun_magazine',
+		},
+		1,
+		1
+	);
+    
+	event.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:iron_spear').copyForgingBonus(),
+		[' A ', 'BCD', 'EF '],
+		{
+			A: 'scguns:iron_gun_frame',
+			B: 'scguns:firing_unit',
+			C: 'scguns:gun_parts',
 			D: 'scguns:heavy_gun_barrel',
 			E: '#tfc:lumber',
 			F: 'scguns:gun_magazine',
@@ -281,6 +296,4 @@ ServerEvents.recipes((event) => {
 		1,
 		0
 	);
-
-    event.recipes.tfc.advanced_shapeless_crafting(TFC.itemStackProvider.of('scguns:sawed_off_callwell').copyForgingBonus(), ['scguns:callwell', '#tfc:saws'], 'scguns:callwell')
 });

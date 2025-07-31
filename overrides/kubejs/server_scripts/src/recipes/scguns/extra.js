@@ -215,9 +215,9 @@ ServerEvents.recipes((event) => {
     event.recipes.tfc.anvil('kubejs:unfinished_diamond_steel_boots', 'tfc:metal/double_sheet/steel', ['bend_last', 'bend_second_last', 'shrink_third_last']).tier(4)
     event.recipes.tfc.anvil('kubejs:unfinished_diamond_steel_helmet', 'tfc:metal/double_sheet/steel', ['hit_last', 'bend_second_last', 'bend_third_last']).tier(4)
 
-    event.shapeless('scguns:diamond_steel_chestplate', [['tfc_textile_coldsweat:black_bear_shirt', 'tfc_textile_coldsweat:grizzly_bear_shirt'], 'kubejs:unfinished_diamond_steel_chestplate'])
-    event.shapeless('scguns:diamond_steel_boots', [['tfc_textile_coldsweat:black_bear_boots', 'tfc_textile_coldsweat:grizzly_bear_boots'], 'kubejs:unfinished_diamond_steel_boots'])
-    event.shapeless('scguns:diamond_steel_helmet', [['tfc_textile_coldsweat:black_bear_hat', 'tfc_textile_coldsweat:grizzly_bear_hat'], 'kubejs:unfinished_diamond_steel_helmet'])
+    event.shapeless('scguns:diamond_steel_chestplate', [['textile:black_bear_shirt', 'textile:grizzly_bear_shirt'], 'kubejs:unfinished_diamond_steel_chestplate'])
+    event.shapeless('scguns:diamond_steel_boots', [['textile:black_bear_boots', 'textile:grizzly_bear_boots'], 'kubejs:unfinished_diamond_steel_boots'])
+    event.shapeless('scguns:diamond_steel_helmet', [['textile:black_bear_hat', 'textile:grizzly_bear_hat'], 'kubejs:unfinished_diamond_steel_helmet'])
 
 
 });
