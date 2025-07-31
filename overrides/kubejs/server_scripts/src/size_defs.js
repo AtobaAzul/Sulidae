@@ -77,6 +77,8 @@ const SIZE_DEFS = {
 	'scguns:saketini': ['huge', 'medium'],
 	'scguns:pax': ['small', 'medium'],
 	'scguns:winnie': ['very_large', 'heavy'],
+    'scguns:callwell': ['very_large', 'heavy'],
+	'scguns:sawed_off_callwell': ['small', 'medium'],
 	'scguns:m3_carabine': ['large', 'medium'],
 	'scguns:greaser_smg': ['normal', 'medium'],
 	'scguns:iron_javelin': ['huge', 'heavy'],

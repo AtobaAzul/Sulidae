@@ -264,7 +264,23 @@ ServerEvents.recipes((event) => {
 			D: 'scguns:heavy_gun_barrel',
 			E: 'tfc:wood/lumber/acacia',
 		},
-        0,
-        0,
+		0,
+		0
 	);
+
+	event.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:callwell').copyForgingBonus(),
+		['ABC', 'DBC', 'EE '],
+		{
+			A: 'scguns:firing_unit',
+			B: 'scguns:heavy_gun_barrel',
+			C: 'scguns:gun_barrel',
+			D: 'scguns:gun_parts',
+			E: 'tfc:wood/lumber/acacia',
+		},
+		1,
+		0
+	);
+
+    event.recipes.tfc.advanced_shapeless_crafting(TFC.itemStackProvider.of('scguns:sawed_off_callwell').copyForgingBonus(), ['scguns:callwell', '#tfc:saws'], 'scguns:callwell')
 });

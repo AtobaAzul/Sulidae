@@ -54,7 +54,7 @@ ServerEvents.recipes((e) => {
             A: 'create:andesite_alloy',
             B: 'tfc:metal/sheet/brass',
             S: 'createaddition:copper_spool',
-            R: 'tfc:metal/rod/wrought_iron',
+            R: 'tfc:metal/double_ingot/steel',
         }
     );
 
@@ -65,7 +65,7 @@ ServerEvents.recipes((e) => {
             A: 'create:andesite_alloy',
             B: 'tfc:metal/sheet/cast_iron',
             S: 'createaddition:copper_spool',
-            R: 'tfc:metal/rod/wrought_iron',
+            R: 'tfc:metal/double_ingot/steel',
         }
     );
 

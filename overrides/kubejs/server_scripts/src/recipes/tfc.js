@@ -670,4 +670,6 @@ ServerEvents.recipes((e) => {
 		},
 		duration: 4000,
 	});
+
+    e.shapeless('kubejs:flint_and_pyrite', ['flint', 'tfc:ore/pyrite'])
 });

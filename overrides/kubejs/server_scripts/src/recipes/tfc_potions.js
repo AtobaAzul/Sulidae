@@ -23,10 +23,23 @@ function randomEntry(array) {
 	let int = Math.floor(random.nextDouble() * array.length);
 	return array[int];
 }
+const POTION_MOB_EFFECTS_MAP = {
+	'minecraft:leaping': 'minecraft:jump_boost',
+	'minecraft:healing': 'minecraft:instant_health',
+	'minecraft:swiftness': 'minecraft:speed',
+	'minecraft:harming': 'minecraft:instant_damage',
+	'minecraft:weakness': 'minecraft:weakness',
+	'minecraft:luck': 'minecraft:luck',
+	'quark:resilience': 'quark:resilience',
+	'minecraft:strength': 'minecraft:strength',
+	'minecraft:regeneration': 'minecraft:regeneration',
+	'minecraft:poison': 'minecraft:poison',
+	'minecraft:slowness': 'minecraft:slowness',
+};
 
 for (const flower of BREW_FLOWERS) {
 	let pick = randomEntry(BREW_EFFECTS);
-	potionDefs[flower] = pick;
+	potionDefs[flower] = [pick, POTION_MOB_EFFECTS_MAP[pick]];
 }
 
 ServerEvents.lowPriorityData((event) => {
@@ -37,8 +50,12 @@ ServerEvents.lowPriorityData((event) => {
 			intoxication: 0,
 			effects: [
 				{
-					type: value,
-					duration: 600 * randomEntry(BREW_DURATION_MULTS),
+					type: value[1],
+					duration:
+						value[1] == 'minecraft:instant_damage' ||
+						value[1] == 'minecraft:instant_health'
+							? 1
+							: 600 * randomEntry(BREW_DURATION_MULTS),
 					amplifier: 1,
 					chance: 1,
 				},
@@ -57,8 +74,8 @@ ServerEvents.lowPriorityData((event) => {
 					ingredient: [
 						{
 							tag: 'tfc:foods/fruits',
-						}
-                    					],
+						},
+					],
 				},
 				{
 					tag: 'kubejs:brew_ingredients',
@@ -94,7 +111,7 @@ ServerEvents.lowPriorityData((event) => {
 					fluid: 'create:potion',
 					nbt: {
 						Bottle: 'REGULAR',
-						Potion: value,
+						Potion: value[0],
 					},
 					amount: 50,
 				},
@@ -104,11 +121,34 @@ ServerEvents.lowPriorityData((event) => {
 		event.addJson(`kubejs:tfc/drinkables/${key}`, json);
 		event.addJson(`kubejs:recipes/pot/${key}`, recipeJson);
 		event.addJson(
-			`kubejs:recipes/distilling/brew_${value.replace(
+			`kubejs:recipes/distilling/brew_${value[0].replace(
 				/^[^:]*:/,
 				''
 			)}_${key.replace(/^[^:]*:/, '')}`,
 			distillingJson
 		);
 	}
+});
+
+ServerEvents.recipes((event) => {
+	event.custom({
+		type: 'createdieselgenerators:distillation',
+		ingredients: [
+			{
+				fluidTag: `kubejs:flower_brew`,
+				amount: 100,
+                nbt: { //to prevent actually crafting this recipe.
+                    invalid: true
+                }
+			},
+		],
+		heatRequirement: 'heated',
+		processingTime: 100,
+		results: [
+			{
+				fluid: 'kubejs:any_potion',
+				amount: 50,
+			},
+		],
+	}).id('kubejs:distilling/any_potion_display_only');
 });

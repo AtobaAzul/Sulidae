@@ -41,9 +41,21 @@ ServerEvents.highPriorityData((event) => {
 				_json.projectile.speed = _json.projectile.speed * 2.5;
 			}
 
+            if (_json.general.spread) {
+                _json.general.spread = _json.general.spread * 0.75;
+            }
+
+            if (_json.general.fireMode == 'scguns:beam') {
+                _json.general.rate = _json.general.rate * 0.1;
+                _json.projectile.damage = _json.projectile.damage * 0.1;
+                _json.general.miningSpeed = 0 //Math.round(_json.general.miningSpeed * 0.1);
+                _json.reloads.maxAmmo = Math.round(_json.reloads.maxAmmo * 3);
+            }
+
 			_json.projectile.life = _json.projectile.life * 100;
 
-			_json.projectile.damage = _json.projectile.damage * 2;
+
+			_json.projectile.damage = _json.general.projectileAmount > 1 ? _json.projectile.damage * 3 : _json.projectile.damage * 2;
 
 			_json.projectile.gravity = true;
 

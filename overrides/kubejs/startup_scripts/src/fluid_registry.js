@@ -17,9 +17,10 @@ StartupEvents.registry('fluid', (event) => {
 
             .thinTexture(color)
             .displayName(name + ' Brew')
-            .noBucket()
             .noBlock();
     }
+
+    event.create('any_potion').stillTexture('create:fluid/potion_still').flowingTexture('create:fluid/potion_flow').displayName(Text.of("Mystery Potion").italic().aqua()).noBucket().noBlock();
 
     event.create('kerosene').stillTexture('kubejs:fluid/kerosene_still').flowingTexture('kubejs:fluid/kerosene_flow').displayName("Kerosene").bucketColor(Color.AQUA);
 
@@ -30,5 +31,6 @@ StartupEvents.registry('fluid', (event) => {
     event.create('alumina_slurry').thinTexture('WHITE').displayName("Alumina Slurry").bucketColor(Color.WHITE) //TODO
     event.create('molten_alumina').thickTexture(Color.LIGHT_GRAY_DYE).displayName("Molten Alumina").bucketColor(Color.LIGHT_GRAY_DYE) //TODO
     event.create('kaolinite_mixture').stillTexture('kubejs:fluid/kaolinite_mixture').flowingTexture('kubejs:fluid/kaolinite_mixture').displayName("Kaolinite Mixture").bucketColor(Color.PINK_DYE) //TODO
+
 
 });

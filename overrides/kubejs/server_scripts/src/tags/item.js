@@ -82,6 +82,8 @@ ServerEvents.tags('item', (e) => {
 	e.add('tfc:makes_lime_dye', 'tfc:plant/field_horsetail');
 	e.remove('tfc:makes_brown_dye', 'tfc:plant/field_horsetail');
 
+    e.add('createlowheated:basic_burner_fuel_whitelist', '#tfc:firepit_fuel')
+
 	e.add('tfc:foods/usable_in_sandwich', [
 		'tfc:food/cooked_egg',
 		'tfc:food/boiled_egg',
@@ -102,4 +104,10 @@ ServerEvents.tags('item', (e) => {
 	e.add('c:hidden_from_recipe_viewers', REMOVED_ITEMS);
 
 	e.add('tfc:metal/rod/any_bronze', /.*\/rod\/.*bronze.*/);
+
+    e.add('createlowheated:burner_starters', 'kubejs:flint_and_pyrite')
+    e.add('tfc:usable_on_tool_rack', 'kubejs:flint_and_pyrite')
+    e.add('minecraft:creeper_igniters', 'kubejs:flint_and_pyrite')
+    e.add('supplementaries:fire_sources', 'kubejs:flint_and_pyrite')
+    e.add('tfc:starts_fires_with_durability', 'kubejs:flint_and_pyrite')
 });

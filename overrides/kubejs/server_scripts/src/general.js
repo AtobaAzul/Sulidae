@@ -110,7 +110,7 @@ LootJS.modifiers((event) => {
 			'tfc:metal/pickaxe/copper',
 			'tfc:ceramic/jug',
 		]);
-});
+    });
 
 BlockEvents.placed((e) => {
 	let { x, y, z } = e.block.pos;

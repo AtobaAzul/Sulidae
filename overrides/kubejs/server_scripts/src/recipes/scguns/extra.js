@@ -197,4 +197,51 @@ ServerEvents.recipes((event) => {
 		A: 'scguns:ammo_box',
 		B: 'tfc:metal/sheet/cast_iron',
 	});
+
+    event.recipes.tfc.sewing('scguns:diamond_steel_leggings', [
+        0, 1, 1, 0, 1, 1, 1, 1, 0, 
+        0, 0, 0, 1, 0, 0, 0, 0, 1,
+        0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 1, 0, 0, 0, 0, 1,
+        0, 1, 1, 0, 1, 1, 1, 1, 0
+    ], [
+         0,  0,  0, 0,  1, 1,  1,  -1,
+        -1, -1, -1, 0,  1, 1,  1,   1,
+        -1, -1, -1, 0,  1, 1,  1,   1,
+         0,  0,  0, 0,  1, 1,  1,  -1
+    ])
+
+    event.recipes.tfc.anvil('kubejs:unfinished_diamond_steel_chestplate', 'tfc:metal/double_sheet/steel', ['hit_last', 'hit_second_last', 'upset_third_last']).tier(4)
+    event.recipes.tfc.anvil('kubejs:unfinished_diamond_steel_boots', 'tfc:metal/double_sheet/steel', ['bend_last', 'bend_second_last', 'shrink_third_last']).tier(4)
+    event.recipes.tfc.anvil('kubejs:unfinished_diamond_steel_helmet', 'tfc:metal/double_sheet/steel', ['hit_last', 'bend_second_last', 'bend_third_last']).tier(4)
+
+    event.shapeless('scguns:diamond_steel_chestplate', [['tfc_textile_coldsweat:black_bear_shirt', 'tfc_textile_coldsweat:grizzly_bear_shirt'], 'kubejs:unfinished_diamond_steel_chestplate'])
+    event.shapeless('scguns:diamond_steel_boots', [['tfc_textile_coldsweat:black_bear_boots', 'tfc_textile_coldsweat:grizzly_bear_boots'], 'kubejs:unfinished_diamond_steel_boots'])
+    event.shapeless('scguns:diamond_steel_helmet', [['tfc_textile_coldsweat:black_bear_hat', 'tfc_textile_coldsweat:grizzly_bear_hat'], 'kubejs:unfinished_diamond_steel_helmet'])
+
+
 });
+
+
+ColdSweatEvents.registries(event => {
+    event.addInsulator(insulator => {
+        insulator.items('scguns:diamond_steel_chestplate')
+        .slot('armor')
+        .insulation(8, 2)
+    })
+    event.addInsulator(insulator => {
+        insulator.items('scguns:diamond_steel_helmet')
+        .slot('armor')
+        .insulation(6, 1)
+    })
+    event.addInsulator(insulator => {
+        insulator.items('scguns:diamond_steel_leggings')
+        .slot('armor')
+        .insulation(6, 3)
+    })
+    event.addInsulator(insulator => {
+        insulator.items('scguns:diamond_steel_boots')
+        .slot('armor')
+        .insulation(7, 2)
+    })
+})

@@ -412,7 +412,6 @@ const BREW_EFFECTS = [
 	'minecraft:poison',
 	'minecraft:harming',
 	'minecraft:healing',
-	'minecraft:turtle_master',
 	'minecraft:slowness',
 	'minecraft:swiftness',
 	'minecraft:leaping',
@@ -471,6 +470,8 @@ const AVAILABLE_GUNS = [
 	'scguns:iron_javelin',
 	'scguns:greaser_smg',
 	'scguns:rocket_rifle',
+    'scguns:callwell',
+    'scguns:sawed_off_callwell',
 ];
 
 //only to be used for getting temp data, since it has both chromium and stainless steel here too.

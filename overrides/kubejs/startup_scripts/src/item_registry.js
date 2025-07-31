@@ -1,4 +1,7 @@
 //Register new items here.
+const $FlintAndSteelItem = Java.loadClass("net.minecraft.world.item.FlintAndSteelItem");
+const $ItemProperties = Java.loadClass("net.minecraft.world.item.Item$Properties");
+
 
 const registryDef = {
 	//pistol_barrel: {name: "Pistol Barrel"},
@@ -64,6 +67,11 @@ const registryDef = {
     straw_doll_1: {name: "Lost Doll"},
     automaton_head: {name: "Automaton Head"},
     bee_trinket: {name: "Bee Trinket"},
+
+    //diamond steel set
+    unfinished_diamond_steel_helmet: {name: "Unfinished Caoivish Helmet", unstackable: true},
+    unfinished_diamond_steel_chestplate: {name: "Unfinished Caoivish Chestplate", unstackable: true},
+    unfinished_diamond_steel_boots: {name: "Unfinished Caoivish Boots", unstackable: true},
 };
 
 /**
@@ -155,4 +163,7 @@ StartupEvents.registry('item', (event) => {
                 break
 		}
 	}
+
+    event.createCustom("flint_and_pyrite", () => new $FlintAndSteelItem(new $ItemProperties().defaultDurability(32).durability(32)));
 });
+

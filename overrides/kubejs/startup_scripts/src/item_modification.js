@@ -69,4 +69,24 @@ ItemEvents.modification((event) => {
     event.modify('tfccanes:refined_walking_cane', item => {
             item.addAttribute('forge:step_height_addition', uuid(), "Cane Step Height", 0.5, "addition")
     })
+
+    event.modify('scguns:diamond_steel_leggings', item => {
+        item.armorKnockbackResistance = 0
+        item.armorToughness = 0
+        item.armorProtection = 0
+    })
+
+    event.modify('scguns:diamond_steel_boots', item => {
+        item.armorToughness = 0
+        item.armorProtection = 2
+    })
+    event.modify('scguns:diamond_steel_helmet', item => {
+        item.armorToughness = 0
+        item.armorProtection = 2
+    })
+    event.modify('scguns:diamond_steel_chestplate', item => {
+        item.armorToughness = 1
+        item.armorProtection = 5
+    })
+
 });

@@ -302,4 +302,6 @@ LootJS.modifiers((e) => {
 				LootEntry.of(`minecraft:${color}_stained_glass`).when((e) => e.matchMainHand('tfc:gem_saw')),
 			);
 	});
+
+    e.addLootTableModifier(/.*/).removeLoot('scguns:pebbles')
 });

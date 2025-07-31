@@ -17,6 +17,10 @@ TFCEvents.data((event) => {
 	event.itemDamageResistance('scguns:adrien_helm', 30, 2, 2);
 	event.itemDamageResistance('scguns:adrien_chestplate', 50, 2, 2);
 
+    event.itemDamageResistance('scguns:diamond_steel_helmet', 35*0.2, 15*0.2, null)
+    event.itemDamageResistance('scguns:diamond_steel_chestplate', 30*0.2, 15*0.2, null)
+    event.itemDamageResistance('scguns:diamond_steel_boots', 30*0.2, 15*0.2, null)
+
     //item heat
 	for (const [metal, heat] of Object.entries(POWDER_HEAT_DEFS)) {
 		event.itemHeat(`tfc:powder/${metal}`, heat, null, null);

@@ -1,28 +1,6 @@
 // priority: 0
 
 // Visit the wiki for more info - https://kubejs.com/
-/*
-JEIEvents.information((event) => {
-	event.addFluid(Ingredient.of('#kubejs:flower_brew'), [
-		'Can be Distilled to extract the pure effect.',
-	]);
-});*/
-
-JEIEvents.hideItems((event) => {
-
-    //So, fun fact. This doesn't work with JEI.
-	REMOVED_ITEMS.forEach((item) => {
-		event.hide(Ingredient.of(item));
-	});
-});
-
-/*
-JEIEvents.hideFluids((event) => {
-    REMOVED_FLUIDS.forEach((fluid) => {
-        console.info("hiding fluid " + fluid)
-        //event.hide(fluid);
-    });
-})*/
 
 ClientEvents.lang('en_us', (event) => {
 	event.renameBlock('minecraft:gravel', 'Debris');
@@ -39,4 +17,9 @@ ClientEvents.lang('en_us', (event) => {
     event.renameBlock('refurbished_furniture:light_electricity_generator', "Light Househoud Transformer")
     event.renameBlock('refurbished_furniture:dark_electricity_generator', "Dark Househoud Transformer")
 
+
+    event.renameItem('scguns:diamond_steel_boots', "Caoivish Boots")
+    event.renameItem('scguns:diamond_steel_leggings', 'Uniform')
+    event.renameItem('scguns:diamond_steel_chestplate', 'Caoivish Chestplate')
+    event.renameItem('scguns:diamond_steel_helmet', 'Caoivish Helmet')
 });
