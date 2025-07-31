@@ -1,0 +1,202 @@
+console.info('loaded recipes/scguns/extra.js');
+
+ServerEvents.recipes((event) => {
+	event.shaped('4x scguns:grenade', ['A', 'B', 'C'], {
+		A: 'tfc:metal/sheet/zinc',
+		B: 'scguns:nitro_powder',
+		C: '#forge:rods/wooden',
+	});
+
+	event.shapeless('4x scguns:molotov_cocktail', [
+		'4x #firmalife:empty_wine_bottles',
+		'kubejs:ethanol_fuel_can',
+		['#tfc:high_quality_cloth', 'tfc:burlap_cloth'],
+	]);
+
+	event.custom({
+		type: 'tfc:knapping',
+		knapping_type: 'tfc:leather',
+		pattern: [' XXX ', 'X   X', 'XXXXX', 'XXXXX', 'XXXXX'],
+		result: {
+			item: 'scguns:empty_casing_pouch',
+		},
+	});
+
+	let ammo_boxes = [
+		'scguns:pistol_ammo_box',
+		'scguns:rifle_ammo_box',
+		'scguns:shotgun_ammo_box',
+		'scguns:rocket_ammo_box',
+	];
+
+	ammo_boxes.forEach((ammo_box) => {
+		event.recipes.tfc.anvil(
+			ammo_box,
+			'firmalife:metal/sheet/stainless_steel',
+			['bend_last', 'bend_second_last', 'bend_third_last']
+		);
+	});
+
+	event.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:iron_bayonet').copyForgingBonus(),
+		[' A', 'B '],
+		{
+			A: 'tfc:metal/sword_blade/wrought_iron',
+			B: '#tfc:lumber',
+		},
+		0,
+		1
+	);
+
+	event.shaped('scguns:light_grip', ['ABA'], {
+		A: 'firmaciv:copper_bolt',
+		B: 'minecraft:leather',
+	});
+	event.shaped('scguns:vertical_grip', ['ABA', ' C ', ' D '], {
+		A: 'firmaciv:copper_bolt',
+		B: 'tfc:wood/lumber/acacia',
+		C: 'tfc:metal/rod/steel',
+		D: 'minecraft:leather',
+	});
+	event.shaped('scguns:wooden_stock', ['AAB', 'AA '], {
+		A: 'tfc:wood/lumber/acacia',
+		B: 'firmaciv:copper_bolt',
+	});
+	event.shaped('scguns:medium_scope', [' A ', ' B ', ' C '], {
+		A: 'firmaciv:copper_bolt',
+		B: 'tfc:lens',
+		C: 'tfc:metal/sheet/steel',
+	});
+
+	event.shaped('scguns:weighted_stock', ['ABC', 'AA '], {
+		A: 'tfc:wood/lumber/acacia',
+		B: 'tfc:metal/sheet/steel',
+		C: 'tfc:metal/rod/steel',
+	});
+	event.shaped('scguns:long_scope', [' A ', 'BCB', ' A '], {
+		A: 'firmaciv:copper_bolt',
+		B: 'tfc:lens',
+		C: 'tfc:metal/sheet/steel',
+	});
+	event.shaped('scguns:light_stock', ['AAA', 'A  '], {
+		A: 'tfc:metal/rod/steel',
+	});
+
+	event.shaped('scguns:extended_barrel', [' A ', 'BCB', ' A '], {
+		A: 'firmaciv:copper_bolt',
+		B: 'scguns:gun_barrel',
+		C: 'tfc:metal/sheet/steel',
+	});
+	event
+		.shapeless('scguns:muzzle_brake', [
+			'scguns:heavy_gun_barrel',
+			'#tfc:saws',
+		])
+		.damageIngredient('#tfc:saws', 10);
+
+	event.shaped('scguns:adrien_chestplate', ['ABA', 'CDC', 'BAB'], {
+		A: 'tfc:metal/sheet/steel',
+		B: 'minecraft:leather',
+		C: 'firmaciv:copper_bolt',
+		D: 'tfc:metal/double_sheet/steel',
+	});
+	event.shaped('scguns:adrien_helm', ['ABA', 'CDC'], {
+		A: 'firmaciv:copper_bolt',
+		B: 'tfc:metal/double_sheet/steel',
+		C: 'tfc:metal/sheet/steel',
+		D: 'minecraft:leather',
+	});
+
+	event.recipes.create.milling('quark:moss_paste', ['tfc:plant/moss']);
+
+	event.shapeless('scguns:basic_poultice', [
+		'quark:moss_paste',
+		['tfc:unrefined_paper', 'paper'],
+	]);
+	event.shapeless('scguns:honey_sulfur_poultice', [
+		'quark:moss_paste',
+		['tfc:unrefined_paper', 'paper'],
+		'firmalife:raw_honey',
+		'tfc:powder/sulfur',
+	]);
+	event.shapeless('scguns:honey_sulfur_poultice', [
+		'scguns:basic_poultice',
+		'firmalife:raw_honey',
+		'tfc:powder/sulfur',
+	]);
+	event.shaped('scguns:anthralite_respirator', ['ABA', 'CDC', ' E '], {
+		A: 'tfc:lens',
+		B: 'tfc:metal/sheet/black_steel',
+		C: 'afc:rubber_bar',
+		D: 'tfc:powder/charcoal',
+		E: '#tfc:high_quality_cloth',
+	});
+	event.shaped('scguns:silencer', [' A ', 'BCB', ' A '], {
+		A: ['tfc:burlap_cloth', '#tfc:high_quality_cloth'],
+		B: 'afc:rubber_bar',
+		C: 'firmalife:metal/sheet/stainless_steel',
+	});
+
+	event.shaped('scguns:basic_turret', [' A ', ' B ', 'CDC'], {
+		A: 'scguns:m3_carabine',
+		B: 'create:precision_mechanism',
+		C: 'tfc:metal/double_sheet/black_steel',
+		D: 'thermal:machine_frame',
+	});
+	event.shaped('scguns:auto_turret', ['ABA', ' C ', 'DED'], {
+		A: 'scguns:greaser_smg',
+		B: 'create:shaft',
+		C: 'create:precision_mechanism',
+		D: 'tfc:metal/double_sheet/black_steel',
+		E: 'thermal:machine_frame',
+	});
+	event.shaped('scguns:shotgun_turret', [' A ', ' B ', 'CDC'], {
+		A: 'scguns:combat_shotgun',
+		B: 'create:precision_mechanism',
+		C: 'tfc:metal/double_sheet/black_steel',
+		D: 'thermal:machine_frame',
+	});
+	event.shapeless('scguns:enemy_log', [
+		'minecraft:book',
+		'minecraft:red_dye',
+	]);
+
+	event.shapeless('scguns:team_log', [
+		'minecraft:purple_dye',
+		'minecraft:book',
+	]);
+	event.shaped('scguns:hostile_turret_targeting_module', ['A', 'B'], {
+		A: 'createaddition:gold_spool',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:turret_targeting_module', ['A', 'B'], {
+		A: 'createaddition:gold_spool',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:player_turret_targeting_module', ['A', 'B'], {
+		A: 'createaddition:gold_spool',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:shell_catcher_turret_module', ['A', 'B'], {
+		A: 'minecraft:hopper',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:fire_rate_turret_module', ['AAA', ' B '], {
+		A: 'createaddition:copper_spool',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:range_turret_module', ['A', 'B', 'C'], {
+		A: 'tfc:metal/double_sheet/cast_iron',
+		B: 'simpleradio:transmitting_module',
+		C: 'simpleradio:receiving_module',
+	});
+	event.shaped('scguns:damage_turret_module', ['ABA', ' C '], {
+		A: 'create:andesite_alloy',
+		B: 'kubejs:rocket_fuel',
+		C: 'tfc:metal/sheet/cast_iron',
+	});
+	event.shaped('scguns:ammo_turret_module', ['A', 'B'], {
+		A: 'scguns:ammo_box',
+		B: 'tfc:metal/sheet/cast_iron',
+	});
+});
