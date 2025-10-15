@@ -1,0 +1,50 @@
+{
+  "mobs": {
+    "minecraft:pillager": {
+      "spawn_chance": 0.5,
+      "ai_difficulty": 4,
+      "weapon_drop_chance": 0.0,
+      "weapons": [
+        "scguns:pax",
+        "scguns:winnie",
+        "scguns:winnie_millend",
+        "scguns:saketini",
+        "scguns:saketini_ironport"
+      ],
+      "armor": [
+        {
+          "item": "minecraft:iron_helmet",
+          "slot": "head",
+          "chance": 0.5
+        },
+        {
+          "item": "minecraft:iron_chestplate",
+          "slot": "chest",
+          "chance": 0.3
+        }
+      ]
+    },
+    "minecraft:vindicator": {
+      "spawn_chance": 1.0,
+      "ai_difficulty": 4,
+      "weapon_drop_chance": 0.0,
+      "weapons": [
+        "scguns:trenchur",
+        "scguns:greaser_smg",
+        "scguns:m3_carabine"
+      ],
+      "armor": [
+        {
+          "item": "minecraft:iron_helmet",
+          "slot": "head",
+          "chance": 0.5
+        },
+        {
+          "item": "minecraft:iron_chestplate",
+          "slot": "chest",
+          "chance": 0.3
+        }
+      ]
+    }
+  }
+}

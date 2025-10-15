@@ -4,8 +4,8 @@ ServerEvents.recipes((event) => {
 	event.remove({ mod: 'scguns' });
 
 	let bullet_defs = {
-		'16x scguns:standard_bullet': 'tfc:metal/rod/wrought_iron',
-		'16x scguns:hardened_bullet': 'tfc:metal/rod/steel',
+		'16x scguns:standard_bullet': 'tfc:metal/rod/steel',
+		'16x scguns:hardened_bullet': 'kubejs:metal/rod/mangalloy',
 	};
 
 	let casings_def = {

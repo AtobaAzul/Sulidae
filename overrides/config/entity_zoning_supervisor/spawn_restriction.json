@@ -1,0 +1,119 @@
+[
+    {
+        "entity": "opposing_force:slug",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "tfc:climate",
+                "climate": {
+                    "min_temperature": 8,
+                    "min_rainfall": 200
+                }
+            },
+            {
+                "type": "ez_supervisor:count_nearby",
+                "distance": 64,
+                "max_count": 2
+            },
+            {
+                "type": "tfc:season",
+                "season": [
+                    "spring",
+                    "summer"
+                ]
+            },
+            {
+                "type": "ez_supervisor:height_filter",
+                "min": 63
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:terror",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "tfc:climate",
+                "climate": {
+                    "max_temperature": 10
+                }
+            },
+            {
+                "type": "ez_supervisor:distance_below_sea_level",
+                "distance": 15
+            },
+            {
+                "type": "ez_supervisor:fluid",
+                "fluid": "tfc:salt_water"
+            },
+            {
+                "type": "ez_supervisor:count_nearby",
+                "distance": 64,
+                "max_count": 2
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:frowzy",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "minecraft:monster",
+                "any_light": false
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:pale_spider",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "minecraft:monster",
+                "any_light": false
+            },
+            {
+                "type": "ez_supervisor:height_filter",
+                "min": 0,
+                "max": 63
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:ramble",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "minecraft:monster",
+                "any_light": false
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:umber_spider",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "minecraft:monster",
+                "any_light": false
+            },
+            {
+                "type": "ez_supervisor:height_filter",
+                "max": 0
+            }
+        ]
+    },
+    {
+        "entity": "opposing_force:trembler",
+        "overwrite_mod_predicate": true,
+        "predicates": [
+            {
+                "type": "minecraft:monster",
+                "any_light": false
+            },
+            {
+                "type": "ez_supervisor:height_filter",
+                "max": 0
+            }
+        ]
+    }
+]

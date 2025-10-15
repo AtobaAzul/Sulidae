@@ -5,7 +5,7 @@ ServerEvents.highPriorityData((event) => {
 		if (_json.general.fireMode == 'scguns:beam') {
 			_json.general.rate = Math.round(_json.general.rate * 0.25);
 			_json.projectile.damage = _json.projectile.damage * 0.25;
-			_json.general.miningSpeed = 8;
+			_json.general.miningSpeed = 16;
 			_json.reloads.maxAmmo = _json.reloads.maxAmmo * 4;
 		}
 
@@ -13,13 +13,13 @@ ServerEvents.highPriorityData((event) => {
 			_json.projectile.speed = _json.projectile.speed * 5;
 		}
 
-        if (datapath.match(/.*carabine.*/)) {
-            _json.general.fireMode = "scguns:automatic"
-        }
+		if (datapath.match(/.*carabine.*/)) {
+			_json.general.fireMode = 'scguns:automatic';
+		}
 
 		if (_json.projectile) {
 			_json.projectile.advantage = 'scguns:none';
-
+            _json.projectile.armorPen = _json.projectile.armorPen != undefined ? _json.projectile.armorPen+10 : 10;
 			switch (_json.projectile.item) {
 				case 'scguns:ramrod_round':
 					_json.projectile.item = 'scguns:beowulf_round';
@@ -51,10 +51,12 @@ ServerEvents.highPriorityData((event) => {
 					break;
 			}
 
-			if (
-				_json.projectile.item != 'scguns:rocket'
-			) {
-				_json.projectile.speed = _json.projectile.speed * 2.5;
+			if (_json.projectile.item != 'scguns:rocket') {
+				if (_json.projectile.item.match(/.*shotgun.*|.*compact.*/)) {
+					_json.projectile.speed = _json.projectile.speed * 1.25;
+				} else {
+					_json.projectile.speed = _json.projectile.speed * 1.5;
+				}
 			}
 
 			if (_json.general.spread) {
@@ -65,13 +67,12 @@ ServerEvents.highPriorityData((event) => {
 
 			_json.projectile.damage =
 				_json.general.projectileAmount > 1
-					? _json.projectile.damage * 3
-					: _json.projectile.damage * 2;
+					? _json.projectile.damage * 1.5
+					: _json.projectile.damage * 1.25;
 
-            //doesn't work :(
-			/*if (_json.projectile.item == 'scguns:rocket') {
-				_json.projectile.damage = 150;
-			}*/
+			if (_json.projectile.item == 'scguns:rocket') {
+				_json.projectile.damage = _json.projectile.damage * 2;
+			}
 
 			_json.projectile.gravity = true;
 
@@ -79,5 +80,3 @@ ServerEvents.highPriorityData((event) => {
 		}
 	}
 });
-
-

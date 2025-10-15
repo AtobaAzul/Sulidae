@@ -308,7 +308,14 @@ const ALL_COLORS = [
 	'white',
 ];
 
-const WELDER_FUELS = ['createdieselgenerators:biodiesel', 'createdieselgenerators:diesel', 'createdieselgenerators:gasoline', 'createdieselgenerators:ethanol', 'kubejs:kerosene', 'kubejs:liquid_hydrogen'];
+const WELDER_FUELS = [
+	'createdieselgenerators:biodiesel',
+	'createdieselgenerators:diesel',
+	'createdieselgenerators:gasoline',
+	'createdieselgenerators:ethanol',
+	'kubejs:kerosene',
+	'kubejs:liquid_hydrogen',
+];
 
 const POWDERS = [
 	'flux',
@@ -488,8 +495,16 @@ const AVAILABLE_GUNS = [
 	'scguns:greaser_smg',
 	'scguns:callwell',
 	'scguns:iron_spear',
-    'scguns:cogloader',
-    'scguns:m22_waltz'
+	'scguns:cogloader',
+	'scguns:m22_waltz',
+	'scguns:birdfeeder',
+	'scguns:howler',
+	'scguns:callwell_terminal',
+	'scguns:micina',
+	'scguns:trenchur',
+	'scguns:mak_mkii',
+	'scguns:killer_23',
+	'scguns:kalaskah',
 ];
 
 const ALL_ROCKS = [

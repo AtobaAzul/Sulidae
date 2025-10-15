@@ -4,7 +4,7 @@
 	enableCameraRecoil = true
 	#The maximum amount of cooldown time remaining before the server will accept another shoot packet from a client. This allows for a litle slack since the server may be lagging
 	#Range: 75 ~ 1000
-	cooldownThreshold = 75
+	cooldownThreshold = 0
 
 	#Stun Grenade related properties
 	[server.grenade]
@@ -22,13 +22,13 @@
 		soundFadeThreshold = 90
 		#Volume of the ringing sound when deafened will play at this volume, before eventually fading to 0.
 		#Range: 0.0 ~ 1.0
-		ringVolume = 0.75
+		ringVolume = 1.0
 
 	#Audio properties
 	[server.audio]
 		#The maximum distance weapons can be heard by players.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		gunShotMaxDistance = 200.0
+		gunShotMaxDistance = 100.0
 		#The maximum distance reloading can be heard by players.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		reloadMaxDistance = 24.0

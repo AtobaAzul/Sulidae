@@ -1,0 +1,32 @@
+
+["Chunk Loaders"]
+	#Defines the maximum number of chunk loaders that can be active at the same time (default: 8).
+	#Range: 1 ~ 2147483646
+	maxActiveChunkLoaders = 8
+	#Defines the max number of ticks chunk loaders can be active in total (default: 576000).
+	#Range: 0 ~ 2147483646
+	maxChunkLoaderCharge = 576000
+	#Defines the number of ticks every set of queued chunk loaders stay active (default: 80).
+	#Range: 40 ~ 2147483646
+	ticksOfActiveChunkLoading = 80
+	#Defines the percentage amount a chunk loader recharges per right click (default: 0,10).
+	#Range: 0.0 ~ 1.0
+	rechargeFactorRightClick = 0.1
+	#Defines the percentage amount a chunk loader recharges per tick while players are nearby (default: 0,05).
+	#Range: 0.0 ~ 1.0
+	rechargeFactorPlayersNearby = 0.05
+	#Defines the percentage amount a chunk loader recharges per activation cycle while its owner is online (default: 0,10).
+	#Range: 0.0 ~ 1.0
+	rechargeFactorOwnerOnline = 0.1
+	#Defines the radius around a chunk loader it will scan for nearby players to determine if it should recharge (default: 24,00).
+	#Range: 0.0 ~ 2.147483646E9
+	rechargeRadiusPlayersNearby = 24.0
+
+[Debug]
+	#If enabled any change of the 'forced' state from chunks will be logged (default: false).
+	logChunkStateChange = false
+	#If enabled updates of chunk loader block entities will be logged (default: false).
+	logChunkLoaderUpdates = false
+	#If enabled the (un)registration of chunk loaders will be logged (default: false).
+	logChunkLoaderRegistration = false
+

@@ -183,4 +183,7 @@ ServerEvents.recipes((event) => {
 		0,
 		0
 	);
+
+    event.recipes.tfc.anvil('kubejs:firing_hammer', 'tfc:metal/rod/black_steel', ['punch_last', 'shrink_second_last', 'bend_third_last']).tier(5)
+    ADDED_ANVIL_RECIPES.push(['kubejs:firing_hammer', 'tfc:metal/rod/black_steel', 5])
 });

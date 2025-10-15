@@ -29,7 +29,7 @@ ServerEvents.recipes((e) => {
 		TFC.itemStackProvider.of('scguns:saketini').copyForgingBonus(),
 		['A  ', 'BCD', 'EE '],
 		{
-			A: 'scguns:firing_unit',
+			A: 'kubejs:firing_hammer',
 			B: 'scguns:gun_parts',
 			C: 'scguns:gun_barrel',
 			D: 'scguns:stone_gun_barrel',
@@ -42,7 +42,7 @@ ServerEvents.recipes((e) => {
 		TFC.itemStackProvider.of('scguns:winnie').copyForgingBonus(),
 		['A  ', 'BCD', 'E  '],
 		{
-			A: 'scguns:firing_unit',
+			A: 'kubejs:firing_hammer',
 			B: 'scguns:gun_parts',
 			C: 'scguns:gun_magazine',
 			D: 'scguns:stone_gun_barrel',
@@ -52,11 +52,29 @@ ServerEvents.recipes((e) => {
 		0
 	);
 
+    	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:winnie_millend').copyForgingBonus(),
+		[
+        'A  ', 
+        'BDD', 
+        'EC '],
+		{
+			A: 'kubejs:firing_hammer',
+			B: 'scguns:gun_parts',
+			C: 'scguns:gun_magazine',
+			D: 'scguns:stone_gun_barrel',
+			E: '#tfc:lumber',
+		},
+		1,
+		0
+	);
+
+
 	e.recipes.tfc.advanced_shaped_crafting(
 		TFC.itemStackProvider.of('scguns:pax').copyForgingBonus(),
 		['ABC', 'D  '],
 		{
-			A: 'scguns:firing_unit',
+			A: 'kubejs:firing_hammer',
 			B: 'scguns:gun_parts',
 			C: 'scguns:stone_gun_barrel',
 			D: '#tfc:lumber',
@@ -290,7 +308,7 @@ ServerEvents.recipes((e) => {
 		TFC.itemStackProvider.of('scguns:callwell').copyForgingBonus(),
 		['ABB', 'DBB', 'EE '],
 		{
-			A: 'scguns:firing_unit',
+			A: 'kubejs:firing_hammer',
 			B: 'scguns:stone_gun_barrel',
 			D: 'scguns:gun_parts',
 			E: '#tfc:lumber',
@@ -436,5 +454,141 @@ ServerEvents.recipes((e) => {
 		},
 		2,
 		1
+	);
+
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:howler').copyForgingBonus(),
+		[' AB', 'CBD', 'EF '],
+		{
+			A: 'scguns:treated_brass_gun_frame',
+			B: 'scguns:heavy_gun_barrel',
+			C: 'scguns:heavy_gun_parts',
+			D: 'tfc:wood/lumber/acacia',
+			E: 'scguns:firing_unit',
+			F: 'scguns:gun_magazine',
+		},
+		1,
+		0
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:callwell_terminal').copyForgingBonus(),
+		['ABC', 'DEF', 'FG '],
+		{
+			A: 'scguns:firing_unit',
+			B: 'scguns:iron_gun_frame',
+			C: 'scguns:gun_barrel',
+			D: 'scguns:gun_parts',
+			E: 'scguns:heavy_gun_barrel',
+			F: 'tfc:wood/lumber/acacia',
+			G: 'scguns:gun_magazine',
+		},
+		1,
+		0
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:kalaskah').copyForgingBonus(),
+		['ABC', 'DEE', 'FC '],
+		{
+			A: 'scguns:gun_parts',
+			B: 'scguns:iron_gun_frame',
+			C: 'tfc:wood/lumber/acacia',
+			D: 'scguns:rapid_firing_unit',
+			E: 'scguns:gun_barrel',
+			F: 'scguns:gun_magazine',
+		},
+		0,
+		0
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:mak_mkii').copyForgingBonus(),
+		['ABC', 'D  '],
+		{
+			A: 'scguns:rapid_firing_unit',
+			B: 'scguns:gun_parts',
+			C: 'scguns:gun_barrel',
+			D: 'scguns:gun_magazine',
+		},
+		0,
+		1
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:micina').copyForgingBonus(),
+		[' A ', 'BCD', 'E  '],
+		{
+			A: 'scguns:diamond_steel_gun_frame',
+			B: 'scguns:rapid_firing_unit',
+			C: 'scguns:heavy_gun_parts',
+			D: 'scguns:gun_barrel',
+			E: 'tfc:wood/lumber/acacia',
+		},
+		1,
+		1
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:trenchur').copyForgingBonus(),
+		['ABC', 'D  '],
+		{
+			A: 'scguns:firing_unit',
+			B: 'scguns:gun_parts',
+			C: 'scguns:gun_barrel',
+			D: 'tfc:wood/lumber/acacia',
+		},
+		0,
+		1
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:killer_23').copyForgingBonus(),
+		[' A ', 'BCD', 'E E'],
+		{
+			A: 'scguns:iron_gun_frame',
+			B: 'scguns:firing_unit',
+			C: 'scguns:gun_parts',
+			D: 'scguns:heavy_gun_barrel',
+			E: 'tfc:wood/lumber/acacia',
+		},
+		1,
+		1
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:birdfeeder').copyForgingBonus(),
+		['AB ', 'CDE', 'F  '],
+		{
+			A: 'scguns:iron_gun_frame',
+			B: 'scguns:gun_magazine',
+			C: 'scguns:rapid_firing_unit',
+			D: 'scguns:gun_parts',
+			E: 'scguns:gun_barrel',
+			F: 'tfc:wood/lumber/acacia',
+		},
+		1,
+		1
+	);
+
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:fencer_carabine').copyForgingBonus(),
+		['  A', 'BAC', 'DE '],
+		{
+			A: 'scguns:stone_gun_barrel',
+			B: 'minecraft:flint_and_steel',
+			C: 'scguns:gun_parts',
+			D: 'scguns:gun_magazine',
+			E: 'create:precision_mechanism',
+		},
+		1,
+		2
+	);
+	e.recipes.tfc.advanced_shaped_crafting(
+		TFC.itemStackProvider.of('scguns:longarm').copyForgingBonus(),
+		['A  ', 'BCD', 'EF '],
+		{
+			A: 'minecraft:flint_and_steel',
+			B: 'scguns:gun_parts',
+			C: 'scguns:gun_magazine',
+			D: 'scguns:stone_gun_barrel',
+			E: 'tfc:wood/lumber/acacia',
+			F: 'create:precision_mechanism',
+		},
+		1,
+		0
 	);
 });

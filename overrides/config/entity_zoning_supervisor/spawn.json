@@ -1,0 +1,35 @@
+[
+    {
+        "entity": "opposing_force:slug",
+        "biomes": [
+            "tfc:lowlands"
+        ],
+        "weight": 30
+    },
+    {
+        "entity": "opposing_force:terror",
+        "biomes": [
+            "tfc:deep_ocean_trench"
+        ],
+        "weight": 30
+    },
+    {
+        "entity": "opposing_force:frowzy",
+        "weight": 30,
+        "min_count": 3,
+        "max_count": 5
+    },
+    {
+        "entity": "opposing_force:ramble",
+        "weight": 10,
+        "max_count": 1
+    },
+    {
+        "entity": "opposing_force:umber_spider",
+        "weight": 30
+    },
+    {
+        "entity": "opposing_force:trembler",
+        "weight": 30
+    }
+]
